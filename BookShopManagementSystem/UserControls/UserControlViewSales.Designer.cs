@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.labelSales = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.ColNetDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSales)).BeginInit();
@@ -90,6 +90,18 @@
             this.panel3.Size = new System.Drawing.Size(835, 26);
             this.panel3.TabIndex = 7;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label1.Location = new System.Drawing.Point(45, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 22);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Recieved:  00";
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.CadetBlue;
@@ -97,7 +109,7 @@
             this.panel5.Controls.Add(this.labelSales);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(13, 15);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(835, 83);
             this.panel5.TabIndex = 8;
@@ -112,7 +124,7 @@
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRefresh.Location = new System.Drawing.Point(0, 0);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(149, 83);
             this.btnRefresh.TabIndex = 3;
@@ -137,7 +149,7 @@
             this.dataGridSales.AllowUserToAddRows = false;
             this.dataGridSales.AllowUserToDeleteRows = false;
             this.dataGridSales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridSales.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dataGridSales.BackgroundColor = System.Drawing.Color.White;
             this.dataGridSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridSales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -185,18 +197,6 @@
             this.ColumnDate.Name = "ColumnDate";
             this.ColumnDate.ReadOnly = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label1.Location = new System.Drawing.Point(45, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 22);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Recieved:  00";
-            // 
             // UserControlViewSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -210,7 +210,7 @@
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.CadetBlue;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserControlViewSales";
             this.Size = new System.Drawing.Size(861, 483);
             this.panel3.ResumeLayout(false);

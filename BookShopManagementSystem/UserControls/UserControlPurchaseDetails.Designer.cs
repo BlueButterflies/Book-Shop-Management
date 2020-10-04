@@ -84,7 +84,7 @@
             // 
             this.dataGridPurchase.AllowUserToAddRows = false;
             this.dataGridPurchase.AllowUserToDeleteRows = false;
-            this.dataGridPurchase.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dataGridPurchase.BackgroundColor = System.Drawing.Color.White;
             this.dataGridPurchase.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridPurchase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridPurchase.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

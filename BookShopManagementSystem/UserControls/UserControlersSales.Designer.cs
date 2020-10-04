@@ -451,6 +451,7 @@
             // UserControlersSales
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label8);
             this.Controls.Add(this.labelAuthor);
             this.Controls.Add(this.txtAuthor);

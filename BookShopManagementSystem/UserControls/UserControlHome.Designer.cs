@@ -77,6 +77,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(154, 14);
             this.pictureBox3.Name = "pictureBox3";
@@ -148,6 +149,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(150, 14);
             this.pictureBox1.Name = "pictureBox1";
@@ -206,6 +208,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(161, 14);
             this.pictureBox2.Name = "pictureBox2";
@@ -242,6 +245,7 @@
             // 
             // metroProgressSpinner1
             // 
+            this.metroProgressSpinner1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroProgressSpinner1.BackColor = System.Drawing.Color.White;
             this.metroProgressSpinner1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroProgressSpinner1.Location = new System.Drawing.Point(469, 249);
@@ -285,6 +289,7 @@
             // 
             // metroProgressSpinner2
             // 
+            this.metroProgressSpinner2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroProgressSpinner2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroProgressSpinner2.Location = new System.Drawing.Point(690, 249);
             this.metroProgressSpinner2.Maximum = 100;
@@ -339,6 +344,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

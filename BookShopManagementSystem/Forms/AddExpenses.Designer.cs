@@ -231,6 +231,7 @@
             // AddExpenses
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(519, 397);
             this.Controls.Add(this.btnCloseWin);
             this.Controls.Add(this.btnClose);
