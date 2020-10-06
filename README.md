@@ -33,19 +33,19 @@
     <tr/>
   <table/>
   <table>
-  <tr>/
+  <tr>
     <td>
       <img src="https://user-images.githubusercontent.com/52591976/95189893-cb46bc00-07ce-11eb-862d-524c0d3398b1.png"width =550/>
       <td/>
     <td>
-      <img src=https://user-images.githubusercontent.com/52591976/95189908-d1d53380-07ce-11eb-9dd2-f1571477dc4a.png"width =550/>
+      <img src="https://user-images.githubusercontent.com/52591976/95189908-d1d53380-07ce-11eb-9dd2-f1571477dc4a.png"width =550/>
       <td/>
     <tr/>
   <table/>
   <table>
   <tr>
     <td>
-      <img src="https://user-images.githubusercontent.com/52591976/95189925-d7cb1480-07ce-11eb-8164-cc7cc793bdbe.png"width =550/>/
+      <img src="https://user-images.githubusercontent.com/52591976/95189925-d7cb1480-07ce-11eb-8164-cc7cc793bdbe.png"width =550/>
       <td/>
     <td>
       <img src="https://user-images.githubusercontent.com/52591976/94338431-6c28c080-fff2-11ea-999e-a5e1b057b365.png"width =550/>
