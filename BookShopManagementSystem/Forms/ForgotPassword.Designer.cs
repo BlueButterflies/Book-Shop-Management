@@ -34,11 +34,11 @@
             this.picturePanelOne = new System.Windows.Forms.PictureBox();
             this.labelForgotPass = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
-            this.txtResetPass = new System.Windows.Forms.TextBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.dargControl = new BookShopManagementSystem.CostumControl.DargControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.panelUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePanelOne)).BeginInit();
             this.panel1.SuspendLayout();
@@ -69,7 +69,7 @@
             this.btnBackCome.Location = new System.Drawing.Point(654, 0);
             this.btnBackCome.Name = "btnBackCome";
             this.btnBackCome.Size = new System.Drawing.Size(43, 73);
-            this.btnBackCome.TabIndex = 4;
+            this.btnBackCome.TabIndex = 0;
             this.btnBackCome.UseVisualStyleBackColor = false;
             this.btnBackCome.Click += new System.EventHandler(this.btnBackCome_Click);
             // 
@@ -104,21 +104,11 @@
             this.label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.Location = new System.Drawing.Point(22, 145);
+            this.label.Location = new System.Drawing.Point(91, 145);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(653, 23);
+            this.label.Size = new System.Drawing.Size(514, 23);
             this.label.TabIndex = 2;
-            this.label.Text = "Please enter you email address and we will mail you a link to reset your password" +
-    ".";
-            // 
-            // txtResetPass
-            // 
-            this.txtResetPass.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtResetPass.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtResetPass.Location = new System.Drawing.Point(26, 217);
-            this.txtResetPass.Name = "txtResetPass";
-            this.txtResetPass.Size = new System.Drawing.Size(638, 26);
-            this.txtResetPass.TabIndex = 3;
+            this.label.Text = "Please enter your username and your email  for reset password ";
             // 
             // btnReset
             // 
@@ -127,12 +117,13 @@
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(168, 315);
+            this.btnReset.Location = new System.Drawing.Point(158, 315);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(380, 53);
-            this.btnReset.TabIndex = 4;
+            this.btnReset.TabIndex = 2;
             this.btnReset.Text = "Reset Password";
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // dargControl
             // 
@@ -155,18 +146,29 @@
             this.label2.ForeColor = System.Drawing.Color.CadetBlue;
             this.label2.Location = new System.Drawing.Point(3, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(319, 15);
+            this.label2.Size = new System.Drawing.Size(333, 15);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Copyrights © 2020.All rights reserved  by BlueButterflies";
+            this.label2.Text = "Copyrights © 2020.All rights reserved by BlueButterfliesDev";
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUserName.ForeColor = System.Drawing.Color.CadetBlue;
+            this.txtUserName.Location = new System.Drawing.Point(95, 217);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(494, 26);
+            this.txtUserName.TabIndex = 0;
+            this.txtUserName.Tag = "username";
+            this.txtUserName.Text = "Username";
             // 
             // ForgotPassword
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(697, 489);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.txtResetPass);
             this.Controls.Add(this.label);
             this.Controls.Add(this.panelUp);
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -192,10 +194,10 @@
         private System.Windows.Forms.PictureBox picturePanelOne;
         private System.Windows.Forms.Label labelForgotPass;
         private System.Windows.Forms.Label label;
-        private System.Windows.Forms.TextBox txtResetPass;
         private System.Windows.Forms.Button btnReset;
         private CostumControl.DargControl dargControl;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtUserName;
     }
 }

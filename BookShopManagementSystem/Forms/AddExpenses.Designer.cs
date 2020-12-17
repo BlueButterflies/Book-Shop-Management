@@ -91,7 +91,7 @@
             this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCategory.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCategory.ForeColor = System.Drawing.Color.White;
-            this.btnAddCategory.Location = new System.Drawing.Point(114, 334);
+            this.btnAddCategory.Location = new System.Drawing.Point(180, 334);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(90, 37);
             this.btnAddCategory.TabIndex = 7;
@@ -103,7 +103,7 @@
             // 
             this.txtExpenseTitle.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExpenseTitle.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtExpenseTitle.Location = new System.Drawing.Point(172, 92);
+            this.txtExpenseTitle.Location = new System.Drawing.Point(180, 92);
             this.txtExpenseTitle.Margin = new System.Windows.Forms.Padding(4);
             this.txtExpenseTitle.Name = "txtExpenseTitle";
             this.txtExpenseTitle.Size = new System.Drawing.Size(289, 28);
@@ -114,7 +114,7 @@
             this.labelNewStox.AutoSize = true;
             this.labelNewStox.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNewStox.ForeColor = System.Drawing.Color.CadetBlue;
-            this.labelNewStox.Location = new System.Drawing.Point(41, 95);
+            this.labelNewStox.Location = new System.Drawing.Point(58, 95);
             this.labelNewStox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNewStox.Name = "labelNewStox";
             this.labelNewStox.Size = new System.Drawing.Size(107, 22);
@@ -125,7 +125,7 @@
             // 
             this.txtAmount.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAmount.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtAmount.Location = new System.Drawing.Point(172, 144);
+            this.txtAmount.Location = new System.Drawing.Point(180, 144);
             this.txtAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(289, 28);
@@ -136,7 +136,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label1.Location = new System.Drawing.Point(84, 147);
+            this.label1.Location = new System.Drawing.Point(79, 147);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 22);
@@ -148,7 +148,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label2.Location = new System.Drawing.Point(184, 33);
+            this.label2.Location = new System.Drawing.Point(171, 33);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 27);
@@ -160,7 +160,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label3.Location = new System.Drawing.Point(58, 202);
+            this.label3.Location = new System.Drawing.Point(66, 202);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 22);
@@ -169,7 +169,7 @@
             // 
             // txtDescriptionExpense
             // 
-            this.txtDescriptionExpense.Location = new System.Drawing.Point(172, 193);
+            this.txtDescriptionExpense.Location = new System.Drawing.Point(180, 193);
             this.txtDescriptionExpense.Name = "txtDescriptionExpense";
             this.txtDescriptionExpense.Size = new System.Drawing.Size(289, 96);
             this.txtDescriptionExpense.TabIndex = 6;
@@ -183,7 +183,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(358, 334);
+            this.btnClose.Location = new System.Drawing.Point(379, 334);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(90, 37);
             this.btnClose.TabIndex = 45;
@@ -199,7 +199,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(210, 334);
+            this.btnClear.Location = new System.Drawing.Point(279, 334);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(90, 37);
             this.btnClear.TabIndex = 44;

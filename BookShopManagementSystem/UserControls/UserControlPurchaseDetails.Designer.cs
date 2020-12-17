@@ -44,7 +44,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddNewBook = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSearchBy = new System.Windows.Forms.TextBox();
             this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
             this.btnAddStock = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -58,7 +57,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(861, 10);
+            this.panel2.Size = new System.Drawing.Size(1273, 10);
             this.panel2.TabIndex = 2;
             // 
             // panel4
@@ -66,7 +65,7 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(851, 10);
+            this.panel4.Location = new System.Drawing.Point(1263, 10);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 473);
             this.panel4.TabIndex = 4;
@@ -77,7 +76,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(10, 473);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(841, 10);
+            this.panel3.Size = new System.Drawing.Size(1253, 10);
             this.panel3.TabIndex = 5;
             // 
             // dataGridPurchase
@@ -102,7 +101,7 @@
             this.dataGridPurchase.ReadOnly = true;
             this.dataGridPurchase.RowHeadersVisible = false;
             this.dataGridPurchase.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridPurchase.Size = new System.Drawing.Size(841, 406);
+            this.dataGridPurchase.Size = new System.Drawing.Size(1253, 406);
             this.dataGridPurchase.TabIndex = 2;
             // 
             // ColTracking
@@ -194,13 +193,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Search by";
             // 
-            // txtSearchBy
-            // 
-            this.txtSearchBy.Location = new System.Drawing.Point(698, 17);
-            this.txtSearchBy.Name = "txtSearchBy";
-            this.txtSearchBy.Size = new System.Drawing.Size(137, 26);
-            this.txtSearchBy.TabIndex = 2;
-            // 
             // comboBoxSearchBy
             // 
             this.comboBoxSearchBy.FormattingEnabled = true;
@@ -236,13 +228,12 @@
             this.panel5.BackColor = System.Drawing.Color.CadetBlue;
             this.panel5.Controls.Add(this.btnAddStock);
             this.panel5.Controls.Add(this.comboBoxSearchBy);
-            this.panel5.Controls.Add(this.txtSearchBy);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.btnAddNewBook);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(10, 10);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(841, 57);
+            this.panel5.Size = new System.Drawing.Size(1253, 57);
             this.panel5.TabIndex = 1;
             // 
             // UserControlPurchaseDetails
@@ -258,7 +249,7 @@
             this.Font = new System.Drawing.Font("Comic Sans MS", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.CadetBlue;
             this.Name = "UserControlPurchaseDetails";
-            this.Size = new System.Drawing.Size(861, 483);
+            this.Size = new System.Drawing.Size(1273, 483);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPurchase)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -283,7 +274,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAddNewBook;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSearchBy;
         private System.Windows.Forms.ComboBox comboBoxSearchBy;
         private System.Windows.Forms.Button btnAddStock;
         private System.Windows.Forms.Panel panel5;

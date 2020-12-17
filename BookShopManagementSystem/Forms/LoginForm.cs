@@ -27,7 +27,7 @@ namespace BookShopManagementSystem.Forms
         private void labelForgotPass_Click(object sender, EventArgs e)
         {
             ForgotPassword forgotPassword = new ForgotPassword();
-
+            this.Hide();
             forgotPassword.ShowDialog();
         }
 

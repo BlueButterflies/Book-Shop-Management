@@ -59,7 +59,7 @@
             this.labelForgotPass.Location = new System.Drawing.Point(353, 321);
             this.labelForgotPass.Name = "labelForgotPass";
             this.labelForgotPass.Size = new System.Drawing.Size(136, 22);
-            this.labelForgotPass.TabIndex = 21;
+            this.labelForgotPass.TabIndex = 4;
             this.labelForgotPass.Text = "Forgot Password?";
             this.labelForgotPass.Click += new System.EventHandler(this.labelForgotPass_Click);
             // 
@@ -76,7 +76,7 @@
             this.btnEnter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(186, 41);
-            this.btnEnter.TabIndex = 20;
+            this.btnEnter.TabIndex = 5;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = false;
             this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
@@ -91,7 +91,7 @@
             this.labelUser.Location = new System.Drawing.Point(132, 162);
             this.labelUser.Name = "labelUser";
             this.labelUser.Size = new System.Drawing.Size(118, 32);
-            this.labelUser.TabIndex = 19;
+            this.labelUser.TabIndex = 0;
             this.labelUser.Text = "Username";
             // 
             // labelPass
@@ -104,7 +104,7 @@
             this.labelPass.Location = new System.Drawing.Point(132, 248);
             this.labelPass.Name = "labelPass";
             this.labelPass.Size = new System.Drawing.Size(112, 32);
-            this.labelPass.TabIndex = 18;
+            this.labelPass.TabIndex = 2;
             this.labelPass.Text = "Password";
             // 
             // txtPass
@@ -116,7 +116,7 @@
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(351, 37);
-            this.txtPass.TabIndex = 17;
+            this.txtPass.TabIndex = 3;
             this.txtPass.UseSystemPasswordChar = true;
             // 
             // txtUser
@@ -128,7 +128,7 @@
             this.txtUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(351, 37);
-            this.txtUser.TabIndex = 16;
+            this.txtUser.TabIndex = 1;
             // 
             // labelLogin
             // 
@@ -215,9 +215,9 @@
             this.label1.ForeColor = System.Drawing.Color.CadetBlue;
             this.label1.Location = new System.Drawing.Point(3, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(319, 15);
+            this.label1.Size = new System.Drawing.Size(338, 15);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Copyrights © 2020.All rights reserved  by BlueButterflies";
+            this.label1.Text = "Copyrights © 2020.All rights reserved  by BlueButterfliesDev";
             // 
             // dargControl
             // 

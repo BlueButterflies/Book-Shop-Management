@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FirstForm));
             this.panelUp = new System.Windows.Forms.Panel();
+            this.picturePanelOne = new System.Windows.Forms.PictureBox();
             this.btnCloseOne = new System.Windows.Forms.Button();
             this.labelShopOne = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,12 +44,11 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picturePanelOne = new System.Windows.Forms.PictureBox();
             this.panelUp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePanelOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePanelOne)).BeginInit();
             this.SuspendLayout();
             // 
             // panelUp
@@ -64,12 +64,25 @@
             this.panelUp.Size = new System.Drawing.Size(673, 74);
             this.panelUp.TabIndex = 0;
             // 
+            // picturePanelOne
+            // 
+            this.picturePanelOne.BackColor = System.Drawing.Color.CadetBlue;
+            this.picturePanelOne.Dock = System.Windows.Forms.DockStyle.Left;
+            this.picturePanelOne.Image = ((System.Drawing.Image)(resources.GetObject("picturePanelOne.Image")));
+            this.picturePanelOne.Location = new System.Drawing.Point(0, 0);
+            this.picturePanelOne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picturePanelOne.Name = "picturePanelOne";
+            this.picturePanelOne.Size = new System.Drawing.Size(66, 74);
+            this.picturePanelOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturePanelOne.TabIndex = 5;
+            this.picturePanelOne.TabStop = false;
+            // 
             // btnCloseOne
             // 
+            this.btnCloseOne.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCloseOne.BackColor = System.Drawing.Color.CadetBlue;
             this.btnCloseOne.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCloseOne.FlatAppearance.BorderSize = 0;
-            this.btnCloseOne.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCloseOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseOne.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseOne.Image")));
             this.btnCloseOne.Location = new System.Drawing.Point(624, 0);
@@ -101,9 +114,9 @@
             this.label1.ForeColor = System.Drawing.Color.CadetBlue;
             this.label1.Location = new System.Drawing.Point(3, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(319, 15);
+            this.label1.Size = new System.Drawing.Size(333, 15);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Copyrights © 2020.All rights reserved  by BlueButterflies";
+            this.label1.Text = "Copyrights © 2020.All rights reserved by BlueButterfliesDev";
             // 
             // pictureBox2
             // 
@@ -222,19 +235,6 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
-            // picturePanelOne
-            // 
-            this.picturePanelOne.BackColor = System.Drawing.Color.CadetBlue;
-            this.picturePanelOne.Dock = System.Windows.Forms.DockStyle.Left;
-            this.picturePanelOne.Image = ((System.Drawing.Image)(resources.GetObject("picturePanelOne.Image")));
-            this.picturePanelOne.Location = new System.Drawing.Point(0, 0);
-            this.picturePanelOne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picturePanelOne.Name = "picturePanelOne";
-            this.picturePanelOne.Size = new System.Drawing.Size(66, 74);
-            this.picturePanelOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picturePanelOne.TabIndex = 5;
-            this.picturePanelOne.TabStop = false;
-            // 
             // FirstForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -259,11 +259,11 @@
             this.Text = "Book Shop Management";
             this.panelUp.ResumeLayout(false);
             this.panelUp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePanelOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePanelOne)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

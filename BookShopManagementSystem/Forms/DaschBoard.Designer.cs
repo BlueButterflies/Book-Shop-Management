@@ -95,11 +95,11 @@
             this.labelShopTwo.AutoSize = true;
             this.labelShopTwo.Font = new System.Drawing.Font("Comic Sans MS", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelShopTwo.ForeColor = System.Drawing.Color.White;
-            this.labelShopTwo.Location = new System.Drawing.Point(57, 88);
+            this.labelShopTwo.Location = new System.Drawing.Point(30, 91);
             this.labelShopTwo.Name = "labelShopTwo";
-            this.labelShopTwo.Size = new System.Drawing.Size(85, 20);
+            this.labelShopTwo.Size = new System.Drawing.Size(128, 20);
             this.labelShopTwo.TabIndex = 1;
-            this.labelShopTwo.Text = "Books Shop";
+            this.labelShopTwo.Text = "Books Manegment";
             // 
             // picShoopTwo
             // 
@@ -136,11 +136,11 @@
             this.label1.BackColor = System.Drawing.Color.CadetBlue;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 570);
+            this.label1.Location = new System.Drawing.Point(8, 570);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 30);
+            this.label1.Size = new System.Drawing.Size(172, 30);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Copyrights © 2020.All rights\r\n reserved  by BlueButterflies";
+            this.label1.Text = "Copyrights © 2020.All rights\r\nreserved by BlueButterfliesDev";
             // 
             // btnHome
             // 

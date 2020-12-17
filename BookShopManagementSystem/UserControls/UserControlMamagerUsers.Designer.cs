@@ -48,26 +48,22 @@
             this.labelConfirmPass = new System.Windows.Forms.Label();
             this.txtConfirmPass = new System.Windows.Forms.TextBox();
             this.labelRole = new System.Windows.Forms.Label();
-            this.dataGridUser = new System.Windows.Forms.DataGridView();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridUser)).BeginInit();
             this.SuspendLayout();
             // 
             // labelFirstName
             // 
             this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(66, 72);
+            this.labelFirstName.Location = new System.Drawing.Point(59, 157);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(80, 19);
+            this.labelFirstName.Size = new System.Drawing.Size(79, 19);
             this.labelFirstName.TabIndex = 0;
-            this.labelFirstName.Text = "First Name";
+            this.labelFirstName.Text = "User Name";
             // 
             // labelManageUser
             // 
             this.labelManageUser.AutoSize = true;
             this.labelManageUser.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelManageUser.Location = new System.Drawing.Point(383, 20);
+            this.labelManageUser.Location = new System.Drawing.Point(353, 48);
             this.labelManageUser.Name = "labelManageUser";
             this.labelManageUser.Size = new System.Drawing.Size(178, 34);
             this.labelManageUser.TabIndex = 1;
@@ -76,7 +72,7 @@
             // txtFirstName
             // 
             this.txtFirstName.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtFirstName.Location = new System.Drawing.Point(168, 69);
+            this.txtFirstName.Location = new System.Drawing.Point(180, 154);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(210, 26);
             this.txtFirstName.TabIndex = 2;
@@ -88,7 +84,7 @@
             this.comboBoxRole.Items.AddRange(new object[] {
             "Admin",
             "Employee"});
-            this.comboBoxRole.Location = new System.Drawing.Point(574, 163);
+            this.comboBoxRole.Location = new System.Drawing.Point(586, 248);
             this.comboBoxRole.Name = "comboBoxRole";
             this.comboBoxRole.Size = new System.Drawing.Size(210, 27);
             this.comboBoxRole.TabIndex = 3;
@@ -96,7 +92,7 @@
             // txtPass
             // 
             this.txtPass.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtPass.Location = new System.Drawing.Point(574, 100);
+            this.txtPass.Location = new System.Drawing.Point(586, 185);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(210, 26);
             this.txtPass.TabIndex = 5;
@@ -104,16 +100,16 @@
             // labelLastName
             // 
             this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(466, 72);
+            this.labelLastName.Location = new System.Drawing.Point(479, 157);
             this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(76, 19);
+            this.labelLastName.Size = new System.Drawing.Size(73, 19);
             this.labelLastName.TabIndex = 4;
-            this.labelLastName.Text = "Last Name";
+            this.labelLastName.Text = "Full Name";
             // 
             // txtLastName
             // 
             this.txtLastName.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtLastName.Location = new System.Drawing.Point(574, 65);
+            this.txtLastName.Location = new System.Drawing.Point(586, 150);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(210, 26);
             this.txtLastName.TabIndex = 7;
@@ -121,7 +117,7 @@
             // labelPhone
             // 
             this.labelPhone.AutoSize = true;
-            this.labelPhone.Location = new System.Drawing.Point(101, 107);
+            this.labelPhone.Location = new System.Drawing.Point(76, 192);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Size = new System.Drawing.Size(45, 19);
             this.labelPhone.TabIndex = 6;
@@ -130,7 +126,7 @@
             // txtPhone
             // 
             this.txtPhone.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtPhone.Location = new System.Drawing.Point(168, 104);
+            this.txtPhone.Location = new System.Drawing.Point(180, 189);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(210, 26);
             this.txtPhone.TabIndex = 9;
@@ -138,7 +134,7 @@
             // labelMobile
             // 
             this.labelMobile.AutoSize = true;
-            this.labelMobile.Location = new System.Drawing.Point(427, 142);
+            this.labelMobile.Location = new System.Drawing.Point(458, 227);
             this.labelMobile.Name = "labelMobile";
             this.labelMobile.Size = new System.Drawing.Size(115, 19);
             this.labelMobile.TabIndex = 8;
@@ -147,7 +143,7 @@
             // txtChangePass
             // 
             this.txtChangePass.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtChangePass.Location = new System.Drawing.Point(574, 131);
+            this.txtChangePass.Location = new System.Drawing.Point(586, 216);
             this.txtChangePass.Name = "txtChangePass";
             this.txtChangePass.Size = new System.Drawing.Size(210, 26);
             this.txtChangePass.TabIndex = 11;
@@ -155,7 +151,7 @@
             // labelPass
             // 
             this.labelPass.AutoSize = true;
-            this.labelPass.Location = new System.Drawing.Point(477, 107);
+            this.labelPass.Location = new System.Drawing.Point(483, 192);
             this.labelPass.Name = "labelPass";
             this.labelPass.Size = new System.Drawing.Size(65, 19);
             this.labelPass.TabIndex = 10;
@@ -164,7 +160,7 @@
             // txtEmail
             // 
             this.txtEmail.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtEmail.Location = new System.Drawing.Point(168, 139);
+            this.txtEmail.Location = new System.Drawing.Point(180, 224);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(210, 26);
             this.txtEmail.TabIndex = 13;
@@ -181,7 +177,7 @@
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(104, 142);
+            this.labelEmail.Location = new System.Drawing.Point(77, 227);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(42, 19);
             this.labelEmail.TabIndex = 14;
@@ -195,7 +191,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(694, 220);
+            this.btnClear.Location = new System.Drawing.Point(706, 309);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(90, 29);
             this.btnClear.TabIndex = 17;
@@ -210,7 +206,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(574, 220);
+            this.btnSave.Location = new System.Drawing.Point(586, 309);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(90, 29);
             this.btnSave.TabIndex = 16;
@@ -220,7 +216,7 @@
             // labelConfirmPass
             // 
             this.labelConfirmPass.AutoSize = true;
-            this.labelConfirmPass.Location = new System.Drawing.Point(26, 174);
+            this.labelConfirmPass.Location = new System.Drawing.Point(38, 259);
             this.labelConfirmPass.Name = "labelConfirmPass";
             this.labelConfirmPass.Size = new System.Drawing.Size(120, 19);
             this.labelConfirmPass.TabIndex = 19;
@@ -229,7 +225,7 @@
             // txtConfirmPass
             // 
             this.txtConfirmPass.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtConfirmPass.Location = new System.Drawing.Point(168, 171);
+            this.txtConfirmPass.Location = new System.Drawing.Point(180, 256);
             this.txtConfirmPass.Name = "txtConfirmPass";
             this.txtConfirmPass.Size = new System.Drawing.Size(210, 26);
             this.txtConfirmPass.TabIndex = 18;
@@ -237,59 +233,17 @@
             // labelRole
             // 
             this.labelRole.AutoSize = true;
-            this.labelRole.Location = new System.Drawing.Point(507, 170);
+            this.labelRole.Location = new System.Drawing.Point(498, 255);
             this.labelRole.Name = "labelRole";
             this.labelRole.Size = new System.Drawing.Size(35, 19);
             this.labelRole.TabIndex = 20;
             this.labelRole.Text = "Role";
-            // 
-            // dataGridUser
-            // 
-            this.dataGridUser.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridUser.Location = new System.Drawing.Point(168, 275);
-            this.dataGridUser.Name = "dataGridUser";
-            this.dataGridUser.Size = new System.Drawing.Size(616, 150);
-            this.dataGridUser.TabIndex = 21;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(694, 441);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(90, 29);
-            this.btnDelete.TabIndex = 23;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEdit.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(574, 441);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(90, 29);
-            this.btnEdit.TabIndex = 22;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = false;
             // 
             // UserControlMamagerUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.dataGridUser);
             this.Controls.Add(this.labelRole);
             this.Controls.Add(this.labelConfirmPass);
             this.Controls.Add(this.txtConfirmPass);
@@ -314,9 +268,8 @@
             this.ForeColor = System.Drawing.Color.CadetBlue;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserControlMamagerUsers";
-            this.Size = new System.Drawing.Size(861, 483);
+            this.Size = new System.Drawing.Size(835, 378);
             this.Load += new System.EventHandler(this.UserControlMamagerUsers_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,8 +297,5 @@
         private System.Windows.Forms.Label labelConfirmPass;
         private System.Windows.Forms.TextBox txtConfirmPass;
         private System.Windows.Forms.Label labelRole;
-        private System.Windows.Forms.DataGridView dataGridUser;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnEdit;
     }
 }

@@ -41,13 +41,13 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.labelPass = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.txtFullName = new System.Windows.Forms.TextBox();
             this.labelPhone = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
-            this.labelLastName = new System.Windows.Forms.Label();
+            this.labelFullName = new System.Windows.Forms.Label();
             this.comboBoxRole = new System.Windows.Forms.ComboBox();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.labelFirstName = new System.Windows.Forms.Label();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.labelUserName = new System.Windows.Forms.Label();
             this.dargControl = new BookShopManagementSystem.CostumControl.DargControl();
             this.panelUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePanelOne)).BeginInit();
@@ -126,9 +126,9 @@
             this.label2.ForeColor = System.Drawing.Color.CadetBlue;
             this.label2.Location = new System.Drawing.Point(3, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(319, 15);
+            this.label2.Size = new System.Drawing.Size(338, 15);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Copyrights © 2020.All rights reserved  by BlueButterflies";
+            this.label2.Text = "Copyrights © 2020.All rights reserved  by BlueButterfliesDev";
             // 
             // labelRole
             // 
@@ -138,7 +138,7 @@
             this.labelRole.Location = new System.Drawing.Point(441, 247);
             this.labelRole.Name = "labelRole";
             this.labelRole.Size = new System.Drawing.Size(59, 32);
-            this.labelRole.TabIndex = 38;
+            this.labelRole.TabIndex = 10;
             this.labelRole.Text = "Role";
             // 
             // btnRegister
@@ -152,7 +152,7 @@
             this.btnRegister.Location = new System.Drawing.Point(256, 333);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(212, 46);
-            this.btnRegister.TabIndex = 34;
+            this.btnRegister.TabIndex = 12;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -165,7 +165,7 @@
             this.labelEmail.Location = new System.Drawing.Point(439, 166);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(70, 32);
-            this.labelEmail.TabIndex = 33;
+            this.labelEmail.TabIndex = 6;
             this.labelEmail.Text = "Email";
             // 
             // txtEmail
@@ -175,7 +175,7 @@
             this.txtEmail.Location = new System.Drawing.Point(445, 201);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(210, 26);
-            this.txtEmail.TabIndex = 32;
+            this.txtEmail.TabIndex = 7;
             // 
             // labelPass
             // 
@@ -185,7 +185,7 @@
             this.labelPass.Location = new System.Drawing.Point(52, 248);
             this.labelPass.Name = "labelPass";
             this.labelPass.Size = new System.Drawing.Size(112, 32);
-            this.labelPass.TabIndex = 30;
+            this.labelPass.TabIndex = 8;
             this.labelPass.Text = "Password";
             // 
             // txtPhone
@@ -195,16 +195,16 @@
             this.txtPhone.Location = new System.Drawing.Point(58, 201);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(210, 26);
-            this.txtPhone.TabIndex = 29;
+            this.txtPhone.TabIndex = 5;
             // 
-            // txtLastName
+            // txtFullName
             // 
-            this.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLastName.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtLastName.Location = new System.Drawing.Point(445, 129);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(210, 26);
-            this.txtLastName.TabIndex = 27;
+            this.txtFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtFullName.ForeColor = System.Drawing.Color.CadetBlue;
+            this.txtFullName.Location = new System.Drawing.Point(445, 129);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(210, 26);
+            this.txtFullName.TabIndex = 3;
             // 
             // labelPhone
             // 
@@ -214,7 +214,7 @@
             this.labelPhone.Location = new System.Drawing.Point(52, 166);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Size = new System.Drawing.Size(76, 32);
-            this.labelPhone.TabIndex = 26;
+            this.labelPhone.TabIndex = 4;
             this.labelPhone.Text = "Phone";
             // 
             // txtPass
@@ -224,18 +224,19 @@
             this.txtPass.Location = new System.Drawing.Point(58, 283);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(210, 26);
-            this.txtPass.TabIndex = 25;
+            this.txtPass.TabIndex = 9;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
-            // labelLastName
+            // labelFullName
             // 
-            this.labelLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelLastName.AutoSize = true;
-            this.labelLastName.Font = new System.Drawing.Font("Comic Sans MS", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLastName.Location = new System.Drawing.Point(439, 94);
-            this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(129, 32);
-            this.labelLastName.TabIndex = 24;
-            this.labelLastName.Text = "Last Name";
+            this.labelFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelFullName.AutoSize = true;
+            this.labelFullName.Font = new System.Drawing.Font("Comic Sans MS", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFullName.Location = new System.Drawing.Point(439, 94);
+            this.labelFullName.Name = "labelFullName";
+            this.labelFullName.Size = new System.Drawing.Size(120, 32);
+            this.labelFullName.TabIndex = 2;
+            this.labelFullName.Text = "Full Name";
             // 
             // comboBoxRole
             // 
@@ -248,27 +249,27 @@
             this.comboBoxRole.Location = new System.Drawing.Point(445, 282);
             this.comboBoxRole.Name = "comboBoxRole";
             this.comboBoxRole.Size = new System.Drawing.Size(210, 27);
-            this.comboBoxRole.TabIndex = 23;
+            this.comboBoxRole.TabIndex = 11;
             // 
-            // txtFirstName
+            // txtUserName
             // 
-            this.txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtFirstName.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtFirstName.Location = new System.Drawing.Point(58, 129);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(210, 26);
-            this.txtFirstName.TabIndex = 22;
+            this.txtUserName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUserName.ForeColor = System.Drawing.Color.CadetBlue;
+            this.txtUserName.Location = new System.Drawing.Point(58, 129);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(210, 26);
+            this.txtUserName.TabIndex = 1;
             // 
-            // labelFirstName
+            // labelUserName
             // 
-            this.labelFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Font = new System.Drawing.Font("Comic Sans MS", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFirstName.Location = new System.Drawing.Point(52, 94);
-            this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(135, 32);
-            this.labelFirstName.TabIndex = 21;
-            this.labelFirstName.Text = "First Name";
+            this.labelUserName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelUserName.AutoSize = true;
+            this.labelUserName.Font = new System.Drawing.Font("Comic Sans MS", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUserName.Location = new System.Drawing.Point(52, 94);
+            this.labelUserName.Name = "labelUserName";
+            this.labelUserName.Size = new System.Drawing.Size(134, 32);
+            this.labelUserName.TabIndex = 0;
+            this.labelUserName.Text = "User Name";
             // 
             // dargControl
             // 
@@ -283,17 +284,17 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelUp);
             this.Controls.Add(this.labelPass);
-            this.Controls.Add(this.labelFirstName);
+            this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.txtFirstName);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.comboBoxRole);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.labelLastName);
+            this.Controls.Add(this.labelFullName);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.labelPhone);
             this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.txtFullName);
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.CadetBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -323,13 +324,13 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label labelPass;
         private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label labelPhone;
         private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.Label labelLastName;
+        private System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.ComboBox comboBoxRole;
-        private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.Label labelFirstName;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.Label labelUserName;
         private CostumControl.DargControl dargControl;
         private System.Windows.Forms.Button btnBack;
     }

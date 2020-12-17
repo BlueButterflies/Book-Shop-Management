@@ -62,6 +62,7 @@
     <Compile Include="CostumControl\DargControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="EncryptionAndDecryption\Cryptography.cs" />
     <Compile Include="Forms\AddExpenses.cs">
       <SubType>Form</SubType>
     </Compile>
