@@ -44,6 +44,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.2\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -74,12 +77,6 @@
     </Compile>
     <Compile Include="Forms\AddNewBook.Designer.cs">
       <DependentUpon>AddNewBook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AddStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AddStock.Designer.cs">
-      <DependentUpon>AddStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DaschBoard.cs">
       <SubType>Form</SubType>
@@ -160,9 +157,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddNewBook.resx">
       <DependentUpon>AddNewBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AddStock.resx">
-      <DependentUpon>AddStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DaschBoard.resx">
       <DependentUpon>DaschBoard.cs</DependentUpon>

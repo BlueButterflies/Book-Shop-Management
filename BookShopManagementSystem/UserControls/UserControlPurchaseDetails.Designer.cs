@@ -45,7 +45,6 @@
             this.btnAddNewBook = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
-            this.btnAddStock = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPurchase)).BeginInit();
             this.panel5.SuspendLayout();
@@ -57,7 +56,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1273, 10);
+            this.panel2.Size = new System.Drawing.Size(811, 10);
             this.panel2.TabIndex = 2;
             // 
             // panel4
@@ -65,18 +64,18 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(1263, 10);
+            this.panel4.Location = new System.Drawing.Point(801, 10);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 473);
+            this.panel4.Size = new System.Drawing.Size(10, 373);
             this.panel4.TabIndex = 4;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(10, 473);
+            this.panel3.Location = new System.Drawing.Point(10, 373);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1253, 10);
+            this.panel3.Size = new System.Drawing.Size(791, 10);
             this.panel3.TabIndex = 5;
             // 
             // dataGridPurchase
@@ -101,7 +100,7 @@
             this.dataGridPurchase.ReadOnly = true;
             this.dataGridPurchase.RowHeadersVisible = false;
             this.dataGridPurchase.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridPurchase.Size = new System.Drawing.Size(1253, 406);
+            this.dataGridPurchase.Size = new System.Drawing.Size(791, 306);
             this.dataGridPurchase.TabIndex = 2;
             // 
             // ColTracking
@@ -163,7 +162,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 473);
+            this.panel1.Size = new System.Drawing.Size(10, 373);
             this.panel1.TabIndex = 3;
             // 
             // btnAddNewBook
@@ -207,33 +206,16 @@
             this.comboBoxSearchBy.Size = new System.Drawing.Size(138, 27);
             this.comboBoxSearchBy.TabIndex = 4;
             // 
-            // btnAddStock
-            // 
-            this.btnAddStock.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAddStock.FlatAppearance.BorderSize = 0;
-            this.btnAddStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddStock.ForeColor = System.Drawing.Color.White;
-            this.btnAddStock.Image = ((System.Drawing.Image)(resources.GetObject("btnAddStock.Image")));
-            this.btnAddStock.Location = new System.Drawing.Point(168, 0);
-            this.btnAddStock.Name = "btnAddStock";
-            this.btnAddStock.Size = new System.Drawing.Size(149, 57);
-            this.btnAddStock.TabIndex = 1;
-            this.btnAddStock.Text = "  Add Stock";
-            this.btnAddStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddStock.UseVisualStyleBackColor = true;
-            this.btnAddStock.Click += new System.EventHandler(this.btnAddStock_Click);
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel5.Controls.Add(this.btnAddStock);
             this.panel5.Controls.Add(this.comboBoxSearchBy);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.btnAddNewBook);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(10, 10);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1253, 57);
+            this.panel5.Size = new System.Drawing.Size(791, 57);
             this.panel5.TabIndex = 1;
             // 
             // UserControlPurchaseDetails
@@ -249,7 +231,7 @@
             this.Font = new System.Drawing.Font("Comic Sans MS", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.CadetBlue;
             this.Name = "UserControlPurchaseDetails";
-            this.Size = new System.Drawing.Size(1273, 483);
+            this.Size = new System.Drawing.Size(811, 383);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPurchase)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -275,7 +257,6 @@
         private System.Windows.Forms.Button btnAddNewBook;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxSearchBy;
-        private System.Windows.Forms.Button btnAddStock;
         private System.Windows.Forms.Panel panel5;
     }
 }

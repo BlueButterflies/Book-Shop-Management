@@ -45,11 +45,11 @@ namespace BookShopManagementSystem.Forms
                    WHERE [UserName] = '" + txtUserName.Text + "'", sql);
             ;
 
-            SqlDataReader sdr = sqlCommand.ExecuteReader();
-            if (sdr.Read())
+            SqlDataReader readerDb = sqlCommand.ExecuteReader();
+            if (readerDb.Read())
             {
-                password = sdr["Password"].ToString();   //get the user password from db if the user name is exist in that.  
-                email = sdr["Email"].ToString();
+                password = readerDb["Password"].ToString();   //get the user password and email from db if the user name is exist in that.  
+                email = readerDb["Email"].ToString();
             }
 
             //Send email message
@@ -89,7 +89,7 @@ namespace BookShopManagementSystem.Forms
             }
 
             //Close Database
-            sdr.Close();
+            readerDb.Close();
             sqlCommand.Dispose();
             sql.Close();
 

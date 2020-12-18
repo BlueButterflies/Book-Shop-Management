@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
+//TO DO Check if user is login and get your username  
 namespace BookShopManagementSystem.Forms
 {
     public partial class DaschBoard : Form
@@ -16,12 +18,35 @@ namespace BookShopManagementSystem.Forms
         int PanelWigth;
         bool isCollapsed;
 
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=bookDb;Integrated Security=True");
+        
         public DaschBoard()
         {
             InitializeComponent();
 
             UserControlHome userHome = new UserControlHome();//Charge  chart dashboard open after login
             AddControlerPanel(userHome);
+
+            string user = "";
+            string role = "";
+
+            #region Use database
+            sqlConnection.Open();
+
+            SqlCommand sqlCommand = new SqlCommand("select [UserName], [Role] From [dbo].[users]", sqlConnection);
+
+            SqlDataReader readerDb = sqlCommand.ExecuteReader();
+
+            if (readerDb.Read())
+            {
+                user = readerDb["UserName"].ToString();
+                role = readerDb["Role"].ToString();
+            }
+            sqlConnection.Close();
+            #endregion
+
+            labelWelcome.Text = "Welcome: " + user;
+            labelRole.Text = "Role: " + role;
 
             timerTimes.Start();
             PanelWigth = panelLeft.Width;
@@ -31,7 +56,7 @@ namespace BookShopManagementSystem.Forms
         private void btnCloseTwo_Click(object sender, EventArgs e)//Button Close Windows
         {
             this.Close();
-        } 
+        }
 
         #region Expanded and close panel Menu
         private void timerPanelLeft_Tick(object sender, EventArgs e)
@@ -80,7 +105,7 @@ namespace BookShopManagementSystem.Forms
 
             panelUser.Controls.Clear();
             panelUser.Controls.Add(control);
-        } 
+        }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -129,13 +154,6 @@ namespace BookShopManagementSystem.Forms
             UserControlMamagerUsers userControlMamagerUsers = new UserControlMamagerUsers();
             AddControlerPanel(userControlMamagerUsers);
         }
-
-        private void btnSetting_Click(object sender, EventArgs e)
-        {
-            MoveSidePanel(btnSetting);
-        }
-
-
 
         #endregion
 

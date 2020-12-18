@@ -29,13 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlHome));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.labelcountCustomers = new System.Windows.Forms.Label();
-            this.labelcUSTOMERS = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.labelSold = new System.Windows.Forms.Label();
             this.labelSoldBooks = new System.Windows.Forms.Label();
@@ -47,68 +43,17 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelReport = new System.Windows.Forms.Label();
-            this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
+            this.spinerRecivedBook = new MetroFramework.Controls.MetroProgressSpinner();
             this.chartReport = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.metroProgressSpinner2 = new MetroFramework.Controls.MetroProgressSpinner();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.spinerSoldBook = new MetroFramework.Controls.MetroProgressSpinner();
+            this.labelsoldBook = new System.Windows.Forms.Label();
+            this.labelRecivedBook = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartReport)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BackColor = System.Drawing.Color.MediumBlue;
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.labelcountCustomers);
-            this.panel3.Controls.Add(this.labelcUSTOMERS);
-            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel3.Location = new System.Drawing.Point(600, 87);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(227, 80);
-            this.panel3.TabIndex = 4;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(154, 14);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(59, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // labelcountCustomers
-            // 
-            this.labelcountCustomers.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelcountCustomers.AutoSize = true;
-            this.labelcountCustomers.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelcountCustomers.ForeColor = System.Drawing.Color.White;
-            this.labelcountCustomers.Location = new System.Drawing.Point(75, 37);
-            this.labelcountCustomers.Name = "labelcountCustomers";
-            this.labelcountCustomers.Size = new System.Drawing.Size(48, 27);
-            this.labelcountCustomers.TabIndex = 1;
-            this.labelcountCustomers.Text = "520";
-            // 
-            // labelcUSTOMERS
-            // 
-            this.labelcUSTOMERS.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelcUSTOMERS.AutoSize = true;
-            this.labelcUSTOMERS.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelcUSTOMERS.ForeColor = System.Drawing.Color.White;
-            this.labelcUSTOMERS.Location = new System.Drawing.Point(17, 10);
-            this.labelcUSTOMERS.Name = "labelcUSTOMERS";
-            this.labelcUSTOMERS.Size = new System.Drawing.Size(106, 27);
-            this.labelcUSTOMERS.TabIndex = 0;
-            this.labelcUSTOMERS.Text = "Customers";
             // 
             // btnRefresh
             // 
@@ -118,7 +63,7 @@
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(774, 13);
+            this.btnRefresh.Location = new System.Drawing.Point(758, 0);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(53, 33);
             this.btnRefresh.TabIndex = 1;
@@ -130,18 +75,19 @@
             this.labelSold.AutoSize = true;
             this.labelSold.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSold.ForeColor = System.Drawing.Color.White;
-            this.labelSold.Location = new System.Drawing.Point(3, 10);
+            this.labelSold.Location = new System.Drawing.Point(23, 14);
             this.labelSold.Name = "labelSold";
             this.labelSold.Size = new System.Drawing.Size(110, 27);
             this.labelSold.TabIndex = 0;
             this.labelSold.Text = "Sold Books";
+            this.labelSold.Click += new System.EventHandler(this.labelSold_Click);
             // 
             // labelSoldBooks
             // 
             this.labelSoldBooks.AutoSize = true;
             this.labelSoldBooks.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSoldBooks.ForeColor = System.Drawing.Color.White;
-            this.labelSoldBooks.Location = new System.Drawing.Point(53, 37);
+            this.labelSoldBooks.Location = new System.Drawing.Point(51, 41);
             this.labelSoldBooks.Name = "labelSoldBooks";
             this.labelSoldBooks.Size = new System.Drawing.Size(60, 27);
             this.labelSoldBooks.TabIndex = 1;
@@ -166,7 +112,7 @@
             this.panel1.Controls.Add(this.labelSoldBooks);
             this.panel1.Controls.Add(this.labelSold);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel1.Location = new System.Drawing.Point(33, 88);
+            this.panel1.Location = new System.Drawing.Point(34, 96);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(227, 80);
             this.panel1.TabIndex = 2;
@@ -178,7 +124,7 @@
             this.labelSalesAndPurchase.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelSalesAndPurchase.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSalesAndPurchase.ForeColor = System.Drawing.Color.CadetBlue;
-            this.labelSalesAndPurchase.Location = new System.Drawing.Point(258, 12);
+            this.labelSalesAndPurchase.Location = new System.Drawing.Point(200, 2);
             this.labelSalesAndPurchase.Name = "labelSalesAndPurchase";
             this.labelSalesAndPurchase.Size = new System.Drawing.Size(352, 34);
             this.labelSalesAndPurchase.TabIndex = 0;
@@ -200,7 +146,7 @@
             this.labelCountPurchase.AutoSize = true;
             this.labelCountPurchase.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCountPurchase.ForeColor = System.Drawing.Color.White;
-            this.labelCountPurchase.Location = new System.Drawing.Point(95, 37);
+            this.labelCountPurchase.Location = new System.Drawing.Point(51, 37);
             this.labelCountPurchase.Name = "labelCountPurchase";
             this.labelCountPurchase.Size = new System.Drawing.Size(60, 27);
             this.labelCountPurchase.TabIndex = 0;
@@ -225,7 +171,7 @@
             this.panel2.Controls.Add(this.labelCountPurchase);
             this.panel2.Controls.Add(this.labelPurchaseBooks);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Location = new System.Drawing.Point(321, 88);
+            this.panel2.Location = new System.Drawing.Point(34, 247);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(227, 80);
             this.panel2.TabIndex = 3;
@@ -237,133 +183,118 @@
             this.labelReport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelReport.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelReport.ForeColor = System.Drawing.Color.CadetBlue;
-            this.labelReport.Location = new System.Drawing.Point(36, 187);
+            this.labelReport.Location = new System.Drawing.Point(568, 66);
             this.labelReport.Name = "labelReport";
-            this.labelReport.Size = new System.Drawing.Size(140, 27);
+            this.labelReport.Size = new System.Drawing.Size(154, 27);
             this.labelReport.TabIndex = 5;
-            this.labelReport.Text = "Yearly Report";
+            this.labelReport.Text = "Monthly Report";
             // 
-            // metroProgressSpinner1
+            // spinerRecivedBook
             // 
-            this.metroProgressSpinner1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroProgressSpinner1.BackColor = System.Drawing.Color.White;
-            this.metroProgressSpinner1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroProgressSpinner1.Location = new System.Drawing.Point(469, 249);
-            this.metroProgressSpinner1.Maximum = 100;
-            this.metroProgressSpinner1.Name = "metroProgressSpinner1";
-            this.metroProgressSpinner1.Size = new System.Drawing.Size(141, 135);
-            this.metroProgressSpinner1.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroProgressSpinner1.TabIndex = 8;
-            this.metroProgressSpinner1.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroProgressSpinner1.UseSelectable = true;
-            this.metroProgressSpinner1.Value = 60;
+            this.spinerRecivedBook.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.spinerRecivedBook.BackColor = System.Drawing.Color.White;
+            this.spinerRecivedBook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.spinerRecivedBook.Location = new System.Drawing.Point(345, 79);
+            this.spinerRecivedBook.Maximum = 100;
+            this.spinerRecivedBook.Name = "spinerRecivedBook";
+            this.spinerRecivedBook.Size = new System.Drawing.Size(95, 97);
+            this.spinerRecivedBook.Style = MetroFramework.MetroColorStyle.Lime;
+            this.spinerRecivedBook.TabIndex = 8;
+            this.spinerRecivedBook.Tag = "Sold Book %";
+            this.spinerRecivedBook.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.spinerRecivedBook.UseSelectable = true;
+            this.spinerRecivedBook.Value = 85;
             // 
             // chartReport
             // 
             this.chartReport.Anchor = System.Windows.Forms.AnchorStyles.None;
-            chartArea2.Name = "Report";
-            this.chartReport.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "Report";
+            this.chartReport.ChartAreas.Add(chartArea1);
             this.chartReport.Cursor = System.Windows.Forms.Cursors.Hand;
-            legend2.Name = "Legend1";
-            this.chartReport.Legends.Add(legend2);
-            this.chartReport.Location = new System.Drawing.Point(33, 226);
+            legend1.Name = "Legend1";
+            this.chartReport.Legends.Add(legend1);
+            this.chartReport.Location = new System.Drawing.Point(471, 96);
             this.chartReport.Name = "chartReport";
             this.chartReport.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
             this.chartReport.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            series2.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
-            series2.BackImageTransparentColor = System.Drawing.Color.White;
-            series2.BorderWidth = 5;
-            series2.ChartArea = "Report";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            series2.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.LabelForeColor = System.Drawing.Color.CadetBlue;
-            series2.Legend = "Legend1";
-            series2.Name = "Report";
-            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series2.ShadowColor = System.Drawing.Color.White;
-            this.chartReport.Series.Add(series2);
-            this.chartReport.Size = new System.Drawing.Size(391, 230);
+            series1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+            series1.BackImageTransparentColor = System.Drawing.Color.White;
+            series1.BorderWidth = 5;
+            series1.ChartArea = "Report";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            series1.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.LabelForeColor = System.Drawing.Color.CadetBlue;
+            series1.Legend = "Legend1";
+            series1.Name = "Report";
+            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
+            series1.ShadowColor = System.Drawing.Color.White;
+            this.chartReport.Series.Add(series1);
+            this.chartReport.Size = new System.Drawing.Size(337, 272);
             this.chartReport.TabIndex = 7;
+            this.chartReport.Click += new System.EventHandler(this.chartReport_Click);
             // 
-            // metroProgressSpinner2
+            // spinerSoldBook
             // 
-            this.metroProgressSpinner2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroProgressSpinner2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroProgressSpinner2.Location = new System.Drawing.Point(690, 249);
-            this.metroProgressSpinner2.Maximum = 100;
-            this.metroProgressSpinner2.Name = "metroProgressSpinner2";
-            this.metroProgressSpinner2.Size = new System.Drawing.Size(137, 135);
-            this.metroProgressSpinner2.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroProgressSpinner2.TabIndex = 9;
-            this.metroProgressSpinner2.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroProgressSpinner2.UseSelectable = true;
-            this.metroProgressSpinner2.Value = 85;
+            this.spinerSoldBook.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.spinerSoldBook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.spinerSoldBook.Location = new System.Drawing.Point(345, 230);
+            this.spinerSoldBook.Maximum = 100;
+            this.spinerSoldBook.Name = "spinerSoldBook";
+            this.spinerSoldBook.Size = new System.Drawing.Size(95, 97);
+            this.spinerSoldBook.Style = MetroFramework.MetroColorStyle.Teal;
+            this.spinerSoldBook.TabIndex = 9;
+            this.spinerSoldBook.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.spinerSoldBook.UseSelectable = true;
+            this.spinerSoldBook.Value = 85;
+            this.spinerSoldBook.Click += new System.EventHandler(this.spinerSoldBook_Click);
             // 
-            // label1
+            // labelsoldBook
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label1.Location = new System.Drawing.Point(736, 408);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 27);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Paid";
+            this.labelsoldBook.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelsoldBook.AutoSize = true;
+            this.labelsoldBook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelsoldBook.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelsoldBook.ForeColor = System.Drawing.Color.CadetBlue;
+            this.labelsoldBook.Location = new System.Drawing.Point(331, 189);
+            this.labelsoldBook.Name = "labelsoldBook";
+            this.labelsoldBook.Size = new System.Drawing.Size(125, 27);
+            this.labelsoldBook.TabIndex = 11;
+            this.labelsoldBook.Text = "Sold Book %";
             // 
-            // label2
+            // labelRecivedBook
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label2.Location = new System.Drawing.Point(607, 187);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 27);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "% Amount";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label3.Location = new System.Drawing.Point(505, 408);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 27);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Recived";
+            this.labelRecivedBook.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelRecivedBook.AutoSize = true;
+            this.labelRecivedBook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelRecivedBook.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecivedBook.ForeColor = System.Drawing.Color.CadetBlue;
+            this.labelRecivedBook.Location = new System.Drawing.Point(310, 341);
+            this.labelRecivedBook.Name = "labelRecivedBook";
+            this.labelRecivedBook.Size = new System.Drawing.Size(155, 27);
+            this.labelRecivedBook.TabIndex = 10;
+            this.labelRecivedBook.Text = "Recived Book %";
             // 
             // UserControlHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.metroProgressSpinner2);
+            this.Controls.Add(this.labelRecivedBook);
+            this.Controls.Add(this.labelsoldBook);
+            this.Controls.Add(this.spinerSoldBook);
             this.Controls.Add(this.chartReport);
-            this.Controls.Add(this.metroProgressSpinner1);
+            this.Controls.Add(this.spinerRecivedBook);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.labelReport);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.labelSalesAndPurchase);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UserControlHome";
-            this.Size = new System.Drawing.Size(861, 483);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.Size = new System.Drawing.Size(811, 383);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -377,10 +308,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label labelcountCustomers;
-        private System.Windows.Forms.Label labelcUSTOMERS;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label labelSold;
         private System.Windows.Forms.Label labelSoldBooks;
@@ -392,11 +319,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelReport;
-        private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner1;
+        private MetroFramework.Controls.MetroProgressSpinner spinerRecivedBook;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartReport;
-        private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private MetroFramework.Controls.MetroProgressSpinner spinerSoldBook;
+        private System.Windows.Forms.Label labelsoldBook;
+        private System.Windows.Forms.Label labelRecivedBook;
     }
 }

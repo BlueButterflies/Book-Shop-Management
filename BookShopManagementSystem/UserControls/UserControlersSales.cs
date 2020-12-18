@@ -24,5 +24,6 @@ namespace BookShopManagementSystem.UserControls
 
             finishOrder.ShowDialog();
         }
+
     }
 }

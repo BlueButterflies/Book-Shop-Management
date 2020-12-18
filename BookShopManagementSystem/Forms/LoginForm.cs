@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using BookShopManagementSystem.EncryptionAndDecryption;
 
 namespace BookShopManagementSystem.Forms
 {
@@ -33,13 +35,36 @@ namespace BookShopManagementSystem.Forms
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            DaschBoard daschBoard = new DaschBoard();
-            this.Hide();
+            string password = "";
 
-            daschBoard.ShowDialog();
+            SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=bookDb;Integrated Security=True");
 
-            this.Close();
+            sqlConnection.Open();
+            SqlCommand sqlCommand = new SqlCommand("SELECT [UserName], [Password] FROM [dbo].[users] WHERE [UserName] = '"+txtUser.Text+"'", sqlConnection);
 
+            SqlDataReader reader = sqlCommand.ExecuteReader();
+
+            if (reader.Read())
+            {
+                password = reader["Password"].ToString();
+            }
+            
+
+            if (Cryptography.Decrypt(password) == txtPass.Text)
+            {
+                DaschBoard daschBoard = new DaschBoard();
+                this.Hide();
+
+                daschBoard.ShowDialog();
+
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Password is wrong");
+            }
+
+            sqlConnection.Close();
         }
     }
 }

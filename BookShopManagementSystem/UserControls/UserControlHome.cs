@@ -7,14 +7,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace BookShopManagementSystem.UserControls
 {
     public partial class UserControlHome : UserControl
     {
+
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=bookDb;Integrated Security=True");
+        
+
         public UserControlHome()
         {
             InitializeComponent();
+
+            sqlConnection.Open();
+
+            #region Get count all sales books
+            SqlCommand sqlCommandSalesBook = new SqlCommand("SELECT COUNT(*) FROM[dbo].[Sale]", sqlConnection);
+
+           int countSalesBook = (int)sqlCommandSalesBook.ExecuteScalar();
+             
+            labelSoldBooks.Text = countSalesBook.ToString();
+            #endregion
+
+            #region count all purchase books
+            SqlCommand sqlCommandBookPurchase = new SqlCommand("SELECT COUNT(*) FROM[dbo].[Books]", sqlConnection);
+
+            int countBookPurchase= (int)sqlCommandBookPurchase.ExecuteScalar();
+
+            labelCountPurchase.Text = countBookPurchase.ToString();
+
+            #endregion
+
+            sqlConnection.Close();
+
+            //The spiners in %
+            spinerRecivedBook.Value = countBookPurchase / 100;
+            spinerSoldBook.Value = countSalesBook / 100;
         }
 
         private void LoadChart() //Create Chart for Dash Board
@@ -38,5 +68,19 @@ namespace BookShopManagementSystem.UserControls
             LoadChart();
         }
 
+        private void labelSold_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chartReport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void spinerSoldBook_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.txtTitle = new System.Windows.Forms.TextBox();
-            this.labelPublisher = new System.Windows.Forms.Label();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnQuantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel5 = new System.Windows.Forms.Panel();
             this.labelSumOfAmount = new System.Windows.Forms.Label();
             this.labelAmount = new System.Windows.Forms.Label();
@@ -55,7 +54,6 @@
             this.txtBarCode = new System.Windows.Forms.TextBox();
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelBarCode = new System.Windows.Forms.Label();
-            this.txtPublisher = new System.Windows.Forms.TextBox();
             this.labelDiscount = new System.Windows.Forms.Label();
             this.txtDiscount = new System.Windows.Forms.TextBox();
             this.labelTracking = new System.Windows.Forms.Label();
@@ -72,22 +70,11 @@
             // txtTitle
             // 
             this.txtTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTitle.Location = new System.Drawing.Point(104, 118);
+            this.txtTitle.Location = new System.Drawing.Point(69, 98);
             this.txtTitle.Margin = new System.Windows.Forms.Padding(4);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(159, 26);
             this.txtTitle.TabIndex = 2;
-            // 
-            // labelPublisher
-            // 
-            this.labelPublisher.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelPublisher.AutoSize = true;
-            this.labelPublisher.Location = new System.Drawing.Point(16, 273);
-            this.labelPublisher.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelPublisher.Name = "labelPublisher";
-            this.labelPublisher.Size = new System.Drawing.Size(66, 19);
-            this.labelPublisher.TabIndex = 13;
-            this.labelPublisher.Text = "Publisher";
             // 
             // panelLeft
             // 
@@ -96,10 +83,10 @@
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelLeft.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelLeft.ForeColor = System.Drawing.Color.CadetBlue;
-            this.panelLeft.Location = new System.Drawing.Point(594, 0);
+            this.panelLeft.Location = new System.Drawing.Point(544, 0);
             this.panelLeft.Margin = new System.Windows.Forms.Padding(4);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(267, 440);
+            this.panelLeft.Size = new System.Drawing.Size(267, 383);
             this.panelLeft.TabIndex = 2;
             // 
             // panel2
@@ -111,39 +98,39 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(12, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(255, 440);
+            this.panel2.Size = new System.Drawing.Size(255, 383);
             this.panel2.TabIndex = 0;
             // 
             // listView
             // 
             this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
+            this.columnTitle,
+            this.columnQuantity,
+            this.columnAmount});
             this.listView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView.GridLines = true;
             this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(0, 0);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(245, 209);
+            this.listView.Size = new System.Drawing.Size(245, 152);
             this.listView.TabIndex = 6;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader1
+            // columnTitle
             // 
-            this.columnHeader1.Text = "Book Title";
-            this.columnHeader1.Width = 100;
+            this.columnTitle.Text = "Book Title";
+            this.columnTitle.Width = 100;
             // 
-            // columnHeader2
+            // columnQuantity
             // 
-            this.columnHeader2.Text = "Qty";
-            this.columnHeader2.Width = 50;
+            this.columnQuantity.Text = "Qty";
+            this.columnQuantity.Width = 50;
             // 
-            // columnHeader3
+            // columnAmount
             // 
-            this.columnHeader3.Text = "Amount";
-            this.columnHeader3.Width = 90;
+            this.columnAmount.Text = "Amount";
+            this.columnAmount.Width = 90;
             // 
             // panel5
             // 
@@ -154,7 +141,7 @@
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 209);
+            this.panel5.Location = new System.Drawing.Point(0, 152);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(245, 231);
             this.panel5.TabIndex = 5;
@@ -300,7 +287,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(245, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 440);
+            this.panel4.Size = new System.Drawing.Size(10, 383);
             this.panel4.TabIndex = 5;
             // 
             // btnAddToCart
@@ -310,7 +297,7 @@
             this.btnAddToCart.FlatAppearance.BorderSize = 0;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToCart.ForeColor = System.Drawing.Color.White;
-            this.btnAddToCart.Location = new System.Drawing.Point(443, 385);
+            this.btnAddToCart.Location = new System.Drawing.Point(390, 328);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(129, 42);
             this.btnAddToCart.TabIndex = 15;
@@ -321,7 +308,7 @@
             // 
             this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(8, 124);
+            this.labelTitle.Location = new System.Drawing.Point(65, 75);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(74, 19);
@@ -331,7 +318,7 @@
             // txtPrice
             // 
             this.txtPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPrice.Location = new System.Drawing.Point(104, 219);
+            this.txtPrice.Location = new System.Drawing.Point(69, 236);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(159, 26);
@@ -340,7 +327,7 @@
             // txtBarCode
             // 
             this.txtBarCode.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBarCode.Location = new System.Drawing.Point(104, 169);
+            this.txtBarCode.Location = new System.Drawing.Point(69, 165);
             this.txtBarCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.Size = new System.Drawing.Size(159, 26);
@@ -350,7 +337,7 @@
             // 
             this.labelPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(42, 225);
+            this.labelPrice.Location = new System.Drawing.Point(65, 213);
             this.labelPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(40, 19);
@@ -361,37 +348,28 @@
             // 
             this.labelBarCode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelBarCode.AutoSize = true;
-            this.labelBarCode.Location = new System.Drawing.Point(16, 172);
+            this.labelBarCode.Location = new System.Drawing.Point(65, 142);
             this.labelBarCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelBarCode.Name = "labelBarCode";
             this.labelBarCode.Size = new System.Drawing.Size(66, 19);
             this.labelBarCode.TabIndex = 5;
             this.labelBarCode.Text = "Bar Code";
             // 
-            // txtPublisher
-            // 
-            this.txtPublisher.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPublisher.Location = new System.Drawing.Point(104, 267);
-            this.txtPublisher.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPublisher.Name = "txtPublisher";
-            this.txtPublisher.Size = new System.Drawing.Size(468, 26);
-            this.txtPublisher.TabIndex = 14;
-            // 
             // labelDiscount
             // 
             this.labelDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelDiscount.AutoSize = true;
-            this.labelDiscount.Location = new System.Drawing.Point(314, 225);
+            this.labelDiscount.Location = new System.Drawing.Point(306, 217);
             this.labelDiscount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDiscount.Name = "labelDiscount";
-            this.labelDiscount.Size = new System.Drawing.Size(62, 19);
+            this.labelDiscount.Size = new System.Drawing.Size(79, 19);
             this.labelDiscount.TabIndex = 11;
-            this.labelDiscount.Text = "Discount";
+            this.labelDiscount.Text = "Discount %";
             // 
             // txtDiscount
             // 
             this.txtDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDiscount.Location = new System.Drawing.Point(397, 222);
+            this.txtDiscount.Location = new System.Drawing.Point(309, 239);
             this.txtDiscount.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(175, 26);
@@ -401,7 +379,7 @@
             // 
             this.labelTracking.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTracking.AutoSize = true;
-            this.labelTracking.Location = new System.Drawing.Point(291, 175);
+            this.labelTracking.Location = new System.Drawing.Point(305, 142);
             this.labelTracking.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTracking.Name = "labelTracking";
             this.labelTracking.Size = new System.Drawing.Size(85, 19);
@@ -411,7 +389,7 @@
             // txtTracking
             // 
             this.txtTracking.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTracking.Location = new System.Drawing.Point(397, 172);
+            this.txtTracking.Location = new System.Drawing.Point(309, 168);
             this.txtTracking.Margin = new System.Windows.Forms.Padding(4);
             this.txtTracking.Name = "txtTracking";
             this.txtTracking.Size = new System.Drawing.Size(175, 26);
@@ -421,7 +399,7 @@
             // 
             this.labelAuthor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAuthor.AutoSize = true;
-            this.labelAuthor.Location = new System.Drawing.Point(323, 118);
+            this.labelAuthor.Location = new System.Drawing.Point(305, 75);
             this.labelAuthor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAuthor.Name = "labelAuthor";
             this.labelAuthor.Size = new System.Drawing.Size(53, 19);
@@ -431,7 +409,7 @@
             // txtAuthor
             // 
             this.txtAuthor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAuthor.Location = new System.Drawing.Point(397, 118);
+            this.txtAuthor.Location = new System.Drawing.Point(309, 98);
             this.txtAuthor.Margin = new System.Windows.Forms.Padding(4);
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.Size = new System.Drawing.Size(175, 26);
@@ -442,7 +420,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(239, 5);
+            this.label8.Location = new System.Drawing.Point(192, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(150, 38);
             this.label8.TabIndex = 0;
@@ -460,20 +438,18 @@
             this.Controls.Add(this.labelDiscount);
             this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.labelBarCode);
-            this.Controls.Add(this.txtPublisher);
             this.Controls.Add(this.labelPrice);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.txtBarCode);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.panelLeft);
-            this.Controls.Add(this.labelPublisher);
             this.Controls.Add(this.txtTitle);
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.CadetBlue;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserControlersSales";
-            this.Size = new System.Drawing.Size(861, 440);
+            this.Size = new System.Drawing.Size(811, 383);
             this.panelLeft.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -487,7 +463,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtTitle;
-        private System.Windows.Forms.Label labelPublisher;
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
@@ -497,9 +472,9 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.ListView listView;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnTitle;
+        private System.Windows.Forms.ColumnHeader columnQuantity;
+        private System.Windows.Forms.ColumnHeader columnAmount;
         private System.Windows.Forms.Label labelSumOfAmount;
         private System.Windows.Forms.Label labelAmount;
         private System.Windows.Forms.Button btnFinish;
@@ -513,7 +488,6 @@
         private System.Windows.Forms.TextBox txtBarCode;
         private System.Windows.Forms.Label labelPrice;
         private System.Windows.Forms.Label labelBarCode;
-        private System.Windows.Forms.TextBox txtPublisher;
         private System.Windows.Forms.Label labelDiscount;
         private System.Windows.Forms.TextBox txtDiscount;
         private System.Windows.Forms.Label labelTracking;

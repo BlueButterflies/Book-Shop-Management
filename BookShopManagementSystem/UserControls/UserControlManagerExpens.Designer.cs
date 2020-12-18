@@ -53,7 +53,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1004, 10);
+            this.panel2.Size = new System.Drawing.Size(811, 10);
             this.panel2.TabIndex = 3;
             // 
             // panel1
@@ -63,7 +63,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 10);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 659);
+            this.panel1.Size = new System.Drawing.Size(10, 373);
             this.panel1.TabIndex = 4;
             // 
             // panel4
@@ -71,20 +71,20 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(994, 10);
+            this.panel4.Location = new System.Drawing.Point(801, 10);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 659);
+            this.panel4.Size = new System.Drawing.Size(10, 373);
             this.panel4.TabIndex = 5;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(10, 658);
+            this.panel3.Location = new System.Drawing.Point(10, 372);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(984, 11);
+            this.panel3.Size = new System.Drawing.Size(791, 11);
             this.panel3.TabIndex = 6;
             // 
             // panel5
@@ -97,7 +97,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(10, 10);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(984, 57);
+            this.panel5.Size = new System.Drawing.Size(791, 57);
             this.panel5.TabIndex = 7;
             // 
             // btnRefresh
@@ -109,7 +109,7 @@
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefresh.Location = new System.Drawing.Point(872, 0);
+            this.btnRefresh.Location = new System.Drawing.Point(679, 0);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(112, 57);
             this.btnRefresh.TabIndex = 3;
@@ -181,7 +181,7 @@
             this.dataGridPurchase.ReadOnly = true;
             this.dataGridPurchase.RowHeadersVisible = false;
             this.dataGridPurchase.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridPurchase.Size = new System.Drawing.Size(984, 591);
+            this.dataGridPurchase.Size = new System.Drawing.Size(791, 305);
             this.dataGridPurchase.TabIndex = 8;
             // 
             // ColExpenseTitle
@@ -217,7 +217,7 @@
             this.ForeColor = System.Drawing.Color.CadetBlue;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UserControlManagerExpens";
-            this.Size = new System.Drawing.Size(1004, 669);
+            this.Size = new System.Drawing.Size(811, 383);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPurchase)).EndInit();

@@ -39,7 +39,6 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.btnSaleBooks = new System.Windows.Forms.Button();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.btnSetting = new System.Windows.Forms.Button();
             this.btnPurchase = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
@@ -95,11 +94,11 @@
             this.labelShopTwo.AutoSize = true;
             this.labelShopTwo.Font = new System.Drawing.Font("Comic Sans MS", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelShopTwo.ForeColor = System.Drawing.Color.White;
-            this.labelShopTwo.Location = new System.Drawing.Point(30, 91);
+            this.labelShopTwo.Location = new System.Drawing.Point(55, 91);
             this.labelShopTwo.Name = "labelShopTwo";
-            this.labelShopTwo.Size = new System.Drawing.Size(128, 20);
+            this.labelShopTwo.Size = new System.Drawing.Size(85, 20);
             this.labelShopTwo.TabIndex = 1;
-            this.labelShopTwo.Text = "Books Manegment";
+            this.labelShopTwo.Text = "Books Shop";
             // 
             // picShoopTwo
             // 
@@ -118,7 +117,6 @@
             this.panelLeft.Controls.Add(this.btnHome);
             this.panelLeft.Controls.Add(this.btnSaleBooks);
             this.panelLeft.Controls.Add(this.panelSide);
-            this.panelLeft.Controls.Add(this.btnSetting);
             this.panelLeft.Controls.Add(this.panelUpLeft);
             this.panelLeft.Controls.Add(this.btnPurchase);
             this.panelLeft.Controls.Add(this.btnUser);
@@ -127,7 +125,7 @@
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(189, 600);
+            this.panelLeft.Size = new System.Drawing.Size(189, 500);
             this.panelLeft.TabIndex = 1;
             // 
             // label1
@@ -136,7 +134,7 @@
             this.label1.BackColor = System.Drawing.Color.CadetBlue;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(8, 570);
+            this.label1.Location = new System.Drawing.Point(8, 461);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(172, 30);
             this.label1.TabIndex = 12;
@@ -191,26 +189,6 @@
             this.panelSide.Name = "panelSide";
             this.panelSide.Size = new System.Drawing.Size(10, 35);
             this.panelSide.TabIndex = 2;
-            // 
-            // btnSetting
-            // 
-            this.btnSetting.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.White;
-            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(19, 376);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(163, 35);
-            this.btnSetting.TabIndex = 8;
-            this.btnSetting.Text = "    Settings";
-            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSetting.UseVisualStyleBackColor = false;
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // btnPurchase
             // 
@@ -302,7 +280,7 @@
             this.panelUp.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUp.Location = new System.Drawing.Point(189, 0);
             this.panelUp.Name = "panelUp";
-            this.panelUp.Size = new System.Drawing.Size(861, 117);
+            this.panelUp.Size = new System.Drawing.Size(811, 117);
             this.panelUp.TabIndex = 2;
             // 
             // panel1
@@ -312,7 +290,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(861, 50);
+            this.panel1.Size = new System.Drawing.Size(811, 50);
             this.panel1.TabIndex = 6;
             // 
             // btnCloseTwo
@@ -323,7 +301,7 @@
             this.btnCloseTwo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCloseTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseTwo.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseTwo.Image")));
-            this.btnCloseTwo.Location = new System.Drawing.Point(818, 0);
+            this.btnCloseTwo.Location = new System.Drawing.Point(768, 0);
             this.btnCloseTwo.Name = "btnCloseTwo";
             this.btnCloseTwo.Size = new System.Drawing.Size(43, 50);
             this.btnCloseTwo.TabIndex = 3;
@@ -347,7 +325,7 @@
             this.labelTimeData.AutoSize = true;
             this.labelTimeData.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTimeData.ForeColor = System.Drawing.Color.White;
-            this.labelTimeData.Location = new System.Drawing.Point(647, 75);
+            this.labelTimeData.Location = new System.Drawing.Point(597, 75);
             this.labelTimeData.Name = "labelTimeData";
             this.labelTimeData.Size = new System.Drawing.Size(127, 23);
             this.labelTimeData.TabIndex = 5;
@@ -388,7 +366,7 @@
             this.panelUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUser.Location = new System.Drawing.Point(189, 117);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(861, 483);
+            this.panelUser.Size = new System.Drawing.Size(811, 383);
             this.panelUser.TabIndex = 3;
             // 
             // dargControl
@@ -398,7 +376,7 @@
             // DaschBoard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1050, 600);
+            this.ClientSize = new System.Drawing.Size(1000, 500);
             this.Controls.Add(this.panelUser);
             this.Controls.Add(this.panelUp);
             this.Controls.Add(this.panelLeft);
@@ -431,7 +409,6 @@
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Button btnSaleBooks;
         private System.Windows.Forms.Panel panelSide;
-        private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnExpenses;
         private System.Windows.Forms.Label labelMarker;

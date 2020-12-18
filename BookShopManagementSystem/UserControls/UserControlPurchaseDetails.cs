@@ -25,11 +25,5 @@ namespace BookShopManagementSystem.UserControls
             addNewBook.ShowDialog();
         }
 
-        private void btnAddStock_Click(object sender, EventArgs e)
-        {
-            AddStock addStock = new AddStock();
-
-            addStock.ShowDialog();
-        }
     }
 }
