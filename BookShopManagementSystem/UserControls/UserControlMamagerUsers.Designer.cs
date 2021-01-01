@@ -55,9 +55,9 @@
             this.labelFirstName.AutoSize = true;
             this.labelFirstName.Location = new System.Drawing.Point(59, 157);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(79, 19);
+            this.labelFirstName.Size = new System.Drawing.Size(69, 19);
             this.labelFirstName.TabIndex = 0;
-            this.labelFirstName.Text = "User Name";
+            this.labelFirstName.Text = "Username";
             // 
             // labelManageUser
             // 

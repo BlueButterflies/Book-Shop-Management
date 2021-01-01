@@ -44,7 +44,6 @@ namespace BookShopManagementSystem.Forms
                 Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
 
 
-
                 if (Regex.IsMatch(txtFullName.Text, @"^[a-zA-Z' ]+$") == true && Regex.IsMatch(txtPhone.Text, @"^[0-9()+ ]+$") == true
                     && regex.IsMatch(txtEmail.Text) == true)
                 {

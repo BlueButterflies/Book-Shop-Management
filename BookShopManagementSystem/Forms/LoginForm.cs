@@ -14,6 +14,9 @@ namespace BookShopManagementSystem.Forms
 {
     public partial class LoginForm : Form
     {
+        public static string userLogin;
+        public static  string userRole;
+
         public LoginForm()
         {
             InitializeComponent();
@@ -40,13 +43,16 @@ namespace BookShopManagementSystem.Forms
             SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=bookDb;Integrated Security=True");
 
             sqlConnection.Open();
-            SqlCommand sqlCommand = new SqlCommand("SELECT [UserName], [Password] FROM [dbo].[users] WHERE [UserName] = '"+txtUser.Text+"'", sqlConnection);
+            SqlCommand sqlCommand = new SqlCommand("SELECT [UserName], [Password], [Role] FROM [dbo].[users] WHERE [UserName] = '"+txtUser.Text.Trim()+"'", sqlConnection);
 
             SqlDataReader reader = sqlCommand.ExecuteReader();
 
             if (reader.Read())
             {
-                password = reader["Password"].ToString();
+                password = reader["Password"].ToString().Trim();
+                userRole = reader["Role"].ToString().Trim();
+                userLogin = reader["UserName"].ToString().Trim();
+
             }
             
 
@@ -54,16 +60,16 @@ namespace BookShopManagementSystem.Forms
             {
                 DaschBoard daschBoard = new DaschBoard();
                 this.Hide();
-
                 daschBoard.ShowDialog();
 
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Password is wrong");
+                MessageBox.Show("Usename or Password is wrong");
             }
 
+            sqlCommand.Parameters.Clear();
             sqlConnection.Close();
         }
     }

@@ -102,6 +102,7 @@
             this.dataGridPurchase.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridPurchase.Size = new System.Drawing.Size(791, 306);
             this.dataGridPurchase.TabIndex = 2;
+            this.dataGridPurchase.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPurchase_CellContentClick);
             // 
             // ColTracking
             // 

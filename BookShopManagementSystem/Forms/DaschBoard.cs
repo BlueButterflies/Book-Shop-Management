@@ -9,12 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using BookShopManagementSystem.Forms;
 
 //TO DO Check if user is login and get your username  
 namespace BookShopManagementSystem.Forms
 {
     public partial class DaschBoard : Form
     {
+        
         int PanelWigth;
         bool isCollapsed;
 
@@ -27,26 +29,28 @@ namespace BookShopManagementSystem.Forms
             UserControlHome userHome = new UserControlHome();//Charge  chart dashboard open after login
             AddControlerPanel(userHome);
 
-            string user = "";
-            string role = "";
+            //string user = "";
+            //string role = "";
 
-            #region Use database
-            sqlConnection.Open();
+            //#region Use database
+            //sqlConnection.Open();
 
-            SqlCommand sqlCommand = new SqlCommand("select [UserName], [Role] From [dbo].[users]", sqlConnection);
+            //SqlCommand sqlCommand = new SqlCommand("select [UserName], [Role] From [dbo].[users]", sqlConnection);
 
-            SqlDataReader readerDb = sqlCommand.ExecuteReader();
+            //SqlDataReader readerDb = sqlCommand.ExecuteReader();
 
-            if (readerDb.Read())
-            {
-                user = readerDb["UserName"].ToString();
-                role = readerDb["Role"].ToString();
-            }
-            sqlConnection.Close();
-            #endregion
+            //if (readerDb.Read())
+            //{
+            //    user = readerDb["UserName"].ToString();
+            //    role = readerDb["Role"].ToString();
+            //}
 
-            labelWelcome.Text = "Welcome: " + user;
-            labelRole.Text = "Role: " + role;
+            //sqlCommand.Parameters.Clear();
+            //sqlConnection.Close();
+            //#endregion
+
+            labelWelcome.Text = "Welcome: " + LoginForm.userLogin;
+            labelRole.Text = "Role: " + LoginForm.userRole;
 
             timerTimes.Start();
             PanelWigth = panelLeft.Width;

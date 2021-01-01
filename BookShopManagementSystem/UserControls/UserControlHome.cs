@@ -26,15 +26,15 @@ namespace BookShopManagementSystem.UserControls
             #region Get count all sales books
             SqlCommand sqlCommandSalesBook = new SqlCommand("SELECT COUNT(*) FROM[dbo].[Sale]", sqlConnection);
 
-           int countSalesBook = (int)sqlCommandSalesBook.ExecuteScalar();
-             
+            int countSalesBook = (int)sqlCommandSalesBook.ExecuteScalar();
+
             labelSoldBooks.Text = countSalesBook.ToString();
             #endregion
 
             #region count all purchase books
             SqlCommand sqlCommandBookPurchase = new SqlCommand("SELECT COUNT(*) FROM[dbo].[Books]", sqlConnection);
 
-            int countBookPurchase= (int)sqlCommandBookPurchase.ExecuteScalar();
+            int countBookPurchase = (int)sqlCommandBookPurchase.ExecuteScalar();
 
             labelCountPurchase.Text = countBookPurchase.ToString();
 
@@ -66,21 +66,6 @@ namespace BookShopManagementSystem.UserControls
         private void btnRefresh_Click(object sender, EventArgs e) //Load from button Refresh
         {
             LoadChart();
-        }
-
-        private void labelSold_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chartReport_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void spinerSoldBook_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

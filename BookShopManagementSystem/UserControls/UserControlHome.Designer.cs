@@ -80,7 +80,6 @@
             this.labelSold.Size = new System.Drawing.Size(110, 27);
             this.labelSold.TabIndex = 0;
             this.labelSold.Text = "Sold Books";
-            this.labelSold.Click += new System.EventHandler(this.labelSold_Click);
             // 
             // labelSoldBooks
             // 
@@ -233,7 +232,6 @@
             this.chartReport.Series.Add(series1);
             this.chartReport.Size = new System.Drawing.Size(337, 272);
             this.chartReport.TabIndex = 7;
-            this.chartReport.Click += new System.EventHandler(this.chartReport_Click);
             // 
             // spinerSoldBook
             // 
@@ -248,7 +246,6 @@
             this.spinerSoldBook.Theme = MetroFramework.MetroThemeStyle.Light;
             this.spinerSoldBook.UseSelectable = true;
             this.spinerSoldBook.Value = 85;
-            this.spinerSoldBook.Click += new System.EventHandler(this.spinerSoldBook_Click);
             // 
             // labelsoldBook
             // 
