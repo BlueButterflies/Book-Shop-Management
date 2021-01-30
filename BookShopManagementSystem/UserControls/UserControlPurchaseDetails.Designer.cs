@@ -28,24 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlPurchaseDetails));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridPurchase = new System.Windows.Forms.DataGridView();
-            this.ColTracking = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColBookTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPublisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColCostPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSelling = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColBarcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddNewBook = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPurchase)).BeginInit();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -85,15 +78,6 @@
             this.dataGridPurchase.BackgroundColor = System.Drawing.Color.White;
             this.dataGridPurchase.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridPurchase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPurchase.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColTracking,
-            this.ColBookTitle,
-            this.ColAuthor,
-            this.ColPublisher,
-            this.ColQuantity,
-            this.ColCostPrice,
-            this.ColSelling,
-            this.ColBarcode});
             this.dataGridPurchase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridPurchase.Location = new System.Drawing.Point(10, 67);
             this.dataGridPurchase.Name = "dataGridPurchase";
@@ -102,60 +86,6 @@
             this.dataGridPurchase.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridPurchase.Size = new System.Drawing.Size(791, 306);
             this.dataGridPurchase.TabIndex = 2;
-            this.dataGridPurchase.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPurchase_CellContentClick);
-            // 
-            // ColTracking
-            // 
-            this.ColTracking.HeaderText = "Tracking ID";
-            this.ColTracking.Name = "ColTracking";
-            this.ColTracking.ReadOnly = true;
-            this.ColTracking.Width = 150;
-            // 
-            // ColBookTitle
-            // 
-            this.ColBookTitle.HeaderText = "Book Title";
-            this.ColBookTitle.Name = "ColBookTitle";
-            this.ColBookTitle.ReadOnly = true;
-            this.ColBookTitle.Width = 200;
-            // 
-            // ColAuthor
-            // 
-            this.ColAuthor.HeaderText = "Author";
-            this.ColAuthor.Name = "ColAuthor";
-            this.ColAuthor.ReadOnly = true;
-            this.ColAuthor.Width = 200;
-            // 
-            // ColPublisher
-            // 
-            this.ColPublisher.HeaderText = "Publisher";
-            this.ColPublisher.Name = "ColPublisher";
-            this.ColPublisher.ReadOnly = true;
-            this.ColPublisher.Width = 200;
-            // 
-            // ColQuantity
-            // 
-            this.ColQuantity.HeaderText = "Quantity";
-            this.ColQuantity.Name = "ColQuantity";
-            this.ColQuantity.ReadOnly = true;
-            // 
-            // ColCostPrice
-            // 
-            this.ColCostPrice.HeaderText = "Cost Price";
-            this.ColCostPrice.Name = "ColCostPrice";
-            this.ColCostPrice.ReadOnly = true;
-            // 
-            // ColSelling
-            // 
-            this.ColSelling.HeaderText = "Selling Price";
-            this.ColSelling.Name = "ColSelling";
-            this.ColSelling.ReadOnly = true;
-            // 
-            // ColBarcode
-            // 
-            this.ColBarcode.HeaderText = "Barcode";
-            this.ColBarcode.Name = "ColBarcode";
-            this.ColBarcode.ReadOnly = true;
-            this.ColBarcode.Width = 200;
             // 
             // panel1
             // 
@@ -173,10 +103,9 @@
             this.btnAddNewBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewBook.Font = new System.Drawing.Font("Comic Sans MS", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewBook.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewBook.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewBook.Image")));
             this.btnAddNewBook.Location = new System.Drawing.Point(0, 0);
             this.btnAddNewBook.Name = "btnAddNewBook";
-            this.btnAddNewBook.Size = new System.Drawing.Size(168, 57);
+            this.btnAddNewBook.Size = new System.Drawing.Size(129, 57);
             this.btnAddNewBook.TabIndex = 0;
             this.btnAddNewBook.Text = " Add New Book";
             this.btnAddNewBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -187,7 +116,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(458, 20);
+            this.label1.Location = new System.Drawing.Point(345, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 2;
@@ -202,7 +131,7 @@
             "Author",
             "Publisher",
             "Barcode"});
-            this.comboBoxSearchBy.Location = new System.Drawing.Point(554, 17);
+            this.comboBoxSearchBy.Location = new System.Drawing.Point(441, 16);
             this.comboBoxSearchBy.Name = "comboBoxSearchBy";
             this.comboBoxSearchBy.Size = new System.Drawing.Size(138, 27);
             this.comboBoxSearchBy.TabIndex = 4;
@@ -210,6 +139,8 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.btnRefresh);
             this.panel5.Controls.Add(this.comboBoxSearchBy);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.btnAddNewBook);
@@ -218,6 +149,39 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(791, 57);
             this.panel5.TabIndex = 1;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Comic Sans MS", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Image = global::BookShopManagementSystem.Properties.Resources.icons8_synchronize_24px;
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefresh.Location = new System.Drawing.Point(694, 0);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(97, 57);
+            this.btnRefresh.TabIndex = 5;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::BookShopManagementSystem.Properties.Resources.icons8_checkmark_26px;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(594, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 27);
+            this.button1.TabIndex = 6;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // UserControlPurchaseDetails
             // 
@@ -246,18 +210,12 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridPurchase;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColTracking;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColBookTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColAuthor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPublisher;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColQuantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColCostPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSelling;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColBarcode;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAddNewBook;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxSearchBy;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button button1;
     }
 }

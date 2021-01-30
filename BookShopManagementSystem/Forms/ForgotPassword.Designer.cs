@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPassword));
             this.panelUp = new System.Windows.Forms.Panel();
             this.btnBackCome = new System.Windows.Forms.Button();
             this.picturePanelOne = new System.Windows.Forms.PictureBox();
@@ -65,7 +64,7 @@
             this.btnBackCome.FlatAppearance.BorderSize = 0;
             this.btnBackCome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnBackCome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackCome.Image = ((System.Drawing.Image)(resources.GetObject("btnBackCome.Image")));
+            this.btnBackCome.Image = global::BookShopManagementSystem.Properties.Resources.icons8_double_left_32px;
             this.btnBackCome.Location = new System.Drawing.Point(654, 0);
             this.btnBackCome.Name = "btnBackCome";
             this.btnBackCome.Size = new System.Drawing.Size(43, 73);
@@ -77,7 +76,7 @@
             // 
             this.picturePanelOne.BackColor = System.Drawing.Color.CadetBlue;
             this.picturePanelOne.Dock = System.Windows.Forms.DockStyle.Left;
-            this.picturePanelOne.Image = ((System.Drawing.Image)(resources.GetObject("picturePanelOne.Image")));
+            this.picturePanelOne.Image = global::BookShopManagementSystem.Properties.Resources.icons8_books_32px;
             this.picturePanelOne.Location = new System.Drawing.Point(0, 0);
             this.picturePanelOne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picturePanelOne.Name = "picturePanelOne";

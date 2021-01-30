@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlViewSales));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -111,7 +110,7 @@
             this.panel5.Location = new System.Drawing.Point(13, 15);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(835, 83);
+            this.panel5.Size = new System.Drawing.Size(835, 63);
             this.panel5.TabIndex = 8;
             // 
             // btnRefresh
@@ -121,14 +120,12 @@
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Comic Sans MS", 9.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefresh.Image = global::BookShopManagementSystem.Properties.Resources.icons8_synchronize_24px;
             this.btnRefresh.Location = new System.Drawing.Point(0, 0);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(149, 83);
+            this.btnRefresh.Size = new System.Drawing.Size(64, 63);
             this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = " Refresh";
             this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
@@ -159,12 +156,12 @@
             this.ColumnTotalAmount,
             this.ColumnDate});
             this.dataGridSales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridSales.Location = new System.Drawing.Point(13, 98);
+            this.dataGridSales.Location = new System.Drawing.Point(13, 78);
             this.dataGridSales.Name = "dataGridSales";
             this.dataGridSales.ReadOnly = true;
             this.dataGridSales.RowHeadersVisible = false;
             this.dataGridSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridSales.Size = new System.Drawing.Size(835, 359);
+            this.dataGridSales.Size = new System.Drawing.Size(835, 379);
             this.dataGridSales.TabIndex = 9;
             // 
             // ColSaleS

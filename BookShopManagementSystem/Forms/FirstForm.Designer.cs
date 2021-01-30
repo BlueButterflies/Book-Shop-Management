@@ -28,13 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FirstForm));
             this.panelUp = new System.Windows.Forms.Panel();
-            this.picturePanelOne = new System.Windows.Forms.PictureBox();
-            this.btnCloseOne = new System.Windows.Forms.Button();
             this.labelShopOne = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelRegister = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -44,11 +40,14 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picturePanelOne = new System.Windows.Forms.PictureBox();
+            this.btnCloseOne = new System.Windows.Forms.Button();
             this.panelUp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePanelOne)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePanelOne)).BeginInit();
             this.SuspendLayout();
             // 
             // panelUp
@@ -64,35 +63,6 @@
             this.panelUp.Size = new System.Drawing.Size(673, 74);
             this.panelUp.TabIndex = 0;
             // 
-            // picturePanelOne
-            // 
-            this.picturePanelOne.BackColor = System.Drawing.Color.CadetBlue;
-            this.picturePanelOne.Dock = System.Windows.Forms.DockStyle.Left;
-            this.picturePanelOne.Image = ((System.Drawing.Image)(resources.GetObject("picturePanelOne.Image")));
-            this.picturePanelOne.Location = new System.Drawing.Point(0, 0);
-            this.picturePanelOne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picturePanelOne.Name = "picturePanelOne";
-            this.picturePanelOne.Size = new System.Drawing.Size(66, 74);
-            this.picturePanelOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picturePanelOne.TabIndex = 5;
-            this.picturePanelOne.TabStop = false;
-            // 
-            // btnCloseOne
-            // 
-            this.btnCloseOne.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCloseOne.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnCloseOne.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCloseOne.FlatAppearance.BorderSize = 0;
-            this.btnCloseOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseOne.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseOne.Image")));
-            this.btnCloseOne.Location = new System.Drawing.Point(624, 0);
-            this.btnCloseOne.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCloseOne.Name = "btnCloseOne";
-            this.btnCloseOne.Size = new System.Drawing.Size(49, 74);
-            this.btnCloseOne.TabIndex = 4;
-            this.btnCloseOne.UseVisualStyleBackColor = false;
-            this.btnCloseOne.Click += new System.EventHandler(this.btnCloseOne_Click);
-            // 
             // labelShopOne
             // 
             this.labelShopOne.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -100,7 +70,7 @@
             this.labelShopOne.BackColor = System.Drawing.Color.CadetBlue;
             this.labelShopOne.Font = new System.Drawing.Font("Comic Sans MS", 26F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelShopOne.ForeColor = System.Drawing.Color.White;
-            this.labelShopOne.Location = new System.Drawing.Point(213, 9);
+            this.labelShopOne.Location = new System.Drawing.Point(230, 9);
             this.labelShopOne.Name = "labelShopOne";
             this.labelShopOne.Size = new System.Drawing.Size(212, 50);
             this.labelShopOne.TabIndex = 2;
@@ -117,18 +87,6 @@
             this.label1.Size = new System.Drawing.Size(333, 15);
             this.label1.TabIndex = 11;
             this.label1.Text = "Copyrights © 2020.All rights reserved by BlueButterfliesDev";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(614, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 34);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
             // 
             // panel1
             // 
@@ -227,13 +185,53 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::BookShopManagementSystem.Properties.Resources.icons8_shop_32px_1;
             this.pictureBox1.Location = new System.Drawing.Point(159, 80);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(347, 193);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox2.Location = new System.Drawing.Point(614, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // picturePanelOne
+            // 
+            this.picturePanelOne.BackColor = System.Drawing.Color.CadetBlue;
+            this.picturePanelOne.Dock = System.Windows.Forms.DockStyle.Left;
+            this.picturePanelOne.Image = global::BookShopManagementSystem.Properties.Resources.icons8_books_32px;
+            this.picturePanelOne.Location = new System.Drawing.Point(0, 0);
+            this.picturePanelOne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picturePanelOne.Name = "picturePanelOne";
+            this.picturePanelOne.Size = new System.Drawing.Size(66, 74);
+            this.picturePanelOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturePanelOne.TabIndex = 5;
+            this.picturePanelOne.TabStop = false;
+            // 
+            // btnCloseOne
+            // 
+            this.btnCloseOne.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCloseOne.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnCloseOne.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCloseOne.FlatAppearance.BorderSize = 0;
+            this.btnCloseOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseOne.Image = global::BookShopManagementSystem.Properties.Resources.icons8_delete_50px;
+            this.btnCloseOne.Location = new System.Drawing.Point(624, 0);
+            this.btnCloseOne.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCloseOne.Name = "btnCloseOne";
+            this.btnCloseOne.Size = new System.Drawing.Size(49, 74);
+            this.btnCloseOne.TabIndex = 4;
+            this.btnCloseOne.UseVisualStyleBackColor = false;
+            this.btnCloseOne.Click += new System.EventHandler(this.btnCloseOne_Click);
             // 
             // FirstForm
             // 
@@ -259,11 +257,11 @@
             this.Text = "Book Shop Management";
             this.panelUp.ResumeLayout(false);
             this.panelUp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePanelOne)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePanelOne)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

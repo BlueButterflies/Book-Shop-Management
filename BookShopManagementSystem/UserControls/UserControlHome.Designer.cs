@@ -28,19 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlHome));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.labelSold = new System.Windows.Forms.Label();
             this.labelSoldBooks = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelSalesAndPurchase = new System.Windows.Forms.Label();
             this.labelPurchaseBooks = new System.Windows.Forms.Label();
             this.labelCountPurchase = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelReport = new System.Windows.Forms.Label();
             this.spinerRecivedBook = new MetroFramework.Controls.MetroProgressSpinner();
@@ -48,27 +44,15 @@
             this.spinerSoldBook = new MetroFramework.Controls.MetroProgressSpinner();
             this.labelsoldBook = new System.Windows.Forms.Label();
             this.labelRecivedBook = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRefresh.BackColor = System.Drawing.Color.White;
-            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(758, 0);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(53, 33);
-            this.btnRefresh.TabIndex = 1;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // labelSold
             // 
@@ -91,17 +75,6 @@
             this.labelSoldBooks.Size = new System.Drawing.Size(60, 27);
             this.labelSoldBooks.TabIndex = 1;
             this.labelSoldBooks.Text = "1000";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(150, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -150,17 +123,6 @@
             this.labelCountPurchase.Size = new System.Drawing.Size(60, 27);
             this.labelCountPurchase.TabIndex = 0;
             this.labelCountPurchase.Text = "1245";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(161, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
             // 
             // panel2
             // 
@@ -273,6 +235,41 @@
             this.labelRecivedBook.TabIndex = 10;
             this.labelRecivedBook.Text = "Recived Book %";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRefresh.BackColor = System.Drawing.Color.White;
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Image = global::BookShopManagementSystem.Properties.Resources.icons8_refresh_32px_1;
+            this.btnRefresh.Location = new System.Drawing.Point(758, 0);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(53, 33);
+            this.btnRefresh.TabIndex = 1;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Location = new System.Drawing.Point(161, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Location = new System.Drawing.Point(150, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(59, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // UserControlHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
@@ -292,13 +289,13 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UserControlHome";
             this.Size = new System.Drawing.Size(811, 383);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

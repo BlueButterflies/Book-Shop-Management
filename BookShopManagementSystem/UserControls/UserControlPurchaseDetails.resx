@@ -117,42 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="ColTracking.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColBookTitle.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColAuthor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColPublisher.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColQuantity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColCostPrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColSelling.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ColBarcode.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnAddNewBook.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAbpJREFUWEft
-        VttKw0AQ7YOXFxH8Cy8giIqIgp/nBVoqCuqPePkOL88+qIi+VNvNGhXGk+nZKM222SbFh5IDQ5kz50wm
-        SXc3tQoV+kFEpiSKdhH3CCkbbBsOmPZ6m5QJtg0HTI9qtnaHVCGUGaCYsQfjNYDjQoKWMRugCKoBqgH+
-        fQBpt5fga2AHvcHvq+uDqEscL1KWD2dkmgscXpPQHyG+ndcTSa2ZaGnrD2diOhB6chpzRU+Muz9Fviat
-        1pyGMevgzlD7VI21F7lDsFnYANaeUP+Ai62QzgC1VWieqD0m7QdFuQPwnSeP1kqns0xa4euRDAguVk8c
-        L5DOwmf2AZomtQ1SKfr1AHfIWp1UFs6MCPsiwjunNYWrMU0BbkNr1l6TysKZg0NkJsSnGpFZzY15S3Iv
-        UlPOFxE0HdUVGSCK3pPcCxSfVWTtNikvcBd3bLZJKgV53yvY0ho2K1JZQLDvGgRGZlm5GtMUf5btgD9h
-        97M8+TJ+oTgvPoZchl9YhvOkywHNGrzYMBvRAenywNOaxGO9ZOPfrVhkWiO7FZ+Dn6B9NNAhRnkYFUV6
-        HBtzi1+r0T2aPcdxrfYDdH7D5xHhxUYAAAAASUVORK5CYII=
-</value>
-  </data>
 </root>

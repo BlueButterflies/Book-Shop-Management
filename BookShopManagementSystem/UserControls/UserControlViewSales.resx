@@ -117,20 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnRefresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAcRJREFUWEft
-        lrtKA0EUhoOovYWIl0QbEez0PbzELuATaESCl8rXEHvFRgVRsRB8DwULaxVDJMZNvI3fWf+VEIw7m8Jq
-        f/jYzJnzn5md7M5OJlWqJHIvL1kXBFtcL+EOyvAIN3ACGzCs9M5FEWeomWHQUdq78B71/cEb7LlabVD2
-        5IqK6XeBYk+KBWATyYeTqlT6QrhrcubU1wBHf4XYfFgwqcICRq22xPVT7WMbVCltRU6O3CN5PqmxrC5/
-        yWx8iKK6vIWnBDb5DyYxq7CfMEUTMNYVTizzqsa9q1b7FY6XTL+iFG9x9xfybisUr+YBW1GKt1yjMYnP
-        /sYr51yvwv8rVmGawbvUTJUqVbzsleHVmVLzf2WbBZvGdbh51OsTCnvLNqt2KCVefNF2QlMQnCvkrdZB
-        m1FKvNzz8wCGBxlLCicW3hXVSDYBE4Y8RJ/jVYW9hacob3SeSPwdsSKrTQUOIKuutuK5GSfvTB47C9ih
-        prMJmDAuhMer7yJ23DqEAgzzwHZDD/1jsEjsGF7BcssMPqManU/ARKEhCuyDz6HUVsxyf1Yr6lOzc1Fk
-        BDbhFG7BVsT+5zt7Y7iucc0pPVUqD2UyX0OMvT3BqAr2AAAAAElFTkSuQmCC
-</value>
-  </data>
+  <metadata name="ColSaleS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColNetAmount.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColNetDiscount.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnTotalAmount.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="ColSaleS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

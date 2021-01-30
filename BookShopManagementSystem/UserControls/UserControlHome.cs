@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using BookShopManagementSystem.Forms;
 
 namespace BookShopManagementSystem.UserControls
 {
     public partial class UserControlHome : UserControl
     {
-
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=bookDb;Integrated Security=True");
-        
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-PO35QJG;Initial Catalog=bookshop;Integrated Security=True");
 
         public UserControlHome()
         {
@@ -24,7 +23,7 @@ namespace BookShopManagementSystem.UserControls
             sqlConnection.Open();
 
             #region Get count all sales books
-            SqlCommand sqlCommandSalesBook = new SqlCommand("SELECT COUNT(*) FROM[dbo].[Sale]", sqlConnection);
+            SqlCommand sqlCommandSalesBook = new SqlCommand("SELECT COUNT(*) FROM[dbo].[Expense]", sqlConnection);
 
             int countSalesBook = (int)sqlCommandSalesBook.ExecuteScalar();
 
@@ -32,7 +31,7 @@ namespace BookShopManagementSystem.UserControls
             #endregion
 
             #region count all purchase books
-            SqlCommand sqlCommandBookPurchase = new SqlCommand("SELECT COUNT(*) FROM[dbo].[Books]", sqlConnection);
+            SqlCommand sqlCommandBookPurchase = new SqlCommand("SELECT COUNT(*) FROM[dbo].[Books] WHERE [UserId] = '"+LoginForm.userId+"'", sqlConnection);
 
             int countBookPurchase = (int)sqlCommandBookPurchase.ExecuteScalar();
 

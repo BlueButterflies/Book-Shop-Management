@@ -32,14 +32,12 @@ namespace BookShopManagementSystem.Forms
         #region Button Register with execute in Database
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            SqlConnection sql = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=bookDb;Integrated Security=True");
+            SqlConnection sql = new SqlConnection(@"Data Source=DESKTOP-PO35QJG;Initial Catalog=bookshop;Integrated Security=True");
 
             if (txtUserName.TextLength > 0 && txtFullName.TextLength > 0 && txtPhone.TextLength > 0
                 && txtPass.TextLength > 0 && txtEmail.TextLength > 0)
             {
-                string pattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|" +
-                   @"([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)" +
-                   @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
+                string pattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|" + @"([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)" + @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
 
                 Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
 
@@ -48,7 +46,7 @@ namespace BookShopManagementSystem.Forms
                     && regex.IsMatch(txtEmail.Text) == true)
                 {
                     SqlCommand sqlCommand = new SqlCommand
-                                     (@"INSERT INTO [dbo].[users]
+                                     (@"INSERT INTO [dbo].[Users]
                     ([UserName],[FullName],[Phone],[Email],[Password],[Role])
                     VALUES
                     ('" + txtUserName.Text + "', " +
@@ -61,6 +59,7 @@ namespace BookShopManagementSystem.Forms
                     sql.Open();
                     sqlCommand.ExecuteNonQuery();
                     sql.Close();
+
                     MessageBox.Show("Register Successfully");
 
                     LoginForm loginForm = new LoginForm();

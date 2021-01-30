@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DaschBoard));
             this.panelUpLeft = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.labelShopTwo = new System.Windows.Forms.Label();
@@ -81,7 +80,7 @@
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
+            this.btnMenu.Image = global::BookShopManagementSystem.Properties.Resources.icons8_menu_24px;
             this.btnMenu.Location = new System.Drawing.Point(143, 3);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(43, 37);
@@ -102,7 +101,7 @@
             // 
             // picShoopTwo
             // 
-            this.picShoopTwo.Image = ((System.Drawing.Image)(resources.GetObject("picShoopTwo.Image")));
+            this.picShoopTwo.Image = global::BookShopManagementSystem.Properties.Resources.icons8_books_32px;
             this.picShoopTwo.Location = new System.Drawing.Point(57, 12);
             this.picShoopTwo.Name = "picShoopTwo";
             this.picShoopTwo.Size = new System.Drawing.Size(83, 64);
@@ -149,7 +148,7 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Image = global::BookShopManagementSystem.Properties.Resources.icons8_home_24px;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(19, 123);
             this.btnHome.Name = "btnHome";
@@ -171,7 +170,7 @@
             this.btnSaleBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaleBooks.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaleBooks.ForeColor = System.Drawing.Color.White;
-            this.btnSaleBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnSaleBooks.Image")));
+            this.btnSaleBooks.Image = global::BookShopManagementSystem.Properties.Resources.icons8_sale_price_tag_24px;
             this.btnSaleBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSaleBooks.Location = new System.Drawing.Point(19, 164);
             this.btnSaleBooks.Name = "btnSaleBooks";
@@ -199,7 +198,7 @@
             this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPurchase.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPurchase.ForeColor = System.Drawing.Color.White;
-            this.btnPurchase.Image = ((System.Drawing.Image)(resources.GetObject("btnPurchase.Image")));
+            this.btnPurchase.Image = global::BookShopManagementSystem.Properties.Resources.icons8_videos_purchased_24px;
             this.btnPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPurchase.Location = new System.Drawing.Point(19, 248);
             this.btnPurchase.Name = "btnPurchase";
@@ -219,7 +218,7 @@
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUser.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.ForeColor = System.Drawing.Color.White;
-            this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
+            this.btnUser.Image = global::BookShopManagementSystem.Properties.Resources.icons8_staff_32px;
             this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUser.Location = new System.Drawing.Point(19, 333);
             this.btnUser.Name = "btnUser";
@@ -239,7 +238,7 @@
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Image = ((System.Drawing.Image)(resources.GetObject("btnView.Image")));
+            this.btnView.Image = global::BookShopManagementSystem.Properties.Resources.icons8_eye_32px;
             this.btnView.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnView.Location = new System.Drawing.Point(19, 205);
             this.btnView.Name = "btnView";
@@ -259,7 +258,7 @@
             this.btnExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExpenses.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExpenses.ForeColor = System.Drawing.Color.White;
-            this.btnExpenses.Image = ((System.Drawing.Image)(resources.GetObject("btnExpenses.Image")));
+            this.btnExpenses.Image = global::BookShopManagementSystem.Properties.Resources.icons8_expensive_price_32px;
             this.btnExpenses.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExpenses.Location = new System.Drawing.Point(19, 290);
             this.btnExpenses.Name = "btnExpenses";
@@ -300,10 +299,10 @@
             this.btnCloseTwo.FlatAppearance.BorderSize = 0;
             this.btnCloseTwo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCloseTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseTwo.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseTwo.Image")));
-            this.btnCloseTwo.Location = new System.Drawing.Point(768, 0);
+            this.btnCloseTwo.Image = global::BookShopManagementSystem.Properties.Resources.icons8_delete_50px;
+            this.btnCloseTwo.Location = new System.Drawing.Point(764, 0);
             this.btnCloseTwo.Name = "btnCloseTwo";
-            this.btnCloseTwo.Size = new System.Drawing.Size(43, 50);
+            this.btnCloseTwo.Size = new System.Drawing.Size(47, 50);
             this.btnCloseTwo.TabIndex = 3;
             this.btnCloseTwo.UseVisualStyleBackColor = false;
             this.btnCloseTwo.Click += new System.EventHandler(this.btnCloseTwo_Click);

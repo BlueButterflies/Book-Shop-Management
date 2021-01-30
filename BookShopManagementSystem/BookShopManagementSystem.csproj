@@ -22,6 +22,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +33,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_books.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
@@ -58,7 +63,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+      <HintPath>..\packages\Zen.Barcode.Core.2.0.0\lib\net45\Zen.Barcode.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +189,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserControls\UserControlersSales.resx">
       <DependentUpon>UserControlersSales.cs</DependentUpon>
@@ -217,6 +223,36 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\ImageBack.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_double_left_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_books_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_books.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_books.ico" />
+    <None Include="Resources\icons8_menu_24px.png" />
+    <None Include="Resources\icons8_checkmark_26px.png" />
+    <None Include="Resources\icons8_books_32px_1.png" />
+    <None Include="Resources\icons8_synchronize_24px.png" />
+    <None Include="Resources\icons8_staff_32px.png" />
+    <None Include="Resources\icons8_staff_50px.png" />
+    <None Include="Resources\icons8_sale_price_tag_24px.png" />
+    <None Include="Resources\icons8_videos_purchased_24px.png" />
+    <None Include="Resources\icons8_home_24px.png" />
+    <None Include="Resources\icons8_eye_32px.png" />
+    <None Include="Resources\icons8_expensive_price_32px.png" />
+    <None Include="Resources\icons8_shop_32px_1.png" />
+    <None Include="Resources\icons8_shop_32px.png" />
+    <None Include="Resources\icons8_delete_50px.png" />
+    <None Include="Resources\icons8_refresh_32px_1.png" />
+    <None Include="Resources\icons8_refresh_32px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

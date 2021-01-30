@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewBook));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -230,7 +229,7 @@
             this.btnSave.Location = new System.Drawing.Point(156, 391);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(90, 33);
-            this.btnSave.TabIndex = 22;
+            this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -265,7 +264,7 @@
             this.txtBarCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.Size = new System.Drawing.Size(142, 28);
-            this.txtBarCode.TabIndex = 16;
+            this.txtBarCode.TabIndex = 15;
             // 
             // labelBarCode
             // 
@@ -276,12 +275,33 @@
             this.labelBarCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelBarCode.Name = "labelBarCode";
             this.labelBarCode.Size = new System.Drawing.Size(75, 22);
-            this.labelBarCode.TabIndex = 15;
+            this.labelBarCode.TabIndex = 14;
             this.labelBarCode.Text = "Bar Code";
             // 
             // comboBoxCategory
             // 
             this.comboBoxCategory.FormattingEnabled = true;
+            this.comboBoxCategory.Items.AddRange(new object[] {
+            "Classic",
+            "Crime",
+            "Fantasy",
+            "Fable",
+            "Gothic fiction",
+            "Gothic Romanticism",
+            "Horror",
+            "Humor",
+            "Legend",
+            "Mystery",
+            "Romance",
+            "Satire",
+            "Science fiction",
+            "Tragicomedy",
+            "Travel",
+            "Western",
+            "Biography",
+            "Journalism",
+            "Narrative nonfiction",
+            "Scientific Article"});
             this.comboBoxCategory.Location = new System.Drawing.Point(156, 236);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(176, 21);
@@ -296,7 +316,7 @@
             this.labelPublishers.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPublishers.Name = "labelPublishers";
             this.labelPublishers.Size = new System.Drawing.Size(74, 22);
-            this.labelPublishers.TabIndex = 18;
+            this.labelPublishers.TabIndex = 17;
             this.labelPublishers.Text = "Publisher";
             // 
             // btnClear
@@ -310,7 +330,7 @@
             this.btnClear.Location = new System.Drawing.Point(252, 391);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(90, 33);
-            this.btnClear.TabIndex = 23;
+            this.btnClear.TabIndex = 20;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -332,7 +352,7 @@
             this.btnCloseWin.Location = new System.Drawing.Point(660, 10);
             this.btnCloseWin.Name = "btnCloseWin";
             this.btnCloseWin.Size = new System.Drawing.Size(33, 31);
-            this.btnCloseWin.TabIndex = 42;
+            this.btnCloseWin.TabIndex = 22;
             this.btnCloseWin.Text = "X";
             this.btnCloseWin.UseVisualStyleBackColor = false;
             this.btnCloseWin.Click += new System.EventHandler(this.btnCloseWin_Click);
@@ -348,7 +368,7 @@
             this.btnClose.Location = new System.Drawing.Point(574, 387);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(90, 37);
-            this.btnClose.TabIndex = 43;
+            this.btnClose.TabIndex = 21;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -359,11 +379,10 @@
             this.checkBoxBarCode.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBoxBarCode.BackColor = System.Drawing.Color.CadetBlue;
             this.checkBoxBarCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxBarCode.Image = ((System.Drawing.Image)(resources.GetObject("checkBoxBarCode.Image")));
             this.checkBoxBarCode.Location = new System.Drawing.Point(623, 227);
             this.checkBoxBarCode.Name = "checkBoxBarCode";
             this.checkBoxBarCode.Size = new System.Drawing.Size(41, 30);
-            this.checkBoxBarCode.TabIndex = 44;
+            this.checkBoxBarCode.TabIndex = 16;
             this.checkBoxBarCode.UseVisualStyleBackColor = false;
             this.checkBoxBarCode.CheckedChanged += new System.EventHandler(this.checkBoxBarCode_CheckedChanged);
             // 
@@ -375,7 +394,7 @@
             this.txtAuthor.Margin = new System.Windows.Forms.Padding(4);
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.Size = new System.Drawing.Size(176, 28);
-            this.txtAuthor.TabIndex = 45;
+            this.txtAuthor.TabIndex = 5;
             // 
             // txtPublish
             // 
@@ -385,7 +404,7 @@
             this.txtPublish.Margin = new System.Windows.Forms.Padding(4);
             this.txtPublish.Name = "txtPublish";
             this.txtPublish.Size = new System.Drawing.Size(508, 28);
-            this.txtPublish.TabIndex = 46;
+            this.txtPublish.TabIndex = 18;
             // 
             // AddNewBook
             // 
