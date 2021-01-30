@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinishOrder));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.labelFinilizate = new System.Windows.Forms.Label();
-            this.picShoopTree = new System.Windows.Forms.PictureBox();
             this.labelNet = new System.Windows.Forms.Label();
             this.txtNet = new System.Windows.Forms.TextBox();
             this.txtDiscounts = new System.Windows.Forms.TextBox();
@@ -48,6 +46,7 @@
             this.btnDone = new System.Windows.Forms.Button();
             this.btnCloseWin = new System.Windows.Forms.Button();
             this.dargControl = new BookShopManagementSystem.CostumControl.DargControl();
+            this.picShoopTree = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picShoopTree)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,20 +96,10 @@
             this.labelFinilizate.TabIndex = 0;
             this.labelFinilizate.Text = "Finalize Your Order";
             // 
-            // picShoopTree
-            // 
-            this.picShoopTree.Image = ((System.Drawing.Image)(resources.GetObject("picShoopTree.Image")));
-            this.picShoopTree.Location = new System.Drawing.Point(74, 31);
-            this.picShoopTree.Name = "picShoopTree";
-            this.picShoopTree.Size = new System.Drawing.Size(126, 90);
-            this.picShoopTree.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picShoopTree.TabIndex = 3;
-            this.picShoopTree.TabStop = false;
-            // 
             // labelNet
             // 
             this.labelNet.AutoSize = true;
-            this.labelNet.Location = new System.Drawing.Point(100, 162);
+            this.labelNet.Location = new System.Drawing.Point(87, 162);
             this.labelNet.Name = "labelNet";
             this.labelNet.Size = new System.Drawing.Size(98, 22);
             this.labelNet.TabIndex = 1;
@@ -118,14 +107,14 @@
             // 
             // txtNet
             // 
-            this.txtNet.Location = new System.Drawing.Point(246, 162);
+            this.txtNet.Location = new System.Drawing.Point(233, 162);
             this.txtNet.Name = "txtNet";
             this.txtNet.Size = new System.Drawing.Size(239, 28);
             this.txtNet.TabIndex = 2;
             // 
             // txtDiscounts
             // 
-            this.txtDiscounts.Location = new System.Drawing.Point(246, 203);
+            this.txtDiscounts.Location = new System.Drawing.Point(233, 203);
             this.txtDiscounts.Name = "txtDiscounts";
             this.txtDiscounts.Size = new System.Drawing.Size(239, 28);
             this.txtDiscounts.TabIndex = 4;
@@ -133,7 +122,7 @@
             // labelDiscounts
             // 
             this.labelDiscounts.AutoSize = true;
-            this.labelDiscounts.Location = new System.Drawing.Point(100, 203);
+            this.labelDiscounts.Location = new System.Drawing.Point(87, 203);
             this.labelDiscounts.Name = "labelDiscounts";
             this.labelDiscounts.Size = new System.Drawing.Size(71, 22);
             this.labelDiscounts.TabIndex = 3;
@@ -141,7 +130,7 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(246, 248);
+            this.txtTotal.Location = new System.Drawing.Point(233, 248);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(239, 28);
             this.txtTotal.TabIndex = 6;
@@ -149,7 +138,7 @@
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(100, 248);
+            this.labelTotal.Location = new System.Drawing.Point(87, 248);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(108, 22);
             this.labelTotal.TabIndex = 5;
@@ -157,7 +146,7 @@
             // 
             // txtPaid
             // 
-            this.txtPaid.Location = new System.Drawing.Point(246, 292);
+            this.txtPaid.Location = new System.Drawing.Point(233, 292);
             this.txtPaid.Name = "txtPaid";
             this.txtPaid.Size = new System.Drawing.Size(239, 28);
             this.txtPaid.TabIndex = 8;
@@ -165,7 +154,7 @@
             // labelPaid
             // 
             this.labelPaid.AutoSize = true;
-            this.labelPaid.Location = new System.Drawing.Point(100, 292);
+            this.labelPaid.Location = new System.Drawing.Point(87, 292);
             this.labelPaid.Name = "labelPaid";
             this.labelPaid.Size = new System.Drawing.Size(100, 22);
             this.labelPaid.TabIndex = 7;
@@ -175,7 +164,7 @@
             // 
             this.labelChange.AutoSize = true;
             this.labelChange.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelChange.Location = new System.Drawing.Point(92, 411);
+            this.labelChange.Location = new System.Drawing.Point(83, 411);
             this.labelChange.Name = "labelChange";
             this.labelChange.Size = new System.Drawing.Size(143, 27);
             this.labelChange.TabIndex = 9;
@@ -185,7 +174,7 @@
             // 
             this.labelZero.AutoSize = true;
             this.labelZero.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelZero.Location = new System.Drawing.Point(241, 411);
+            this.labelZero.Location = new System.Drawing.Point(232, 411);
             this.labelZero.Name = "labelZero";
             this.labelZero.Size = new System.Drawing.Size(36, 27);
             this.labelZero.TabIndex = 10;
@@ -198,7 +187,7 @@
             this.btnDone.FlatAppearance.BorderSize = 0;
             this.btnDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDone.ForeColor = System.Drawing.Color.White;
-            this.btnDone.Location = new System.Drawing.Point(394, 403);
+            this.btnDone.Location = new System.Drawing.Point(385, 403);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(91, 35);
             this.btnDone.TabIndex = 11;
@@ -225,6 +214,16 @@
             // dargControl
             // 
             this.dargControl.SelectControl = this;
+            // 
+            // picShoopTree
+            // 
+            this.picShoopTree.Image = global::BookShopManagementSystem.Properties.Resources.icons8_books_32px_1;
+            this.picShoopTree.Location = new System.Drawing.Point(74, 31);
+            this.picShoopTree.Name = "picShoopTree";
+            this.picShoopTree.Size = new System.Drawing.Size(126, 90);
+            this.picShoopTree.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picShoopTree.TabIndex = 3;
+            this.picShoopTree.TabStop = false;
             // 
             // FinishOrder
             // 

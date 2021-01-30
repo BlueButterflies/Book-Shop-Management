@@ -53,7 +53,7 @@
             // labelFirstName
             // 
             this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(59, 157);
+            this.labelFirstName.Location = new System.Drawing.Point(54, 153);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(69, 19);
             this.labelFirstName.TabIndex = 0;
@@ -63,7 +63,7 @@
             // 
             this.labelManageUser.AutoSize = true;
             this.labelManageUser.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelManageUser.Location = new System.Drawing.Point(353, 48);
+            this.labelManageUser.Location = new System.Drawing.Point(328, 42);
             this.labelManageUser.Name = "labelManageUser";
             this.labelManageUser.Size = new System.Drawing.Size(178, 34);
             this.labelManageUser.TabIndex = 1;
@@ -72,7 +72,7 @@
             // txtFirstName
             // 
             this.txtFirstName.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtFirstName.Location = new System.Drawing.Point(180, 154);
+            this.txtFirstName.Location = new System.Drawing.Point(175, 150);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(210, 26);
             this.txtFirstName.TabIndex = 2;
@@ -84,7 +84,7 @@
             this.comboBoxRole.Items.AddRange(new object[] {
             "Admin",
             "Employee"});
-            this.comboBoxRole.Location = new System.Drawing.Point(586, 248);
+            this.comboBoxRole.Location = new System.Drawing.Point(581, 244);
             this.comboBoxRole.Name = "comboBoxRole";
             this.comboBoxRole.Size = new System.Drawing.Size(210, 27);
             this.comboBoxRole.TabIndex = 3;
@@ -92,7 +92,7 @@
             // txtPass
             // 
             this.txtPass.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtPass.Location = new System.Drawing.Point(586, 185);
+            this.txtPass.Location = new System.Drawing.Point(581, 181);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(210, 26);
             this.txtPass.TabIndex = 5;
@@ -100,7 +100,7 @@
             // labelLastName
             // 
             this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(479, 157);
+            this.labelLastName.Location = new System.Drawing.Point(474, 153);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(73, 19);
             this.labelLastName.TabIndex = 4;
@@ -109,7 +109,7 @@
             // txtLastName
             // 
             this.txtLastName.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtLastName.Location = new System.Drawing.Point(586, 150);
+            this.txtLastName.Location = new System.Drawing.Point(581, 146);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(210, 26);
             this.txtLastName.TabIndex = 7;
@@ -117,7 +117,7 @@
             // labelPhone
             // 
             this.labelPhone.AutoSize = true;
-            this.labelPhone.Location = new System.Drawing.Point(76, 192);
+            this.labelPhone.Location = new System.Drawing.Point(71, 188);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Size = new System.Drawing.Size(45, 19);
             this.labelPhone.TabIndex = 6;
@@ -126,7 +126,7 @@
             // txtPhone
             // 
             this.txtPhone.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtPhone.Location = new System.Drawing.Point(180, 189);
+            this.txtPhone.Location = new System.Drawing.Point(175, 185);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(210, 26);
             this.txtPhone.TabIndex = 9;
@@ -134,7 +134,7 @@
             // labelMobile
             // 
             this.labelMobile.AutoSize = true;
-            this.labelMobile.Location = new System.Drawing.Point(458, 227);
+            this.labelMobile.Location = new System.Drawing.Point(453, 223);
             this.labelMobile.Name = "labelMobile";
             this.labelMobile.Size = new System.Drawing.Size(115, 19);
             this.labelMobile.TabIndex = 8;
@@ -143,7 +143,7 @@
             // txtChangePass
             // 
             this.txtChangePass.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtChangePass.Location = new System.Drawing.Point(586, 216);
+            this.txtChangePass.Location = new System.Drawing.Point(581, 212);
             this.txtChangePass.Name = "txtChangePass";
             this.txtChangePass.Size = new System.Drawing.Size(210, 26);
             this.txtChangePass.TabIndex = 11;
@@ -151,7 +151,7 @@
             // labelPass
             // 
             this.labelPass.AutoSize = true;
-            this.labelPass.Location = new System.Drawing.Point(483, 192);
+            this.labelPass.Location = new System.Drawing.Point(478, 188);
             this.labelPass.Name = "labelPass";
             this.labelPass.Size = new System.Drawing.Size(65, 19);
             this.labelPass.TabIndex = 10;
@@ -160,7 +160,7 @@
             // txtEmail
             // 
             this.txtEmail.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtEmail.Location = new System.Drawing.Point(180, 224);
+            this.txtEmail.Location = new System.Drawing.Point(175, 220);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(210, 26);
             this.txtEmail.TabIndex = 13;
@@ -177,7 +177,7 @@
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(77, 227);
+            this.labelEmail.Location = new System.Drawing.Point(72, 223);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(42, 19);
             this.labelEmail.TabIndex = 14;
@@ -191,7 +191,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(706, 309);
+            this.btnClear.Location = new System.Drawing.Point(701, 305);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(90, 29);
             this.btnClear.TabIndex = 17;
@@ -206,7 +206,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(586, 309);
+            this.btnSave.Location = new System.Drawing.Point(581, 305);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(90, 29);
             this.btnSave.TabIndex = 16;
@@ -216,7 +216,7 @@
             // labelConfirmPass
             // 
             this.labelConfirmPass.AutoSize = true;
-            this.labelConfirmPass.Location = new System.Drawing.Point(38, 259);
+            this.labelConfirmPass.Location = new System.Drawing.Point(33, 255);
             this.labelConfirmPass.Name = "labelConfirmPass";
             this.labelConfirmPass.Size = new System.Drawing.Size(120, 19);
             this.labelConfirmPass.TabIndex = 19;
@@ -225,7 +225,7 @@
             // txtConfirmPass
             // 
             this.txtConfirmPass.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtConfirmPass.Location = new System.Drawing.Point(180, 256);
+            this.txtConfirmPass.Location = new System.Drawing.Point(175, 252);
             this.txtConfirmPass.Name = "txtConfirmPass";
             this.txtConfirmPass.Size = new System.Drawing.Size(210, 26);
             this.txtConfirmPass.TabIndex = 18;
@@ -233,7 +233,7 @@
             // labelRole
             // 
             this.labelRole.AutoSize = true;
-            this.labelRole.Location = new System.Drawing.Point(498, 255);
+            this.labelRole.Location = new System.Drawing.Point(493, 251);
             this.labelRole.Name = "labelRole";
             this.labelRole.Size = new System.Drawing.Size(35, 19);
             this.labelRole.TabIndex = 20;

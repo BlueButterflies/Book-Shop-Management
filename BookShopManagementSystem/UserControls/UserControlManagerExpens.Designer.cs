@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlManagerExpens));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -39,9 +38,6 @@
             this.labelExtenses = new System.Windows.Forms.Label();
             this.btnAddNewExtens = new System.Windows.Forms.Button();
             this.dataGridPurchase = new System.Windows.Forms.DataGridView();
-            this.ColExpenseTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPurchase)).BeginInit();
             this.SuspendLayout();
@@ -107,15 +103,14 @@
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Comic Sans MS", 9.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefresh.Location = new System.Drawing.Point(679, 0);
+            this.btnRefresh.Image = global::BookShopManagementSystem.Properties.Resources.icons8_synchronize_24px;
+            this.btnRefresh.Location = new System.Drawing.Point(741, 0);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(112, 57);
+            this.btnRefresh.Size = new System.Drawing.Size(50, 57);
             this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = " Refresh";
             this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnDel
             // 
@@ -124,7 +119,6 @@
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Comic Sans MS", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
             this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDel.Location = new System.Drawing.Point(123, 0);
             this.btnDel.Name = "btnDel";
@@ -133,13 +127,14 @@
             this.btnDel.Text = "Delete";
             this.btnDel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // labelExtenses
             // 
             this.labelExtenses.AutoSize = true;
             this.labelExtenses.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelExtenses.ForeColor = System.Drawing.Color.White;
-            this.labelExtenses.Location = new System.Drawing.Point(400, 13);
+            this.labelExtenses.Location = new System.Drawing.Point(305, 13);
             this.labelExtenses.Name = "labelExtenses";
             this.labelExtenses.Size = new System.Drawing.Size(181, 27);
             this.labelExtenses.TabIndex = 2;
@@ -152,7 +147,6 @@
             this.btnAddNewExtens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewExtens.Font = new System.Drawing.Font("Comic Sans MS", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewExtens.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewExtens.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewExtens.Image")));
             this.btnAddNewExtens.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddNewExtens.Location = new System.Drawing.Point(0, 0);
             this.btnAddNewExtens.Name = "btnAddNewExtens";
@@ -171,10 +165,6 @@
             this.dataGridPurchase.BackgroundColor = System.Drawing.Color.White;
             this.dataGridPurchase.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridPurchase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPurchase.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColExpenseTitle,
-            this.ColAmount,
-            this.ColDescription});
             this.dataGridPurchase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridPurchase.Location = new System.Drawing.Point(10, 67);
             this.dataGridPurchase.Name = "dataGridPurchase";
@@ -183,24 +173,6 @@
             this.dataGridPurchase.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridPurchase.Size = new System.Drawing.Size(791, 305);
             this.dataGridPurchase.TabIndex = 8;
-            // 
-            // ColExpenseTitle
-            // 
-            this.ColExpenseTitle.HeaderText = "Expense Title";
-            this.ColExpenseTitle.Name = "ColExpenseTitle";
-            this.ColExpenseTitle.ReadOnly = true;
-            // 
-            // ColAmount
-            // 
-            this.ColAmount.HeaderText = "Amount";
-            this.ColAmount.Name = "ColAmount";
-            this.ColAmount.ReadOnly = true;
-            // 
-            // ColDescription
-            // 
-            this.ColDescription.HeaderText = "Description";
-            this.ColDescription.Name = "ColDescription";
-            this.ColDescription.ReadOnly = true;
             // 
             // UserControlManagerExpens
             // 
@@ -237,8 +209,5 @@
         private System.Windows.Forms.Label labelExtenses;
         private System.Windows.Forms.Button btnAddNewExtens;
         private System.Windows.Forms.DataGridView dataGridPurchase;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColExpenseTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDescription;
     }
 }

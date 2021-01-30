@@ -51,22 +51,19 @@ namespace BookShopManagementSystem.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=bookDb;Integrated Security=True");
-
-
+            SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-PO35QJG;Initial Catalog=bookshop;Integrated Security=True");
 
             SqlCommand sqlCommand = new SqlCommand
-                (@"INSERT INTO[dbo].[books]
-            ([TrackingId],[Title],[Author],[Quantity],[CostPrice],[SellingPrice],[Categories],[BarCode],[Publisher])
-            VALUES('" + txtTracking.Text + "', '" + txtTitle.Text + "', '" + txtAuthor.Text + "', '" + txtQuantity.Text + "', '" + txtCostPrice + "', '" + txtSellingPrice + "', '" + comboBoxCategory.Items + "', '" + txtBarCode + "', '" + txtPublish.Text + "')", sqlConnection);
+                (@"INSERT INTO[dbo].[Books]
+            ([TrackingId],[Title],[Author],[Quantity],[CostPrice],[SellingPrice],[Categories],[BarCode],[Publisher],[UserId])
+            VALUES('" + txtTracking.Text + "', '" + txtTitle.Text + "', '" + txtAuthor.Text + "', '" + txtQuantity.Text + "', '" + txtCostPrice.Text + "', '" + txtSellingPrice.Text + "', '" + comboBoxCategory.Text + "', '" + txtBarCode.Text + "', '" + txtPublish.Text + "', '" + LoginForm.userId + "')", sqlConnection);
           
             
             sqlConnection.Open();
             sqlCommand.ExecuteNonQuery();
             sqlConnection.Close();
 
-            MessageBox.Show("Add book Successfully");
-
+            MessageBox.Show("Add book successfully");
         }
     }
 }

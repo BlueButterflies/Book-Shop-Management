@@ -16,6 +16,7 @@ namespace BookShopManagementSystem.Forms
     {
         public static string userLogin;
         public static  string userRole;
+        public static int userId;
 
         public LoginForm()
         {
@@ -40,10 +41,10 @@ namespace BookShopManagementSystem.Forms
         {
             string password = "";
 
-            SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=bookDb;Integrated Security=True");
+            SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-PO35QJG;Initial Catalog=bookshop;Integrated Security=True");
 
             sqlConnection.Open();
-            SqlCommand sqlCommand = new SqlCommand("SELECT [UserName], [Password], [Role] FROM [dbo].[users] WHERE [UserName] = '"+txtUser.Text.Trim()+"'", sqlConnection);
+            SqlCommand sqlCommand = new SqlCommand("SELECT [id], [UserName], [Password], [Role] FROM [dbo].[Users] WHERE [UserName] = '"+txtUser.Text.Trim()+"'", sqlConnection);
 
             SqlDataReader reader = sqlCommand.ExecuteReader();
 
@@ -52,10 +53,9 @@ namespace BookShopManagementSystem.Forms
                 password = reader["Password"].ToString().Trim();
                 userRole = reader["Role"].ToString().Trim();
                 userLogin = reader["UserName"].ToString().Trim();
-
+                userId = (int)reader["id"]; 
             }
             
-
             if (Cryptography.Decrypt(password) == txtPass.Text)
             {
                 DaschBoard daschBoard = new DaschBoard();

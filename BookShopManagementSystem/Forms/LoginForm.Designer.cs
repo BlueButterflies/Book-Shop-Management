@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.labelForgotPass = new System.Windows.Forms.Label();
             this.btnEnter = new System.Windows.Forms.Button();
             this.labelUser = new System.Windows.Forms.Label();
@@ -164,7 +163,7 @@
             this.btnCloseOne.FlatAppearance.BorderSize = 0;
             this.btnCloseOne.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCloseOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseOne.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseOne.Image")));
+            this.btnCloseOne.Image = global::BookShopManagementSystem.Properties.Resources.icons8_double_left_32px;
             this.btnCloseOne.Location = new System.Drawing.Point(578, 0);
             this.btnCloseOne.Name = "btnCloseOne";
             this.btnCloseOne.Size = new System.Drawing.Size(43, 73);
@@ -176,7 +175,7 @@
             // 
             this.picturePanelOne.BackColor = System.Drawing.Color.CadetBlue;
             this.picturePanelOne.Dock = System.Windows.Forms.DockStyle.Left;
-            this.picturePanelOne.Image = ((System.Drawing.Image)(resources.GetObject("picturePanelOne.Image")));
+            this.picturePanelOne.Image = global::BookShopManagementSystem.Properties.Resources.icons8_books_32px;
             this.picturePanelOne.Location = new System.Drawing.Point(0, 0);
             this.picturePanelOne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picturePanelOne.Name = "picturePanelOne";
@@ -215,9 +214,9 @@
             this.label1.ForeColor = System.Drawing.Color.CadetBlue;
             this.label1.Location = new System.Drawing.Point(3, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(338, 15);
+            this.label1.Size = new System.Drawing.Size(333, 15);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Copyrights © 2020.All rights reserved  by BlueButterfliesDev";
+            this.label1.Text = "Copyrights © 2020.All rights reserved by BlueButterfliesDev";
             // 
             // dargControl
             // 

@@ -123,14 +123,4 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>38</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="checkBoxBarCode.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAMRJREFUWEft
-        ijEKw0AAw/L/B2dNKIgaDMJjO5zAg21dh8Phb3ju+/mE+u0d7ukzq0cNJna4p8+sHjWY2OGePrN61GBi
-        h3v6zOpRg4kd7ukzq0cNJna4p8+sHjWY2OGePrN61GBih3v6zOpRg4kd7ukzq0cNJna4p8+sHjWY2OGe
-        PrN61GBih3v6zOpRg4kd7ukzq0cNJna4p8+sHjWY2OGePrN61GBih3v6zOpRg4kd7ukzq0cNJna4p8+s
-        HvVwOPya63oB7JP0Zf5UYzIAAAAASUVORK5CYII=
-</value>
-  </data>
 </root>

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterNewUser));
             this.panelUp = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.picturePanelOne = new System.Windows.Forms.PictureBox();
@@ -75,7 +74,7 @@
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.Image = global::BookShopManagementSystem.Properties.Resources.icons8_double_left_32px;
             this.btnBack.Location = new System.Drawing.Point(664, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(43, 73);
@@ -87,7 +86,7 @@
             // 
             this.picturePanelOne.BackColor = System.Drawing.Color.CadetBlue;
             this.picturePanelOne.Dock = System.Windows.Forms.DockStyle.Left;
-            this.picturePanelOne.Image = ((System.Drawing.Image)(resources.GetObject("picturePanelOne.Image")));
+            this.picturePanelOne.Image = global::BookShopManagementSystem.Properties.Resources.icons8_books_32px;
             this.picturePanelOne.Location = new System.Drawing.Point(0, 0);
             this.picturePanelOne.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picturePanelOne.Name = "picturePanelOne";

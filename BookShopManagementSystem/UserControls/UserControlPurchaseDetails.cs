@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookShopManagementSystem.Forms;
 using System.Data.SqlClient;
+using System.Data.Odbc;
 
 namespace BookShopManagementSystem.UserControls
 {
@@ -26,40 +27,21 @@ namespace BookShopManagementSystem.UserControls
             addNewBook.ShowDialog();
         }
 
-        private void table_phonebook_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
-            {
-                if (e.ColumnIndex >= 0 && e.RowIndex >= 0)
-                {
-                    //Selected Cell Position
-                    dataGridPurchase.CurrentCell = dataGridPurchase.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                    dataGridPurchase.Rows[e.RowIndex].Selected = true;
-                    dataGridPurchase.Focus();
+            SqlConnection sql_connect = new SqlConnection(@"Data Source=DESKTOP-PO35QJG;Initial Catalog=bookshop;Integrated Security=True");
+            SqlCommand sql_command = new SqlCommand(@"SELECT [TrackingId],[Title],[Author],[Quantity],[CostPrice],[SellingPrice],[Categories],[BarCode],[Publisher] FROM [dbo].[Books] WHERE [UserId] = '"+LoginForm.userId+"'");
+           
 
-                //    //Veiw Context Menu
-                //    //dataGridPurchase.ContextMenuStrip = contextMenu;
-                //    Point positionContextMenu = new Point(MousePosition.X, MousePosition.Y);
-                //    dataGridPurchase.ContextMenuStrip.Show(positionContextMenu);
-                //    dataGridPurchase.ContextMenuStrip = null;
-                }
-                //else
-                //{
-                //    dataGridPurchase.ContextMenuStrip = null;
-                //}
-            }
-        }
+            SqlDataAdapter sql_ada = new SqlDataAdapter();
+            DataTable dt = new DataTable();
 
-        private void dataGridPurchase_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=bookDb;Integrated Security=True");
+            sql_command.Connection = sql_connect;
 
-            SqlCommand sqlCommand = new SqlCommand(@"SELECT [[TrackingId]]],[Title],[[Author]]],[Quantity],[CostPrice],[SellingPrice],[Categories],[BarCode],[Publisher] FROM [dbo].[books]");
+            sql_ada.SelectCommand = sql_command;
+            sql_ada.Fill(dt);
 
-            foreach(var item in sqlCommand.ToString())
-            {
-                dataGridPurchase.Rows[0].Cells[0].Value = item;
-            }
+            dataGridPurchase.DataSource = dt;
         }
     }
 }
