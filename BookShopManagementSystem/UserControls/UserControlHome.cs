@@ -23,7 +23,7 @@ namespace BookShopManagementSystem.UserControls
             sqlConnection.Open();
 
             #region Get count all sales books
-            SqlCommand sqlCommandSalesBook = new SqlCommand("SELECT COUNT(*) FROM[dbo].[Expense]", sqlConnection);
+            SqlCommand sqlCommandSalesBook = new SqlCommand("SELECT COUNT(*) FROM[dbo].[Expense] WHERE [UserId] = '" + LoginForm.userId + "'", sqlConnection);
 
             int countSalesBook = (int)sqlCommandSalesBook.ExecuteScalar();
 

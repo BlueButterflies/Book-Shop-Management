@@ -61,6 +61,16 @@ namespace BookShopManagementSystem.Properties {
         }
         
         /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_barcode_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_barcode_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
         /// </summary>
         internal static System.Drawing.Icon icons8_books {
