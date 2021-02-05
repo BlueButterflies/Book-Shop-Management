@@ -133,12 +133,12 @@
             this.labelTracking.AutoSize = true;
             this.labelTracking.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTracking.ForeColor = System.Drawing.Color.CadetBlue;
-            this.labelTracking.Location = new System.Drawing.Point(39, 118);
+            this.labelTracking.Location = new System.Drawing.Point(65, 119);
             this.labelTracking.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTracking.Name = "labelTracking";
-            this.labelTracking.Size = new System.Drawing.Size(97, 22);
+            this.labelTracking.Size = new System.Drawing.Size(71, 22);
             this.labelTracking.TabIndex = 0;
-            this.labelTracking.Text = "Tracking ID";
+            this.labelTracking.Text = "Tracking";
             // 
             // txtQuantity
             // 
@@ -280,6 +280,7 @@
             // 
             // comboBoxCategory
             // 
+            this.comboBoxCategory.ForeColor = System.Drawing.Color.CadetBlue;
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Items.AddRange(new object[] {
             "Classic",
@@ -379,6 +380,7 @@
             this.checkBoxBarCode.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBoxBarCode.BackColor = System.Drawing.Color.CadetBlue;
             this.checkBoxBarCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxBarCode.Image = global::BookShopManagementSystem.Properties.Resources.icons8_barcode_32px;
             this.checkBoxBarCode.Location = new System.Drawing.Point(623, 227);
             this.checkBoxBarCode.Name = "checkBoxBarCode";
             this.checkBoxBarCode.Size = new System.Drawing.Size(41, 30);

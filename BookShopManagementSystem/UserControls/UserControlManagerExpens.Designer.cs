@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -37,9 +38,17 @@
             this.btnDel = new System.Windows.Forms.Button();
             this.labelExtenses = new System.Windows.Forms.Label();
             this.btnAddNewExtens = new System.Windows.Forms.Button();
-            this.dataGridPurchase = new System.Windows.Forms.DataGridView();
+            this.dataGridExtenses = new System.Windows.Forms.DataGridView();
+            this.expenseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookshopDataSet6 = new BookShopManagementSystem.bookshopDataSet6();
+            this.expenseTableAdapter = new BookShopManagementSystem.bookshopDataSet6TableAdapters.ExpenseTableAdapter();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridPurchase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridExtenses)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expenseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookshopDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -124,7 +133,7 @@
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(99, 57);
             this.btnDel.TabIndex = 1;
-            this.btnDel.Text = "Delete";
+            this.btnDel.Text = "Delete All";
             this.btnDel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDel.UseVisualStyleBackColor = true;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
@@ -157,29 +166,69 @@
             this.btnAddNewExtens.UseVisualStyleBackColor = true;
             this.btnAddNewExtens.Click += new System.EventHandler(this.btnAddNewExtens_Click);
             // 
-            // dataGridPurchase
+            // dataGridExtenses
             // 
-            this.dataGridPurchase.AllowUserToAddRows = false;
-            this.dataGridPurchase.AllowUserToDeleteRows = false;
-            this.dataGridPurchase.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridPurchase.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridPurchase.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridPurchase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPurchase.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridPurchase.Location = new System.Drawing.Point(10, 67);
-            this.dataGridPurchase.Name = "dataGridPurchase";
-            this.dataGridPurchase.ReadOnly = true;
-            this.dataGridPurchase.RowHeadersVisible = false;
-            this.dataGridPurchase.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridPurchase.Size = new System.Drawing.Size(791, 305);
-            this.dataGridPurchase.TabIndex = 8;
+            this.dataGridExtenses.AllowUserToAddRows = false;
+            this.dataGridExtenses.AllowUserToDeleteRows = false;
+            this.dataGridExtenses.AutoGenerateColumns = false;
+            this.dataGridExtenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridExtenses.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridExtenses.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridExtenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridExtenses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.titleDataGridViewTextBoxColumn,
+            this.amountDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn});
+            this.dataGridExtenses.DataSource = this.expenseBindingSource;
+            this.dataGridExtenses.Location = new System.Drawing.Point(10, 67);
+            this.dataGridExtenses.Name = "dataGridExtenses";
+            this.dataGridExtenses.ReadOnly = true;
+            this.dataGridExtenses.RowHeadersVisible = false;
+            this.dataGridExtenses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridExtenses.Size = new System.Drawing.Size(791, 305);
+            this.dataGridExtenses.TabIndex = 8;
+            // 
+            // expenseBindingSource
+            // 
+            this.expenseBindingSource.DataMember = "Expense";
+            this.expenseBindingSource.DataSource = this.bookshopDataSet6;
+            // 
+            // bookshopDataSet6
+            // 
+            this.bookshopDataSet6.DataSetName = "bookshopDataSet6";
+            this.bookshopDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // expenseTableAdapter
+            // 
+            this.expenseTableAdapter.ClearBeforeFill = true;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // UserControlManagerExpens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.dataGridPurchase);
+            this.Controls.Add(this.dataGridExtenses);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
@@ -192,7 +241,9 @@
             this.Size = new System.Drawing.Size(811, 383);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridPurchase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridExtenses)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expenseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookshopDataSet6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -208,6 +259,12 @@
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Label labelExtenses;
         private System.Windows.Forms.Button btnAddNewExtens;
-        private System.Windows.Forms.DataGridView dataGridPurchase;
+        private System.Windows.Forms.DataGridView dataGridExtenses;
+        private System.Windows.Forms.BindingSource expenseBindingSource;
+        private bookshopDataSet6 bookshopDataSet6;
+        private bookshopDataSet6TableAdapters.ExpenseTableAdapter expenseTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
     }
 }

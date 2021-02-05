@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookShopManagementSystem.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,18 +27,17 @@ namespace BookShopManagementSystem.Forms
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
             SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-PO35QJG;Initial Catalog=bookshop;Integrated Security=True");
+            sqlConnection.Open();
 
             SqlCommand sqlCommand = new SqlCommand
                 (@"INSERT INTO[dbo].[Expense]
             ([Title],[Amount],[Description], [UserId])
-            VALUES('" + txtExpenseTitle.Text + "', '" +txtAmount.Text + "', '" + txtDescriptionExpense.Text + "', '"+LoginForm.userId+"')", sqlConnection);
+            VALUES('" + txtExpenseTitle.Text + "', '" + txtAmount.Text + "', '" + txtDescriptionExpense.Text + "', '" + LoginForm.userId + "')", sqlConnection);
 
-
-            sqlConnection.Open();
             sqlCommand.ExecuteNonQuery();
-            sqlConnection.Close();
 
             MessageBox.Show("Add expense successfully");
+            sqlConnection.Close();
         }
 
         private void btnClear_Click(object sender, EventArgs e)

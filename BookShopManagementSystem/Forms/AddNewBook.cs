@@ -55,7 +55,7 @@ namespace BookShopManagementSystem.Forms
 
             SqlCommand sqlCommand = new SqlCommand
                 (@"INSERT INTO[dbo].[Books]
-            ([TrackingId],[Title],[Author],[Quantity],[CostPrice],[SellingPrice],[Categories],[BarCode],[Publisher],[UserId])
+            ([Tracking],[Title],[Author],[Quantity],[CostPrice],[SellingPrice],[Categories],[BarCode],[Publisher],[UserId])
             VALUES('" + txtTracking.Text + "', '" + txtTitle.Text + "', '" + txtAuthor.Text + "', '" + txtQuantity.Text + "', '" + txtCostPrice.Text + "', '" + txtSellingPrice.Text + "', '" + comboBoxCategory.Text + "', '" + txtBarCode.Text + "', '" + txtPublish.Text + "', '" + LoginForm.userId + "')", sqlConnection);
           
             
@@ -65,5 +65,6 @@ namespace BookShopManagementSystem.Forms
 
             MessageBox.Show("Add book successfully");
         }
+
     }
 }

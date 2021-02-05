@@ -67,6 +67,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bookshopDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookshopDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bookshopDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookshopDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CostumControl\DargControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -209,6 +219,28 @@
     <EmbeddedResource Include="UserControls\UserControlViewSales.resx">
       <DependentUpon>UserControlViewSales.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bookshopDataSet2.xsc">
+      <DependentUpon>bookshopDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bookshopDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bookshopDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bookshopDataSet2.xss">
+      <DependentUpon>bookshopDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bookshopDataSet6.xsc">
+      <DependentUpon>bookshopDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="bookshopDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bookshopDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bookshopDataSet6.xss">
+      <DependentUpon>bookshopDataSet6.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -237,6 +269,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_books.ico" />
+    <None Include="Resources\icons8_barcode_32px.png" />
     <None Include="Resources\icons8_menu_24px.png" />
     <None Include="Resources\icons8_checkmark_26px.png" />
     <None Include="Resources\icons8_books_32px_1.png" />
