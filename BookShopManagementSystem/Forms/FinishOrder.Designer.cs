@@ -33,20 +33,17 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.labelFinilizate = new System.Windows.Forms.Label();
-            this.labelNet = new System.Windows.Forms.Label();
-            this.txtNet = new System.Windows.Forms.TextBox();
-            this.txtDiscounts = new System.Windows.Forms.TextBox();
-            this.labelDiscounts = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.labelTotal = new System.Windows.Forms.Label();
-            this.txtPaid = new System.Windows.Forms.TextBox();
-            this.labelPaid = new System.Windows.Forms.Label();
             this.labelChange = new System.Windows.Forms.Label();
             this.labelZero = new System.Windows.Forms.Label();
             this.btnDone = new System.Windows.Forms.Button();
             this.btnCloseWin = new System.Windows.Forms.Button();
-            this.dargControl = new BookShopManagementSystem.CostumControl.DargControl();
             this.picShoopTree = new System.Windows.Forms.PictureBox();
+            this.txtPaid = new System.Windows.Forms.TextBox();
+            this.labelPaid = new System.Windows.Forms.Label();
+            this.btnChangeMoney = new System.Windows.Forms.Button();
+            this.dargControl = new BookShopManagementSystem.CostumControl.DargControl();
             ((System.ComponentModel.ISupportInitialize)(this.picShoopTree)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,47 +87,16 @@
             // 
             this.labelFinilizate.AutoSize = true;
             this.labelFinilizate.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFinilizate.Location = new System.Drawing.Point(240, 61);
+            this.labelFinilizate.Location = new System.Drawing.Point(157, 149);
             this.labelFinilizate.Name = "labelFinilizate";
             this.labelFinilizate.Size = new System.Drawing.Size(245, 34);
             this.labelFinilizate.TabIndex = 0;
             this.labelFinilizate.Text = "Finalize Your Order";
             // 
-            // labelNet
-            // 
-            this.labelNet.AutoSize = true;
-            this.labelNet.Location = new System.Drawing.Point(87, 162);
-            this.labelNet.Name = "labelNet";
-            this.labelNet.Size = new System.Drawing.Size(98, 22);
-            this.labelNet.TabIndex = 1;
-            this.labelNet.Text = "Net Amount";
-            // 
-            // txtNet
-            // 
-            this.txtNet.Location = new System.Drawing.Point(233, 162);
-            this.txtNet.Name = "txtNet";
-            this.txtNet.Size = new System.Drawing.Size(239, 28);
-            this.txtNet.TabIndex = 2;
-            // 
-            // txtDiscounts
-            // 
-            this.txtDiscounts.Location = new System.Drawing.Point(233, 203);
-            this.txtDiscounts.Name = "txtDiscounts";
-            this.txtDiscounts.Size = new System.Drawing.Size(239, 28);
-            this.txtDiscounts.TabIndex = 4;
-            // 
-            // labelDiscounts
-            // 
-            this.labelDiscounts.AutoSize = true;
-            this.labelDiscounts.Location = new System.Drawing.Point(87, 203);
-            this.labelDiscounts.Name = "labelDiscounts";
-            this.labelDiscounts.Size = new System.Drawing.Size(71, 22);
-            this.labelDiscounts.TabIndex = 3;
-            this.labelDiscounts.Text = "Discount";
-            // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(233, 248);
+            this.txtTotal.ForeColor = System.Drawing.Color.CadetBlue;
+            this.txtTotal.Location = new System.Drawing.Point(233, 242);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(239, 28);
             this.txtTotal.TabIndex = 6;
@@ -138,33 +104,17 @@
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(87, 248);
+            this.labelTotal.Location = new System.Drawing.Point(87, 242);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(108, 22);
             this.labelTotal.TabIndex = 5;
             this.labelTotal.Text = "Total Amount";
             // 
-            // txtPaid
-            // 
-            this.txtPaid.Location = new System.Drawing.Point(233, 292);
-            this.txtPaid.Name = "txtPaid";
-            this.txtPaid.Size = new System.Drawing.Size(239, 28);
-            this.txtPaid.TabIndex = 8;
-            // 
-            // labelPaid
-            // 
-            this.labelPaid.AutoSize = true;
-            this.labelPaid.Location = new System.Drawing.Point(87, 292);
-            this.labelPaid.Name = "labelPaid";
-            this.labelPaid.Size = new System.Drawing.Size(100, 22);
-            this.labelPaid.TabIndex = 7;
-            this.labelPaid.Text = "Paid Amount";
-            // 
             // labelChange
             // 
             this.labelChange.AutoSize = true;
             this.labelChange.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelChange.Location = new System.Drawing.Point(83, 411);
+            this.labelChange.Location = new System.Drawing.Point(52, 405);
             this.labelChange.Name = "labelChange";
             this.labelChange.Size = new System.Drawing.Size(143, 27);
             this.labelChange.TabIndex = 9;
@@ -174,7 +124,7 @@
             // 
             this.labelZero.AutoSize = true;
             this.labelZero.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelZero.Location = new System.Drawing.Point(232, 411);
+            this.labelZero.Location = new System.Drawing.Point(201, 405);
             this.labelZero.Name = "labelZero";
             this.labelZero.Size = new System.Drawing.Size(36, 27);
             this.labelZero.TabIndex = 10;
@@ -187,7 +137,7 @@
             this.btnDone.FlatAppearance.BorderSize = 0;
             this.btnDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDone.ForeColor = System.Drawing.Color.White;
-            this.btnDone.Location = new System.Drawing.Point(385, 403);
+            this.btnDone.Location = new System.Drawing.Point(421, 397);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(91, 35);
             this.btnDone.TabIndex = 11;
@@ -211,19 +161,51 @@
             this.btnCloseWin.UseVisualStyleBackColor = false;
             this.btnCloseWin.Click += new System.EventHandler(this.btnCloseWin_Click);
             // 
-            // dargControl
-            // 
-            this.dargControl.SelectControl = this;
-            // 
             // picShoopTree
             // 
             this.picShoopTree.Image = global::BookShopManagementSystem.Properties.Resources.icons8_books_32px_1;
-            this.picShoopTree.Location = new System.Drawing.Point(74, 31);
+            this.picShoopTree.Location = new System.Drawing.Point(167, 12);
             this.picShoopTree.Name = "picShoopTree";
-            this.picShoopTree.Size = new System.Drawing.Size(126, 90);
+            this.picShoopTree.Size = new System.Drawing.Size(225, 134);
             this.picShoopTree.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picShoopTree.TabIndex = 3;
             this.picShoopTree.TabStop = false;
+            // 
+            // txtPaid
+            // 
+            this.txtPaid.ForeColor = System.Drawing.Color.CadetBlue;
+            this.txtPaid.Location = new System.Drawing.Point(233, 303);
+            this.txtPaid.Name = "txtPaid";
+            this.txtPaid.Size = new System.Drawing.Size(182, 28);
+            this.txtPaid.TabIndex = 8;
+            // 
+            // labelPaid
+            // 
+            this.labelPaid.AutoSize = true;
+            this.labelPaid.Location = new System.Drawing.Point(87, 303);
+            this.labelPaid.Name = "labelPaid";
+            this.labelPaid.Size = new System.Drawing.Size(100, 22);
+            this.labelPaid.TabIndex = 7;
+            this.labelPaid.Text = "Paid Amount";
+            // 
+            // btnChangeMoney
+            // 
+            this.btnChangeMoney.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnChangeMoney.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangeMoney.FlatAppearance.BorderSize = 0;
+            this.btnChangeMoney.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangeMoney.ForeColor = System.Drawing.Color.White;
+            this.btnChangeMoney.Location = new System.Drawing.Point(421, 303);
+            this.btnChangeMoney.Name = "btnChangeMoney";
+            this.btnChangeMoney.Size = new System.Drawing.Size(51, 28);
+            this.btnChangeMoney.TabIndex = 13;
+            this.btnChangeMoney.Text = "✔";
+            this.btnChangeMoney.UseVisualStyleBackColor = false;
+            this.btnChangeMoney.Click += new System.EventHandler(this.btnChangeMoney_Click);
+            // 
+            // dargControl
+            // 
+            this.dargControl.SelectControl = this;
             // 
             // FinishOrder
             // 
@@ -231,6 +213,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(558, 466);
+            this.Controls.Add(this.btnChangeMoney);
             this.Controls.Add(this.btnCloseWin);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDone);
@@ -240,10 +223,6 @@
             this.Controls.Add(this.labelPaid);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.labelTotal);
-            this.Controls.Add(this.txtDiscounts);
-            this.Controls.Add(this.labelDiscounts);
-            this.Controls.Add(this.txtNet);
-            this.Controls.Add(this.labelNet);
             this.Controls.Add(this.picShoopTree);
             this.Controls.Add(this.labelFinilizate);
             this.Controls.Add(this.panel3);
@@ -256,6 +235,7 @@
             this.Name = "FinishOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FinishOrder";
+            this.Load += new System.EventHandler(this.FinishOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picShoopTree)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -270,18 +250,15 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label labelFinilizate;
         private System.Windows.Forms.PictureBox picShoopTree;
-        private System.Windows.Forms.Label labelNet;
-        private System.Windows.Forms.TextBox txtNet;
-        private System.Windows.Forms.TextBox txtDiscounts;
-        private System.Windows.Forms.Label labelDiscounts;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label labelTotal;
-        private System.Windows.Forms.TextBox txtPaid;
-        private System.Windows.Forms.Label labelPaid;
         private System.Windows.Forms.Label labelChange;
         private System.Windows.Forms.Label labelZero;
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Button btnCloseWin;
         private CostumControl.DargControl dargControl;
+        private System.Windows.Forms.TextBox txtPaid;
+        private System.Windows.Forms.Label labelPaid;
+        private System.Windows.Forms.Button btnChangeMoney;
     }
 }

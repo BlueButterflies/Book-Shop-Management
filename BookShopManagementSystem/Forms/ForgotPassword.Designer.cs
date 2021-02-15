@@ -103,11 +103,11 @@
             this.label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.Location = new System.Drawing.Point(91, 145);
+            this.label.Location = new System.Drawing.Point(160, 145);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(514, 23);
+            this.label.Size = new System.Drawing.Size(389, 23);
             this.label.TabIndex = 2;
-            this.label.Text = "Please enter your username and your email  for reset password ";
+            this.label.Text = "Please enter your username for reset password ";
             // 
             // btnReset
             // 
@@ -116,7 +116,7 @@
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(158, 315);
+            this.btnReset.Location = new System.Drawing.Point(164, 315);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(380, 53);
             this.btnReset.TabIndex = 2;
@@ -153,12 +153,11 @@
             // 
             this.txtUserName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUserName.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtUserName.Location = new System.Drawing.Point(95, 217);
+            this.txtUserName.Location = new System.Drawing.Point(101, 217);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(494, 26);
             this.txtUserName.TabIndex = 0;
             this.txtUserName.Tag = "username";
-            this.txtUserName.Text = "Username";
             // 
             // ForgotPassword
             // 

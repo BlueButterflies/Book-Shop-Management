@@ -29,26 +29,6 @@ namespace BookShopManagementSystem.Forms
             UserControlHome userHome = new UserControlHome();//Charge  chart dashboard open after login
             AddControlerPanel(userHome);
 
-            //string user = "";
-            //string role = "";
-
-            //#region Use database
-            //sqlConnection.Open();
-
-            //SqlCommand sqlCommand = new SqlCommand("select [UserName], [Role] From [dbo].[users]", sqlConnection);
-
-            //SqlDataReader readerDb = sqlCommand.ExecuteReader();
-
-            //if (readerDb.Read())
-            //{
-            //    user = readerDb["UserName"].ToString();
-            //    role = readerDb["Role"].ToString();
-            //}
-
-            //sqlCommand.Parameters.Clear();
-            //sqlConnection.Close();
-            //#endregion
-
             labelWelcome.Text = "Welcome: " + LoginForm.userLogin;
             labelRole.Text = "Role: " + LoginForm.userRole;
 
@@ -57,10 +37,12 @@ namespace BookShopManagementSystem.Forms
             isCollapsed = false;
         }
 
+        #region Button Close Windows
         private void btnCloseTwo_Click(object sender, EventArgs e)//Button Close Windows
         {
             this.Close();
         }
+        #endregion
 
         #region Expanded and close panel Menu
         private void timerPanelLeft_Tick(object sender, EventArgs e)
@@ -123,7 +105,7 @@ namespace BookShopManagementSystem.Forms
         {
             MoveSidePanel(btnSaleBooks);
 
-            UserControlersSales sales = new UserControlersSales();
+            UserControlersSell sales = new UserControlersSell();
             AddControlerPanel(sales);
         }
 
@@ -131,7 +113,7 @@ namespace BookShopManagementSystem.Forms
         {
             MoveSidePanel(btnView);
 
-            UserControlViewSales userControlViewSales = new UserControlViewSales();
+            UserControlViewSoldRecord userControlViewSales = new UserControlViewSoldRecord();
             AddControlerPanel(userControlViewSales);
         }
 

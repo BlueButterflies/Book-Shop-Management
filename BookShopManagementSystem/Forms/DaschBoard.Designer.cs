@@ -244,7 +244,7 @@
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(163, 35);
             this.btnView.TabIndex = 4;
-            this.btnView.Text = "  View Sales";
+            this.btnView.Text = "  View Sold ";
             this.btnView.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnView.UseVisualStyleBackColor = false;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);

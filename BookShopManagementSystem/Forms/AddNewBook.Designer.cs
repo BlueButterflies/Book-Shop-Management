@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.labelAddNewBook = new System.Windows.Forms.Label();
             this.labelAuthor = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.labelTracking = new System.Windows.Forms.Label();
@@ -51,12 +50,14 @@
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.labelPublishers = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
-            this.dargControl = new BookShopManagementSystem.CostumControl.DargControl();
             this.btnCloseWin = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.checkBoxBarCode = new System.Windows.Forms.CheckBox();
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.txtPublish = new System.Windows.Forms.TextBox();
+            this.imageBarcode = new System.Windows.Forms.PictureBox();
+            this.dargControl = new BookShopManagementSystem.CostumControl.DargControl();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBarcode)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -94,17 +95,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(683, 10);
             this.panel4.TabIndex = 5;
-            // 
-            // labelAddNewBook
-            // 
-            this.labelAddNewBook.AutoSize = true;
-            this.labelAddNewBook.Font = new System.Drawing.Font("Comic Sans MS", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddNewBook.ForeColor = System.Drawing.Color.CadetBlue;
-            this.labelAddNewBook.Location = new System.Drawing.Point(241, 13);
-            this.labelAddNewBook.Name = "labelAddNewBook";
-            this.labelAddNewBook.Size = new System.Drawing.Size(221, 38);
-            this.labelAddNewBook.TabIndex = 30;
-            this.labelAddNewBook.Text = "Add New Books";
             // 
             // labelAuthor
             // 
@@ -336,10 +326,6 @@
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // dargControl
-            // 
-            this.dargControl.SelectControl = this;
-            // 
             // btnCloseWin
             // 
             this.btnCloseWin.BackColor = System.Drawing.Color.White;
@@ -405,14 +391,27 @@
             this.txtPublish.Location = new System.Drawing.Point(156, 273);
             this.txtPublish.Margin = new System.Windows.Forms.Padding(4);
             this.txtPublish.Name = "txtPublish";
-            this.txtPublish.Size = new System.Drawing.Size(508, 28);
+            this.txtPublish.Size = new System.Drawing.Size(320, 28);
             this.txtPublish.TabIndex = 18;
+            // 
+            // imageBarcode
+            // 
+            this.imageBarcode.Location = new System.Drawing.Point(515, 273);
+            this.imageBarcode.Name = "imageBarcode";
+            this.imageBarcode.Size = new System.Drawing.Size(133, 74);
+            this.imageBarcode.TabIndex = 31;
+            this.imageBarcode.TabStop = false;
+            // 
+            // dargControl
+            // 
+            this.dargControl.SelectControl = this;
             // 
             // AddNewBook
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(703, 440);
+            this.Controls.Add(this.imageBarcode);
             this.Controls.Add(this.txtPublish);
             this.Controls.Add(this.txtAuthor);
             this.Controls.Add(this.checkBoxBarCode);
@@ -423,7 +422,6 @@
             this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.txtBarCode);
             this.Controls.Add(this.labelBarCode);
-            this.Controls.Add(this.labelAddNewBook);
             this.Controls.Add(this.labelAuthor);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.labelTracking);
@@ -445,6 +443,7 @@
             this.Name = "AddNewBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            ((System.ComponentModel.ISupportInitialize)(this.imageBarcode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,7 +455,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label labelAddNewBook;
         private System.Windows.Forms.Label labelAuthor;
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Label labelTracking;
@@ -481,5 +479,6 @@
         private System.Windows.Forms.CheckBox checkBoxBarCode;
         private System.Windows.Forms.TextBox txtAuthor;
         private System.Windows.Forms.TextBox txtPublish;
+        private System.Windows.Forms.PictureBox imageBarcode;
     }
 }

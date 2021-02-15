@@ -110,7 +110,7 @@
             // 
             this.txtPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPass.Font = new System.Drawing.Font("Comic Sans MS", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.ForeColor = System.Drawing.Color.Black;
+            this.txtPass.ForeColor = System.Drawing.Color.CadetBlue;
             this.txtPass.Location = new System.Drawing.Point(138, 282);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.Name = "txtPass";
@@ -121,8 +121,8 @@
             // txtUser
             // 
             this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUser.Font = new System.Drawing.Font("Comic Sans MS", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.ForeColor = System.Drawing.Color.Black;
+            this.txtUser.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.ForeColor = System.Drawing.Color.CadetBlue;
             this.txtUser.Location = new System.Drawing.Point(138, 198);
             this.txtUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUser.Name = "txtUser";

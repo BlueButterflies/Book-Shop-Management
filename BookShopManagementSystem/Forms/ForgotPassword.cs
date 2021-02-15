@@ -33,7 +33,7 @@ namespace BookShopManagementSystem.Forms
         private void btnReset_Click(object sender, EventArgs e)
         {
             //Get info from Database
-            SqlConnection sql = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=bookDb;Integrated Security=True");
+            SqlConnection sql = new SqlConnection(@"Data Source=DESKTOP-PO35QJG;Initial Catalog=bookshop;Integrated Security=True");
 
             string password = "";
             string email = "";
@@ -41,9 +41,9 @@ namespace BookShopManagementSystem.Forms
             sql.Open();
             SqlCommand sqlCommand = new SqlCommand
                 (@"SELECT [Email], [Password] 
-                   FROM [dbo].[users]
-                   WHERE [UserName] = '" + txtUserName.Text + "'", sql);
-            ;
+                   FROM [dbo].[Users]
+                   WHERE [UserName] = @User", sql);
+            sqlCommand.Parameters.AddWithValue("#@User", txtUserName.Text.Trim());
 
             SqlDataReader readerDb = sqlCommand.ExecuteReader();
             if (readerDb.Read())

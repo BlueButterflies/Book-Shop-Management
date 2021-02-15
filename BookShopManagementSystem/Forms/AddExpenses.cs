@@ -19,34 +19,40 @@ namespace BookShopManagementSystem.Forms
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnAddCategory_Click(object sender, EventArgs e)
+        #region Add Expense
+        private void btnAddExpense_Click(object sender, EventArgs e)
         {
             SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-PO35QJG;Initial Catalog=bookshop;Integrated Security=True");
+
             sqlConnection.Open();
 
             SqlCommand sqlCommand = new SqlCommand
                 (@"INSERT INTO[dbo].[Expense]
             ([Title],[Amount],[Description], [UserId])
-            VALUES('" + txtExpenseTitle.Text + "', '" + txtAmount.Text + "', '" + txtDescriptionExpense.Text + "', '" + LoginForm.userId + "')", sqlConnection);
+            VALUES(@ExpenseTitle, @Amount, @Description, @UserId)", sqlConnection);
+
+            sqlCommand.Parameters.AddWithValue("@ExpenseTitle",txtExpenseTitle.Text);
+            sqlCommand.Parameters.AddWithValue("@Amount",txtAmount.Text);
+            sqlCommand.Parameters.AddWithValue("@Description", txtDescriptionExpense.Text);
+            sqlCommand.Parameters.AddWithValue("@UserId", LoginForm.userId);
 
             sqlCommand.ExecuteNonQuery();
 
             MessageBox.Show("Add expense successfully");
             sqlConnection.Close();
         }
+        #endregion
 
+        #region Button Clear
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtExpenseTitle.Text = "";
             txtAmount.Text = "";
             txtDescriptionExpense.Text = "";
         }
+        #endregion
 
+        #region Buttons Close
         private void btnCloseWin_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -56,5 +62,6 @@ namespace BookShopManagementSystem.Forms
         {
             this.Close();
         }
+        #endregion
     }
 }

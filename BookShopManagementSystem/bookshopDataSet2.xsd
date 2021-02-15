@@ -12,22 +12,14 @@
               <DbSource ConnectionRef="bookshopConnectionString (Settings)" DbObjectName="bookshop.dbo.Books" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Tracking, Title, Author, Quantity, CostPrice, SellingPrice, Categories, BarCode, Publisher FROM dbo.Books</CommandText>
+                    <CommandText>SELECT Title FROM dbo.Books</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Tracking" DataSetColumn="Tracking" />
               <Mapping SourceColumn="Title" DataSetColumn="Title" />
-              <Mapping SourceColumn="Author" DataSetColumn="Author" />
-              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
-              <Mapping SourceColumn="CostPrice" DataSetColumn="CostPrice" />
-              <Mapping SourceColumn="SellingPrice" DataSetColumn="SellingPrice" />
-              <Mapping SourceColumn="Categories" DataSetColumn="Categories" />
-              <Mapping SourceColumn="BarCode" DataSetColumn="BarCode" />
-              <Mapping SourceColumn="Publisher" DataSetColumn="Publisher" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -42,63 +34,7 @@
         <xs:element name="Books" msprop:Generator_TableClassName="BooksDataTable" msprop:Generator_TableVarName="tableBooks" msprop:Generator_TablePropName="Books" msprop:Generator_RowDeletingName="BooksRowDeleting" msprop:Generator_RowChangingName="BooksRowChanging" msprop:Generator_RowEvHandlerName="BooksRowChangeEventHandler" msprop:Generator_RowDeletedName="BooksRowDeleted" msprop:Generator_UserTableName="Books" msprop:Generator_RowChangedName="BooksRowChanged" msprop:Generator_RowEvArgName="BooksRowChangeEvent" msprop:Generator_RowClassName="BooksRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Tracking" msprop:Generator_ColumnVarNameInTable="columnTracking" msprop:Generator_ColumnPropNameInRow="Tracking" msprop:Generator_ColumnPropNameInTable="TrackingColumn" msprop:Generator_UserColumnName="Tracking" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="150" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Author" msprop:Generator_ColumnVarNameInTable="columnAuthor" msprop:Generator_ColumnPropNameInRow="Author" msprop:Generator_ColumnPropNameInTable="AuthorColumn" msprop:Generator_UserColumnName="Author" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="150" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="CostPrice" msprop:Generator_ColumnVarNameInTable="columnCostPrice" msprop:Generator_ColumnPropNameInRow="CostPrice" msprop:Generator_ColumnPropNameInTable="CostPriceColumn" msprop:Generator_UserColumnName="CostPrice" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="SellingPrice" msprop:Generator_ColumnVarNameInTable="columnSellingPrice" msprop:Generator_ColumnPropNameInRow="SellingPrice" msprop:Generator_ColumnPropNameInTable="SellingPriceColumn" msprop:Generator_UserColumnName="SellingPrice" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Categories" msprop:Generator_ColumnVarNameInTable="columnCategories" msprop:Generator_ColumnPropNameInRow="Categories" msprop:Generator_ColumnPropNameInTable="CategoriesColumn" msprop:Generator_UserColumnName="Categories" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="BarCode" msprop:Generator_ColumnVarNameInTable="columnBarCode" msprop:Generator_ColumnPropNameInRow="BarCode" msprop:Generator_ColumnPropNameInTable="BarCodeColumn" msprop:Generator_UserColumnName="BarCode" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Publisher" msprop:Generator_ColumnVarNameInTable="columnPublisher" msprop:Generator_ColumnPropNameInRow="Publisher" msprop:Generator_ColumnPropNameInTable="PublisherColumn" msprop:Generator_UserColumnName="Publisher" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
