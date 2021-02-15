@@ -13,7 +13,7 @@ namespace BookShopManagementSystem.UserControls
 {
     public partial class UserControlManagerExpens : UserControl
     {
-        SqlConnection sql_connect = new SqlConnection(@"Data Source=DESKTOP-PO35QJG;Initial Catalog=bookshop;Integrated Security=True");
+        SqlConnection sqlConnect = new SqlConnection(@"Data Source=DESKTOP-PO35QJG;Initial Catalog=bookshop;Integrated Security=True");
 
         public UserControlManagerExpens()
         {
@@ -24,17 +24,18 @@ namespace BookShopManagementSystem.UserControls
         #region Charge data table whit data from database
         private void ChargeDataGrid()
         {
-            SqlCommand sql_command = new SqlCommand(@"SELECT [Title],[Amount],[Description] FROM [dbo].[Expense] WHERE [UserId] = '" + LoginForm.userId + "'");
+            SqlCommand sqlCommand = new SqlCommand(@"SELECT [Title],[Amount],[Description] FROM [dbo].[Expense] WHERE [UserId] = @UserId");
+            sqlCommand.Parameters.AddWithValue("@UserId", LoginForm.userId);
 
-            SqlDataAdapter sql_ada = new SqlDataAdapter();
-            DataTable dt = new DataTable();
+            SqlDataAdapter sqlAdapter = new SqlDataAdapter();
+            DataTable dataTable = new DataTable();
 
-            sql_command.Connection = sql_connect;
+            sqlCommand.Connection = sqlConnect;
 
-            sql_ada.SelectCommand = sql_command;
-            sql_ada.Fill(dt);
+            sqlAdapter.SelectCommand = sqlCommand;
+            sqlAdapter.Fill(dataTable);
 
-            dataGridExtenses.DataSource = dt;
+            dataGridExtenses.DataSource = dataTable;
         }
         #endregion
 
@@ -65,26 +66,27 @@ namespace BookShopManagementSystem.UserControls
                 MessageBox.Show("There are no expense present for delete.");
                 return;
             }
-             if (MessageBox.Show("Are you sure want delete?", "Messsage", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure want delete?", "Messsage", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
                 {
-                    try
-                    {
-                    
-                        SqlCommand sqlCommand = new SqlCommand("DELETE FROM [dbo].[Expense] WHERE [UserId] = '" + LoginForm.userId + "'", sql_connect);
 
-                        sql_connect.Open();
-                        sqlCommand.ExecuteNonQuery();
+                    SqlCommand sqlCommand = new SqlCommand("DELETE FROM [dbo].[Expense] WHERE [UserId] = @UserId", sqlConnect);
+                    sqlCommand.Parameters.AddWithValue("@UserId", LoginForm.userId);
 
-                        MessageBox.Show("Records has been Deleted");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
+                    sqlConnect.Open();
+                    sqlCommand.ExecuteNonQuery();
 
-                    ChargeDataGrid();
-                    sql_connect.Close();
-                
+                    MessageBox.Show("Records has been Deleted");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                ChargeDataGrid();
+                sqlConnect.Close();
+
             }
         }
 

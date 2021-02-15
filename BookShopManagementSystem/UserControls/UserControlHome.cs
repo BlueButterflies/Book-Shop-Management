@@ -22,16 +22,18 @@ namespace BookShopManagementSystem.UserControls
 
             sqlConnection.Open();
 
-            #region Get count all sales books
-            SqlCommand sqlCommandSalesBook = new SqlCommand("SELECT COUNT(*) FROM[dbo].[Expense] WHERE [UserId] = '" + LoginForm.userId + "'", sqlConnection);
+            #region Get count all sold books
+            SqlCommand sqlCommandSalesBook = new SqlCommand("SELECT COUNT(*) FROM[dbo].[Sold] WHERE [UserId] = @Userid", sqlConnection);
+            sqlCommandSalesBook.Parameters.AddWithValue("@UserId", LoginForm.userId);
 
-            int countSalesBook = (int)sqlCommandSalesBook.ExecuteScalar();
+            int countSoldBook = (int)sqlCommandSalesBook.ExecuteScalar();
 
-            labelSoldBooks.Text = countSalesBook.ToString();
+            labelSoldBooks.Text = countSoldBook.ToString();
             #endregion
 
             #region count all purchase books
-            SqlCommand sqlCommandBookPurchase = new SqlCommand("SELECT COUNT(*) FROM[dbo].[Books] WHERE [UserId] = '"+LoginForm.userId+"'", sqlConnection);
+            SqlCommand sqlCommandBookPurchase = new SqlCommand("SELECT COUNT(*) FROM[dbo].[Books] WHERE [UserId] = @UserId", sqlConnection);
+            sqlCommandBookPurchase.Parameters.AddWithValue("@UserId", LoginForm.userId);
 
             int countBookPurchase = (int)sqlCommandBookPurchase.ExecuteScalar();
 
@@ -43,7 +45,7 @@ namespace BookShopManagementSystem.UserControls
 
             //The spiners in %
             spinerRecivedBook.Value = countBookPurchase / 100;
-            spinerSoldBook.Value = countSalesBook / 100;
+            spinerSoldBook.Value = countSoldBook / 100;
         }
 
         private void LoadChart() //Create Chart for Dash Board

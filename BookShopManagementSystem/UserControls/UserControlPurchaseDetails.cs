@@ -15,7 +15,7 @@ namespace BookShopManagementSystem.UserControls
 {
     public partial class UserControlPurchaseDetails : UserControl
     {
-        SqlConnection sql_connect = new SqlConnection(@"Data Source=DESKTOP-PO35QJG;Initial Catalog=bookshop;Integrated Security=True");
+        SqlConnection sqlConnect = new SqlConnection(@"Data Source=DESKTOP-PO35QJG;Initial Catalog=bookshop;Integrated Security=True");
 
         public UserControlPurchaseDetails()
         {
@@ -26,17 +26,18 @@ namespace BookShopManagementSystem.UserControls
         #region Charge data table whit data from database
         private void ChargeDataGrid()
         {
-            SqlCommand sql_command = new SqlCommand(@"SELECT [Tracking],[Title],[Author],[Quantity],[CostPrice],[SellingPrice],[Categories],[BarCode],[Publisher] FROM [dbo].[Books] WHERE [UserId] = '" + LoginForm.userId + "'");
+            SqlCommand sqlCommand = new SqlCommand(@"SELECT [Tracking],[Title],[Author],[Quantity],[CostPrice],[SellingPrice],[Categories],[BarCode],[Publisher] FROM [dbo].[Books] WHERE [UserId] = @UserId");
+            sqlCommand.Parameters.AddWithValue("@UserId", LoginForm.userId);
 
-            SqlDataAdapter sql_ada = new SqlDataAdapter();
-            DataTable dt = new DataTable();
+            SqlDataAdapter sqlAdapter = new SqlDataAdapter();
+            DataTable dataTable = new DataTable();
 
-            sql_command.Connection = sql_connect;
+            sqlCommand.Connection = sqlConnect;
 
-            sql_ada.SelectCommand = sql_command;
-            sql_ada.Fill(dt);
+            sqlAdapter.SelectCommand = sqlCommand;
+            sqlAdapter.Fill(dataTable);
 
-            dataGridPurchase.DataSource = dt;
+            dataGridPurchase.DataSource = dataTable;
         }
         #endregion
 
@@ -46,6 +47,8 @@ namespace BookShopManagementSystem.UserControls
             AddNewBook addNewBook = new AddNewBook();
 
             addNewBook.ShowDialog();
+
+            ChargeDataGrid();
         }
         #endregion
 
@@ -67,27 +70,24 @@ namespace BookShopManagementSystem.UserControls
         #region Search from data table and database
         private void SearchMethod()
         {
-            sql_connect.Open();
+            sqlConnect.Open();
             SqlDataAdapter adapt = new SqlDataAdapter();
+
             if (comboBoxSearchBy.Text == "Author")
             {
-                adapt = new SqlDataAdapter("SELECT * FROM [dbo].[Books] WHERE [Author] LIKE '" + txtSearch.Text + "'", sql_connect);
-            }
-            else if (comboBoxSearchBy.Text == "Tracking")
-            {
-                adapt = new SqlDataAdapter("SELECT * FROM [dbo].[Books] WHERE [Tracking] LIKE '" + txtSearch.Text + "'", sql_connect);
+                adapt = new SqlDataAdapter("SELECT * FROM [dbo].[Books] WHERE [Author] LIKE '" + txtSearch.Text + "'", sqlConnect);
             }
             else if (comboBoxSearchBy.Text == "Title")
             {
-                adapt = new SqlDataAdapter("SELECT * FROM [dbo].[Books] WHERE [Title] LIKE '" + txtSearch.Text + "'", sql_connect);
+                adapt = new SqlDataAdapter("SELECT * FROM [dbo].[Books] WHERE [Title] LIKE '" + txtSearch.Text + "'", sqlConnect);
             }
             else if (comboBoxSearchBy.Text == "Publisher")
             {
-                adapt = new SqlDataAdapter("SELECT * FROM [dbo].[Books] WHERE [Publisher] LIKE '" + txtSearch.Text + "'", sql_connect);
+                adapt = new SqlDataAdapter("SELECT * FROM [dbo].[Books] WHERE [Publisher] LIKE '" + txtSearch.Text + "'", sqlConnect);
             }
             else if (comboBoxSearchBy.Text == "Barcode")
             {
-                adapt = new SqlDataAdapter("SELECT * FROM [dbo].[Books] WHERE [BarCode] LIKE '" + txtSearch.Text + "'", sql_connect);
+                adapt = new SqlDataAdapter("SELECT * FROM [dbo].[Books] WHERE [BarCode] LIKE '" + txtSearch.Text + "'", sqlConnect);
             }
 
             DataTable dt = new DataTable();
@@ -95,7 +95,17 @@ namespace BookShopManagementSystem.UserControls
 
             dataGridPurchase.DataSource = dt;
 
-            sql_connect.Close();
+            sqlConnect.Close();
+            txtSearch.Text = "";
+            comboBoxSearchBy.Text = "Select";
+        }
+        #endregion
+
+        #region Button Update
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateBook updateBook = new UpdateBook();
+            updateBook.ShowDialog();
         }
         #endregion
     }

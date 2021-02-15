@@ -1,6 +1,6 @@
 ﻿namespace BookShopManagementSystem.UserControls
 {
-    partial class UserControlViewSales
+    partial class UserControlViewSoldRecord
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -36,15 +37,19 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.labelSales = new System.Windows.Forms.Label();
-            this.dataGridSales = new System.Windows.Forms.DataGridView();
-            this.ColSaleS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNetAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNetDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridSold = new System.Windows.Forms.DataGridView();
+            this.soldBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookshopDataSet1 = new BookShopManagementSystem.bookshopDataSet1();
+            this.soldTableAdapter = new BookShopManagementSystem.bookshopDataSet1TableAdapters.SoldTableAdapter();
+            this.netAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.netDiscountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewImageColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridSales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridSold)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soldBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookshopDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -128,78 +133,94 @@
             this.btnRefresh.TabIndex = 3;
             this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // labelSales
             // 
             this.labelSales.AutoSize = true;
             this.labelSales.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSales.ForeColor = System.Drawing.Color.White;
-            this.labelSales.Location = new System.Drawing.Point(334, 19);
+            this.labelSales.Location = new System.Drawing.Point(346, 19);
             this.labelSales.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSales.Name = "labelSales";
-            this.labelSales.Size = new System.Drawing.Size(166, 34);
+            this.labelSales.Size = new System.Drawing.Size(142, 34);
             this.labelSales.TabIndex = 2;
-            this.labelSales.Text = "Sales Record";
+            this.labelSales.Text = "Sold Books";
             // 
-            // dataGridSales
+            // dataGridSold
             // 
-            this.dataGridSales.AllowUserToAddRows = false;
-            this.dataGridSales.AllowUserToDeleteRows = false;
-            this.dataGridSales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridSales.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridSales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColSaleS,
-            this.ColNetAmount,
-            this.ColNetDiscount,
-            this.ColumnTotalAmount,
-            this.ColumnDate});
-            this.dataGridSales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridSales.Location = new System.Drawing.Point(13, 78);
-            this.dataGridSales.Name = "dataGridSales";
-            this.dataGridSales.ReadOnly = true;
-            this.dataGridSales.RowHeadersVisible = false;
-            this.dataGridSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridSales.Size = new System.Drawing.Size(835, 379);
-            this.dataGridSales.TabIndex = 9;
+            this.dataGridSold.AllowUserToAddRows = false;
+            this.dataGridSold.AllowUserToDeleteRows = false;
+            this.dataGridSold.AutoGenerateColumns = false;
+            this.dataGridSold.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridSold.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridSold.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridSold.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridSold.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.netAmountDataGridViewTextBoxColumn,
+            this.netDiscountDataGridViewTextBoxColumn,
+            this.totalAmountDataGridViewTextBoxColumn,
+            this.dateDataGridViewImageColumn});
+            this.dataGridSold.DataSource = this.soldBindingSource;
+            this.dataGridSold.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridSold.Location = new System.Drawing.Point(13, 78);
+            this.dataGridSold.Name = "dataGridSold";
+            this.dataGridSold.ReadOnly = true;
+            this.dataGridSold.RowHeadersVisible = false;
+            this.dataGridSold.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridSold.Size = new System.Drawing.Size(835, 379);
+            this.dataGridSold.TabIndex = 9;
             // 
-            // ColSaleS
+            // soldBindingSource
             // 
-            this.ColSaleS.HeaderText = "Sales ID";
-            this.ColSaleS.Name = "ColSaleS";
-            this.ColSaleS.ReadOnly = true;
+            this.soldBindingSource.DataMember = "Sold";
+            this.soldBindingSource.DataSource = this.bookshopDataSet1;
             // 
-            // ColNetAmount
+            // bookshopDataSet1
             // 
-            this.ColNetAmount.HeaderText = "Net Amount";
-            this.ColNetAmount.Name = "ColNetAmount";
-            this.ColNetAmount.ReadOnly = true;
+            this.bookshopDataSet1.DataSetName = "bookshopDataSet1";
+            this.bookshopDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // ColNetDiscount
+            // soldTableAdapter
             // 
-            this.ColNetDiscount.HeaderText = "Net Discount";
-            this.ColNetDiscount.Name = "ColNetDiscount";
-            this.ColNetDiscount.ReadOnly = true;
+            this.soldTableAdapter.ClearBeforeFill = true;
             // 
-            // ColumnTotalAmount
+            // netAmountDataGridViewTextBoxColumn
             // 
-            this.ColumnTotalAmount.HeaderText = "Total Amount";
-            this.ColumnTotalAmount.Name = "ColumnTotalAmount";
-            this.ColumnTotalAmount.ReadOnly = true;
+            this.netAmountDataGridViewTextBoxColumn.DataPropertyName = "NetAmount";
+            this.netAmountDataGridViewTextBoxColumn.HeaderText = "Net Amount";
+            this.netAmountDataGridViewTextBoxColumn.Name = "netAmountDataGridViewTextBoxColumn";
+            this.netAmountDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // ColumnDate
+            // netDiscountDataGridViewTextBoxColumn
             // 
-            this.ColumnDate.HeaderText = "Date";
-            this.ColumnDate.Name = "ColumnDate";
-            this.ColumnDate.ReadOnly = true;
+            this.netDiscountDataGridViewTextBoxColumn.DataPropertyName = "NetDiscount";
+            this.netDiscountDataGridViewTextBoxColumn.HeaderText = "Net Discount";
+            this.netDiscountDataGridViewTextBoxColumn.Name = "netDiscountDataGridViewTextBoxColumn";
+            this.netDiscountDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // UserControlViewSales
+            // totalAmountDataGridViewTextBoxColumn
+            // 
+            this.totalAmountDataGridViewTextBoxColumn.DataPropertyName = "TotalAmount";
+            this.totalAmountDataGridViewTextBoxColumn.HeaderText = "Total Amount";
+            this.totalAmountDataGridViewTextBoxColumn.Name = "totalAmountDataGridViewTextBoxColumn";
+            this.totalAmountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateDataGridViewImageColumn
+            // 
+            this.dateDataGridViewImageColumn.DataPropertyName = "Date";
+            this.dateDataGridViewImageColumn.HeaderText = "Date";
+            this.dateDataGridViewImageColumn.Name = "dateDataGridViewImageColumn";
+            this.dateDataGridViewImageColumn.ReadOnly = true;
+            this.dateDataGridViewImageColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dateDataGridViewImageColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // UserControlViewSoldRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.dataGridSales);
+            this.Controls.Add(this.dataGridSold);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
@@ -208,13 +229,15 @@
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.CadetBlue;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UserControlViewSales";
+            this.Name = "UserControlViewSoldRecord";
             this.Size = new System.Drawing.Size(861, 483);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridSales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridSold)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soldBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookshopDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -228,12 +251,14 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label labelSales;
-        private System.Windows.Forms.DataGridView dataGridSales;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSaleS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNetAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNetDiscount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTotalAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDate;
+        private System.Windows.Forms.DataGridView dataGridSold;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource soldBindingSource;
+        private bookshopDataSet1 bookshopDataSet1;
+        private bookshopDataSet1TableAdapters.SoldTableAdapter soldTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn netAmountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn netDiscountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalAmountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewImageColumn;
     }
 }

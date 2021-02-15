@@ -1,6 +1,6 @@
 ﻿namespace BookShopManagementSystem.UserControls
 {
-    partial class UserControlersSales
+    partial class UserControlersSell
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listView = new System.Windows.Forms.ListView();
@@ -39,13 +39,10 @@
             this.labelSumOfAmount = new System.Windows.Forms.Label();
             this.labelAmount = new System.Windows.Forms.Label();
             this.btnFinish = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnMinus = new System.Windows.Forms.Button();
-            this.btnPlus = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnAddToCart = new System.Windows.Forms.Button();
@@ -61,20 +58,20 @@
             this.labelAuthor = new System.Windows.Forms.Label();
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.ComboTitle = new System.Windows.Forms.ComboBox();
+            this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookshopDataSet2 = new BookShopManagementSystem.bookshopDataSet2();
+            this.booksTableAdapter = new BookShopManagementSystem.bookshopDataSet2TableAdapters.BooksTableAdapter();
+            this.btnChargeOtherInfo = new System.Windows.Forms.Button();
             this.panelLeft.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookshopDataSet2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtTitle
-            // 
-            this.txtTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTitle.Location = new System.Drawing.Point(69, 98);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(159, 26);
-            this.txtTitle.TabIndex = 2;
             // 
             // panelLeft
             // 
@@ -108,6 +105,7 @@
             this.columnQuantity,
             this.columnAmount});
             this.listView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView.ForeColor = System.Drawing.Color.CadetBlue;
             this.listView.GridLines = true;
             this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(0, 0);
@@ -137,7 +135,6 @@
             this.panel5.Controls.Add(this.labelSumOfAmount);
             this.panel5.Controls.Add(this.labelAmount);
             this.panel5.Controls.Add(this.btnFinish);
-            this.panel5.Controls.Add(this.btnClear);
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -150,18 +147,18 @@
             // 
             this.labelSumOfAmount.AutoSize = true;
             this.labelSumOfAmount.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSumOfAmount.Location = new System.Drawing.Point(187, 107);
+            this.labelSumOfAmount.Location = new System.Drawing.Point(173, 107);
             this.labelSumOfAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSumOfAmount.Name = "labelSumOfAmount";
-            this.labelSumOfAmount.Size = new System.Drawing.Size(36, 27);
+            this.labelSumOfAmount.Size = new System.Drawing.Size(44, 27);
             this.labelSumOfAmount.TabIndex = 4;
-            this.labelSumOfAmount.Text = "00";
+            this.labelSumOfAmount.Text = " 00";
             // 
             // labelAmount
             // 
             this.labelAmount.AutoSize = true;
             this.labelAmount.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAmount.Location = new System.Drawing.Point(27, 107);
+            this.labelAmount.Location = new System.Drawing.Point(24, 107);
             this.labelAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAmount.Name = "labelAmount";
             this.labelAmount.Size = new System.Drawing.Size(152, 27);
@@ -174,53 +171,25 @@
             this.btnFinish.FlatAppearance.BorderSize = 0;
             this.btnFinish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinish.ForeColor = System.Drawing.Color.White;
-            this.btnFinish.Location = new System.Drawing.Point(126, 176);
+            this.btnFinish.Location = new System.Drawing.Point(17, 176);
             this.btnFinish.Name = "btnFinish";
-            this.btnFinish.Size = new System.Drawing.Size(116, 42);
+            this.btnFinish.Size = new System.Drawing.Size(210, 42);
             this.btnFinish.TabIndex = 1;
             this.btnFinish.Text = "Finish";
             this.btnFinish.UseVisualStyleBackColor = false;
             this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.Crimson;
-            this.btnClear.FlatAppearance.BorderSize = 0;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(4, 176);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(116, 42);
-            this.btnClear.TabIndex = 0;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
-            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Controls.Add(this.btnAdd);
             this.panel8.Controls.Add(this.btnDelete);
-            this.panel8.Controls.Add(this.btnMinus);
-            this.panel8.Controls.Add(this.btnPlus);
             this.panel8.Controls.Add(this.panel7);
+            this.panel8.Controls.Add(this.btnClear);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 10);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(245, 56);
             this.panel8.TabIndex = 5;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(185, 3);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(57, 42);
-            this.btnAdd.TabIndex = 3;
-            this.btnAdd.Text = "Add ";
-            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // btnDelete
             // 
@@ -228,40 +197,13 @@
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(107, 3);
+            this.btnDelete.Location = new System.Drawing.Point(129, 3);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(72, 42);
+            this.btnDelete.Size = new System.Drawing.Size(116, 42);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnMinus
-            // 
-            this.btnMinus.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnMinus.FlatAppearance.BorderSize = 0;
-            this.btnMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinus.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinus.ForeColor = System.Drawing.Color.White;
-            this.btnMinus.Location = new System.Drawing.Point(55, 3);
-            this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(46, 42);
-            this.btnMinus.TabIndex = 1;
-            this.btnMinus.Text = "-";
-            this.btnMinus.UseVisualStyleBackColor = false;
-            // 
-            // btnPlus
-            // 
-            this.btnPlus.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnPlus.FlatAppearance.BorderSize = 0;
-            this.btnPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlus.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlus.ForeColor = System.Drawing.Color.White;
-            this.btnPlus.Location = new System.Drawing.Point(3, 3);
-            this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(46, 42);
-            this.btnPlus.TabIndex = 0;
-            this.btnPlus.Text = "+";
-            this.btnPlus.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel7
             // 
@@ -271,6 +213,20 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(245, 10);
             this.panel7.TabIndex = 5;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.Orange;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(0, 3);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(116, 42);
+            this.btnClear.TabIndex = 0;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // panel6
             // 
@@ -297,47 +253,50 @@
             this.btnAddToCart.FlatAppearance.BorderSize = 0;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToCart.ForeColor = System.Drawing.Color.White;
-            this.btnAddToCart.Location = new System.Drawing.Point(390, 328);
+            this.btnAddToCart.Location = new System.Drawing.Point(408, 328);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(129, 42);
             this.btnAddToCart.TabIndex = 15;
             this.btnAddToCart.Text = "Add to Cart";
             this.btnAddToCart.UseVisualStyleBackColor = false;
+            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
             // labelTitle
             // 
             this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(65, 75);
+            this.labelTitle.Location = new System.Drawing.Point(108, 62);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(74, 19);
+            this.labelTitle.Size = new System.Drawing.Size(84, 19);
             this.labelTitle.TabIndex = 1;
-            this.labelTitle.Text = "Book Title";
+            this.labelTitle.Text = "Select Book";
             // 
             // txtPrice
             // 
             this.txtPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPrice.Location = new System.Drawing.Point(69, 236);
+            this.txtPrice.ForeColor = System.Drawing.Color.CadetBlue;
+            this.txtPrice.Location = new System.Drawing.Point(260, 213);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(159, 26);
+            this.txtPrice.Size = new System.Drawing.Size(175, 26);
             this.txtPrice.TabIndex = 10;
             // 
             // txtBarCode
             // 
             this.txtBarCode.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBarCode.Location = new System.Drawing.Point(69, 165);
+            this.txtBarCode.ForeColor = System.Drawing.Color.CadetBlue;
+            this.txtBarCode.Location = new System.Drawing.Point(20, 216);
             this.txtBarCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarCode.Name = "txtBarCode";
-            this.txtBarCode.Size = new System.Drawing.Size(159, 26);
+            this.txtBarCode.Size = new System.Drawing.Size(175, 26);
             this.txtBarCode.TabIndex = 6;
             // 
             // labelPrice
             // 
             this.labelPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(65, 213);
+            this.labelPrice.Location = new System.Drawing.Point(256, 190);
             this.labelPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(40, 19);
@@ -348,7 +307,7 @@
             // 
             this.labelBarCode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelBarCode.AutoSize = true;
-            this.labelBarCode.Location = new System.Drawing.Point(65, 142);
+            this.labelBarCode.Location = new System.Drawing.Point(16, 193);
             this.labelBarCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelBarCode.Name = "labelBarCode";
             this.labelBarCode.Size = new System.Drawing.Size(66, 19);
@@ -359,7 +318,7 @@
             // 
             this.labelDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelDiscount.AutoSize = true;
-            this.labelDiscount.Location = new System.Drawing.Point(306, 217);
+            this.labelDiscount.Location = new System.Drawing.Point(17, 259);
             this.labelDiscount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDiscount.Name = "labelDiscount";
             this.labelDiscount.Size = new System.Drawing.Size(79, 19);
@@ -369,7 +328,8 @@
             // txtDiscount
             // 
             this.txtDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDiscount.Location = new System.Drawing.Point(309, 239);
+            this.txtDiscount.ForeColor = System.Drawing.Color.CadetBlue;
+            this.txtDiscount.Location = new System.Drawing.Point(20, 281);
             this.txtDiscount.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(175, 26);
@@ -379,17 +339,18 @@
             // 
             this.labelTracking.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTracking.AutoSize = true;
-            this.labelTracking.Location = new System.Drawing.Point(305, 142);
+            this.labelTracking.Location = new System.Drawing.Point(256, 129);
             this.labelTracking.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTracking.Name = "labelTracking";
-            this.labelTracking.Size = new System.Drawing.Size(85, 19);
+            this.labelTracking.Size = new System.Drawing.Size(69, 19);
             this.labelTracking.TabIndex = 7;
-            this.labelTracking.Text = "Tracking ID";
+            this.labelTracking.Text = "Tracking ";
             // 
             // txtTracking
             // 
             this.txtTracking.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTracking.Location = new System.Drawing.Point(309, 168);
+            this.txtTracking.ForeColor = System.Drawing.Color.CadetBlue;
+            this.txtTracking.Location = new System.Drawing.Point(261, 155);
             this.txtTracking.Margin = new System.Windows.Forms.Padding(4);
             this.txtTracking.Name = "txtTracking";
             this.txtTracking.Size = new System.Drawing.Size(175, 26);
@@ -399,7 +360,7 @@
             // 
             this.labelAuthor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAuthor.AutoSize = true;
-            this.labelAuthor.Location = new System.Drawing.Point(305, 75);
+            this.labelAuthor.Location = new System.Drawing.Point(16, 129);
             this.labelAuthor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAuthor.Name = "labelAuthor";
             this.labelAuthor.Size = new System.Drawing.Size(53, 19);
@@ -409,7 +370,8 @@
             // txtAuthor
             // 
             this.txtAuthor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAuthor.Location = new System.Drawing.Point(309, 98);
+            this.txtAuthor.ForeColor = System.Drawing.Color.CadetBlue;
+            this.txtAuthor.Location = new System.Drawing.Point(20, 152);
             this.txtAuthor.Margin = new System.Windows.Forms.Padding(4);
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.Size = new System.Drawing.Size(175, 26);
@@ -420,16 +382,78 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(192, 0);
+            this.label8.Location = new System.Drawing.Point(208, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(150, 38);
             this.label8.TabIndex = 0;
             this.label8.Text = "Sell Books";
             // 
-            // UserControlersSales
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(256, 258);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 19);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Quantity";
+            // 
+            // txtQuantity
+            // 
+            this.txtQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtQuantity.ForeColor = System.Drawing.Color.CadetBlue;
+            this.txtQuantity.Location = new System.Drawing.Point(260, 281);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(175, 26);
+            this.txtQuantity.TabIndex = 17;
+            // 
+            // ComboTitle
+            // 
+            this.ComboTitle.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.booksBindingSource, "Title", true));
+            this.ComboTitle.ForeColor = System.Drawing.Color.CadetBlue;
+            this.ComboTitle.FormattingEnabled = true;
+            this.ComboTitle.Location = new System.Drawing.Point(21, 84);
+            this.ComboTitle.Name = "ComboTitle";
+            this.ComboTitle.Size = new System.Drawing.Size(337, 27);
+            this.ComboTitle.TabIndex = 18;
+            this.ComboTitle.Text = "Select";
+            // 
+            // booksBindingSource
+            // 
+            this.booksBindingSource.DataMember = "Books";
+            this.booksBindingSource.DataSource = this.bookshopDataSet2;
+            // 
+            // bookshopDataSet2
+            // 
+            this.bookshopDataSet2.DataSetName = "bookshopDataSet2";
+            this.bookshopDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // booksTableAdapter
+            // 
+            this.booksTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnChargeOtherInfo
+            // 
+            this.btnChargeOtherInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChargeOtherInfo.Font = new System.Drawing.Font("Comic Sans MS", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChargeOtherInfo.Location = new System.Drawing.Point(398, 84);
+            this.btnChargeOtherInfo.Name = "btnChargeOtherInfo";
+            this.btnChargeOtherInfo.Size = new System.Drawing.Size(37, 27);
+            this.btnChargeOtherInfo.TabIndex = 19;
+            this.btnChargeOtherInfo.Text = "✔";
+            this.btnChargeOtherInfo.UseVisualStyleBackColor = true;
+            this.btnChargeOtherInfo.Click += new System.EventHandler(this.btnChargeOtherInfo_Click);
+            // 
+            // UserControlersSell
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnChargeOtherInfo);
+            this.Controls.Add(this.ComboTitle);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.labelAuthor);
             this.Controls.Add(this.txtAuthor);
@@ -444,25 +468,24 @@
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.panelLeft);
-            this.Controls.Add(this.txtTitle);
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.CadetBlue;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UserControlersSales";
+            this.Name = "UserControlersSell";
             this.Size = new System.Drawing.Size(811, 383);
             this.panelLeft.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookshopDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
@@ -471,18 +494,11 @@
         private System.Windows.Forms.Button btnAddToCart;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.ListView listView;
-        private System.Windows.Forms.ColumnHeader columnTitle;
-        private System.Windows.Forms.ColumnHeader columnQuantity;
-        private System.Windows.Forms.ColumnHeader columnAmount;
         private System.Windows.Forms.Label labelSumOfAmount;
         private System.Windows.Forms.Label labelAmount;
         private System.Windows.Forms.Button btnFinish;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnMinus;
-        private System.Windows.Forms.Button btnPlus;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtBarCode;
@@ -495,5 +511,16 @@
         private System.Windows.Forms.Label labelAuthor;
         private System.Windows.Forms.TextBox txtAuthor;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListView listView;
+        private System.Windows.Forms.ColumnHeader columnTitle;
+        private System.Windows.Forms.ColumnHeader columnQuantity;
+        private System.Windows.Forms.ColumnHeader columnAmount;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.ComboBox ComboTitle;
+        private System.Windows.Forms.BindingSource booksBindingSource;
+        private bookshopDataSet2 bookshopDataSet2;
+        private bookshopDataSet2TableAdapters.BooksTableAdapter booksTableAdapter;
+        private System.Windows.Forms.Button btnChargeOtherInfo;
     }
 }

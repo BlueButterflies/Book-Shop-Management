@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnAddCategory = new System.Windows.Forms.Button();
+            this.btnAddExpense = new System.Windows.Forms.Button();
             this.txtExpenseTitle = new System.Windows.Forms.TextBox();
             this.labelNewStox = new System.Windows.Forms.Label();
             this.txtAmount = new System.Windows.Forms.TextBox();
@@ -83,27 +83,27 @@
             this.panel3.Size = new System.Drawing.Size(499, 10);
             this.panel3.TabIndex = 7;
             // 
-            // btnAddCategory
+            // btnAddExpense
             // 
-            this.btnAddCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddCategory.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnAddCategory.FlatAppearance.BorderSize = 0;
-            this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCategory.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCategory.ForeColor = System.Drawing.Color.White;
-            this.btnAddCategory.Location = new System.Drawing.Point(180, 334);
-            this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(90, 37);
-            this.btnAddCategory.TabIndex = 7;
-            this.btnAddCategory.Text = "Add";
-            this.btnAddCategory.UseVisualStyleBackColor = false;
-            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
+            this.btnAddExpense.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddExpense.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnAddExpense.FlatAppearance.BorderSize = 0;
+            this.btnAddExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddExpense.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddExpense.ForeColor = System.Drawing.Color.White;
+            this.btnAddExpense.Location = new System.Drawing.Point(176, 344);
+            this.btnAddExpense.Name = "btnAddExpense";
+            this.btnAddExpense.Size = new System.Drawing.Size(90, 37);
+            this.btnAddExpense.TabIndex = 7;
+            this.btnAddExpense.Text = "Add";
+            this.btnAddExpense.UseVisualStyleBackColor = false;
+            this.btnAddExpense.Click += new System.EventHandler(this.btnAddExpense_Click);
             // 
             // txtExpenseTitle
             // 
             this.txtExpenseTitle.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExpenseTitle.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtExpenseTitle.Location = new System.Drawing.Point(180, 92);
+            this.txtExpenseTitle.Location = new System.Drawing.Point(176, 92);
             this.txtExpenseTitle.Margin = new System.Windows.Forms.Padding(4);
             this.txtExpenseTitle.Name = "txtExpenseTitle";
             this.txtExpenseTitle.Size = new System.Drawing.Size(289, 28);
@@ -114,7 +114,7 @@
             this.labelNewStox.AutoSize = true;
             this.labelNewStox.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNewStox.ForeColor = System.Drawing.Color.CadetBlue;
-            this.labelNewStox.Location = new System.Drawing.Point(58, 95);
+            this.labelNewStox.Location = new System.Drawing.Point(54, 95);
             this.labelNewStox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNewStox.Name = "labelNewStox";
             this.labelNewStox.Size = new System.Drawing.Size(107, 22);
@@ -125,7 +125,7 @@
             // 
             this.txtAmount.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAmount.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtAmount.Location = new System.Drawing.Point(180, 144);
+            this.txtAmount.Location = new System.Drawing.Point(176, 144);
             this.txtAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(289, 28);
@@ -136,7 +136,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label1.Location = new System.Drawing.Point(79, 147);
+            this.label1.Location = new System.Drawing.Point(75, 147);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 22);
@@ -160,7 +160,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.CadetBlue;
-            this.label3.Location = new System.Drawing.Point(66, 202);
+            this.label3.Location = new System.Drawing.Point(62, 202);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 22);
@@ -169,7 +169,8 @@
             // 
             // txtDescriptionExpense
             // 
-            this.txtDescriptionExpense.Location = new System.Drawing.Point(180, 193);
+            this.txtDescriptionExpense.ForeColor = System.Drawing.Color.CadetBlue;
+            this.txtDescriptionExpense.Location = new System.Drawing.Point(176, 193);
             this.txtDescriptionExpense.Name = "txtDescriptionExpense";
             this.txtDescriptionExpense.Size = new System.Drawing.Size(289, 96);
             this.txtDescriptionExpense.TabIndex = 6;
@@ -183,7 +184,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(379, 334);
+            this.btnClose.Location = new System.Drawing.Point(375, 344);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(90, 37);
             this.btnClose.TabIndex = 45;
@@ -199,7 +200,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(279, 334);
+            this.btnClear.Location = new System.Drawing.Point(275, 344);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(90, 37);
             this.btnClear.TabIndex = 44;
@@ -243,7 +244,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtExpenseTitle);
             this.Controls.Add(this.labelNewStox);
-            this.Controls.Add(this.btnAddCategory);
+            this.Controls.Add(this.btnAddExpense);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
@@ -264,7 +265,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnAddCategory;
+        private System.Windows.Forms.Button btnAddExpense;
         private System.Windows.Forms.TextBox txtExpenseTitle;
         private System.Windows.Forms.Label labelNewStox;
         private System.Windows.Forms.RichTextBox txtDescriptionExpense;

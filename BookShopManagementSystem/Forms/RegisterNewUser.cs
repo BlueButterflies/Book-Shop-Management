@@ -22,12 +22,14 @@ namespace BookShopManagementSystem.Forms
 
         }
 
+        #region Button back
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             FirstForm firstForm = new FirstForm();
             firstForm.ShowDialog();
         }
+        #endregion
 
         #region Button Register with execute in Database
         private void btnRegister_Click(object sender, EventArgs e)
@@ -49,12 +51,14 @@ namespace BookShopManagementSystem.Forms
                                      (@"INSERT INTO [dbo].[Users]
                     ([UserName],[FullName],[Phone],[Email],[Password],[Role])
                     VALUES
-                    ('" + txtUserName.Text + "', " +
-                                        "'" + txtFullName.Text + "'," +
-                                        "'" + txtPhone.Text + "'," +
-                                        "'" + txtEmail.Text + "'," +
-                                        "'" + Cryptography.Encrypt(txtPass.Text) + "'," +
-                                        "'" + comboBoxRole.SelectedItem.ToString() + "')", sql);
+                    (@UserName, @FullName, @Phone, @Email,@Password,@Role", sql);
+
+                    sqlCommand.Parameters.AddWithValue("@Username", txtUserName.Text);
+                    sqlCommand.Parameters.AddWithValue("@FullName", txtFullName.Text);
+                    sqlCommand.Parameters.AddWithValue("@Pahone", txtPhone.Text);
+                    sqlCommand.Parameters.AddWithValue("@Email", txtEmail.Text);
+                    sqlCommand.Parameters.AddWithValue("@Password", Cryptography.Encrypt(txtPass.Text));
+                    sqlCommand.Parameters.AddWithValue("@Role", comboBoxRole.Text);
 
                     sql.Open();
                     sqlCommand.ExecuteNonQuery();
