@@ -50,7 +50,7 @@ namespace BookShopManagementSystem.Forms
 
             sqlConnection.Open();
 
-            SqlCommand sqlCommand = new SqlCommand("SELECT [id], [UserName], [Password], [Role] FROM [dbo].[Users] WHERE [UserName] = '@User", sqlConnection);
+            SqlCommand sqlCommand = new SqlCommand("SELECT [id], [UserName], [Password], [Role] FROM [dbo].[Users] WHERE [UserName] = @User", sqlConnection);
 
             sqlCommand.Parameters.AddWithValue("@User", txtUser.Text.Trim().ToLower());
 

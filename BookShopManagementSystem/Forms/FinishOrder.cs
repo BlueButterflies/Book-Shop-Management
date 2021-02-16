@@ -22,7 +22,7 @@ namespace BookShopManagementSystem.Forms
             InitializeComponent();
         }
 
-        #region Load Finish Orede form
+        #region Load Finish Order 
         private void FinishOrder_Load(object sender, EventArgs e)
         {
             txtTotal.Text = UserControlersSell.totalPrice.ToString();
@@ -33,6 +33,8 @@ namespace BookShopManagementSystem.Forms
         private void btnDone_Click(object sender, EventArgs e)
         {
             InsertInDatabase();
+            UpdateAndDeleteFromDatabase();
+            MessageBox.Show("Sold it!");
             this.Close();
         }
         #endregion
@@ -43,13 +45,12 @@ namespace BookShopManagementSystem.Forms
             DateTime time = DateTime.Now;
 
             SqlCommand sqlCommand = new SqlCommand
-                ("INSERT INTO[dbo].[Sold] ([NetAmount], [NetDiscount], [TotalAmount], [Date], [BookId], [UserId]) VALUES (@PriceBookAfterDiscount, @DiscountPrecent, @TotalPrice, @Time, @SellId, @UserId) ", sqlConnection);
+                ("INSERT INTO[dbo].[Sold] ([NetAmount], [NetDiscount], [TotalAmount], [Date], [UserId]) VALUES (@PriceBookAfterDiscount, @DiscountPrecent, @TotalPrice, @Time, @UserId) ", sqlConnection);
 
-            sqlCommand.Parameters.AddWithValue("@PriceBookAfterDiscount", UserControlersSell.priceBookAfterDiscount.ToString());
+            sqlCommand.Parameters.AddWithValue("@PriceBookAfterDiscount", UserControlersSell.priceBookBeforeDiscount.ToString());
             sqlCommand.Parameters.AddWithValue("@DiscountPrecent", UserControlersSell.discountPrecent.ToString());
-            sqlCommand.Parameters.AddWithValue("@TotalPrice", UserControlersSell.totalPrice.ToString()); 
+            sqlCommand.Parameters.AddWithValue("@TotalPrice", UserControlersSell.totalPrice.ToString());
             sqlCommand.Parameters.AddWithValue("@Time", time);
-            sqlCommand.Parameters.AddWithValue("@SellId", UserControlersSell.id);
             sqlCommand.Parameters.AddWithValue("@UserId", LoginForm.userId);
 
             sqlConnection.Open();
@@ -68,8 +69,38 @@ namespace BookShopManagementSystem.Forms
         #region Button Change Money
         private void btnChangeMoney_Click(object sender, EventArgs e)
         {
-            var changeMoney = Math.Round(Double.Parse(txtPaid.Text) - Double.Parse(txtTotal.Text));
-            labelZero.Text = changeMoney.ToString();
+            var changeMoney = Double.Parse(txtPaid.Text) - Double.Parse(txtTotal.Text);
+            labelZero.Text = string.Format($"{changeMoney:F2}");
+        }
+        #endregion
+
+        #region Update and Delete from Books table- database
+        private void UpdateAndDeleteFromDatabase()
+        {
+            sqlConnection.Open();
+            int totalQuantity = UserControlersSell.quantityDatabase;
+            SqlCommand sqlCommand = new SqlCommand();
+
+            if(UserControlersSell.quantityDatabase > UserControlersSell.quantitySell)
+            {
+                totalQuantity -= UserControlersSell.quantitySell;
+
+                sqlCommand = new SqlCommand(@"UPDATE [dbo].[Books] SET [Quantity] = @Quantity WHERE [id] = @ID AND [UserId] = @UserId", sqlConnection);
+
+                sqlCommand.Parameters.AddWithValue("@Quantity", totalQuantity);
+                sqlCommand.Parameters.AddWithValue("@ID", UserControlersSell.id);
+                sqlCommand.Parameters.AddWithValue("@UserId", LoginForm.userId);
+            }
+            
+            if (UserControlersSell.quantityDatabase == 1 || UserControlersSell.quantityDatabase == UserControlersSell.quantitySell)
+            {
+                sqlCommand = new SqlCommand(@"DELETE FROM [dbo].[Books] WHERE [id] = @Id AND [UserId] = @UserId", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@Id", UserControlersSell.id);
+                sqlCommand.Parameters.AddWithValue("@UserId", LoginForm.userId);
+            }
+
+            sqlCommand.ExecuteNonQuery();
+            sqlConnection.Close();
         }
         #endregion
     }

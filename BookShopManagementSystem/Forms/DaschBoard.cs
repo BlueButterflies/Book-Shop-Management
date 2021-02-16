@@ -137,7 +137,7 @@ namespace BookShopManagementSystem.Forms
         {
             MoveSidePanel(btnUser);
 
-            UserControlMamagerUsers userControlMamagerUsers = new UserControlMamagerUsers();
+            UserControlManagerUsers userControlMamagerUsers = new UserControlManagerUsers();
             AddControlerPanel(userControlMamagerUsers);
         }
 

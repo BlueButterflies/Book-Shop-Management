@@ -14,12 +14,17 @@ namespace BookShopManagementSystem.UserControls
 {
     public partial class UserControlViewSoldRecord : UserControl
     {
+        //Connect with database
         SqlConnection sqlConnect = new SqlConnection(@"Data Source=DESKTOP-PO35QJG;Initial Catalog=bookshop;Integrated Security=True");
+        private double totalPrice;
 
         public UserControlViewSoldRecord()
         {
             InitializeComponent();
+
             ChargeDataGrid();
+
+            GetInfoFromTableSold();
         }
 
         #region Charge data table whit data from database
@@ -45,6 +50,26 @@ namespace BookShopManagementSystem.UserControls
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             ChargeDataGrid();
+        }
+        #endregion
+
+        #region Get Info From Database - Table Sold
+        private void GetInfoFromTableSold()
+        {
+            SqlCommand sqlCommand = new SqlCommand(@"SELECT [TotalAmount] FROM [dbo].[Sold] WHERE [UserId] = @UserId", sqlConnect);
+            sqlCommand.Parameters.AddWithValue("@UserId", LoginForm.userId);
+
+            sqlConnect.Open();
+            SqlDataReader dataReader = sqlCommand.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                totalPrice += double.Parse(dataReader["TotalAmount"].ToString());
+            }
+
+            sqlConnect.Close();
+
+            labelTotal.Text = string.Format($"Recieved:  {totalPrice:F2}");
         }
         #endregion
     }

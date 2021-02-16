@@ -78,15 +78,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bookshopDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="bookshopDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bookshopDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="bookshopDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>bookshopDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bookshopDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookshopDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="bookshopDataSet6.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -177,11 +177,11 @@
     <Compile Include="UserControls\UserControlPurchaseDetails.Designer.cs">
       <DependentUpon>UserControlPurchaseDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlMamagerUsers.cs">
+    <Compile Include="UserControls\UserControlManagerUsers.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlMamagerUsers.Designer.cs">
-      <DependentUpon>UserControlMamagerUsers.cs</DependentUpon>
+    <Compile Include="UserControls\UserControlManagerUsers.Designer.cs">
+      <DependentUpon>UserControlManagerUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControlViewSoldRecord.cs">
       <SubType>UserControl</SubType>
@@ -232,8 +232,8 @@
     <EmbeddedResource Include="UserControls\UserControlHome.resx">
       <DependentUpon>UserControlHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControlMamagerUsers.resx">
-      <DependentUpon>UserControlMamagerUsers.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UserControlManagerUsers.resx">
+      <DependentUpon>UserControlManagerUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlManagerExpens.resx">
       <DependentUpon>UserControlManagerExpens.cs</DependentUpon>
@@ -255,17 +255,6 @@
     <None Include="bookshopDataSet.xss">
       <DependentUpon>bookshopDataSet.xsd</DependentUpon>
     </None>
-    <None Include="bookshopDataSet1.xsc">
-      <DependentUpon>bookshopDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="bookshopDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bookshopDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="bookshopDataSet1.xss">
-      <DependentUpon>bookshopDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="bookshopDataSet2.xsc">
       <DependentUpon>bookshopDataSet2.xsd</DependentUpon>
     </None>
@@ -276,6 +265,17 @@
     </None>
     <None Include="bookshopDataSet2.xss">
       <DependentUpon>bookshopDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bookshopDataSet3.xsc">
+      <DependentUpon>bookshopDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bookshopDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bookshopDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bookshopDataSet3.xss">
+      <DependentUpon>bookshopDataSet3.xsd</DependentUpon>
     </None>
     <None Include="bookshopDataSet6.xsc">
       <DependentUpon>bookshopDataSet6.xsd</DependentUpon>
