@@ -19,14 +19,11 @@ namespace BookShopManagementSystem.UserControls
         #region Variables
         public static double totalPrice;
         public static double discountPrecent;
-        public static double priceBookAfterDiscount;
+        public static double priceBookBeforeDiscount;
 
         public static int id;
-        public static string tracking;
-        public static string title;
-        public static string author;
-        public static string sellingPrice;
-        public static string barcode;
+        public static int quantityDatabase;
+        public static int quantitySell;
 
         //Connect with database
         SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-PO35QJG;Initial Catalog=bookshop;Integrated Security=True");
@@ -50,12 +47,17 @@ namespace BookShopManagementSystem.UserControls
         #region Button Add to cart
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
+            if (quantityDatabase < int.Parse(txtQuantity.Text))
+            {
+                MessageBox.Show($"The books available are {quantityDatabase}");
+            }
+
             totalPrice = Double.Parse(txtPrice.Text);
             totalPrice -= ((Double.Parse(txtPrice.Text) * Double.Parse(txtDiscount.Text)) / 100);
             totalPrice *= Double.Parse(txtQuantity.Text);
 
             //Give prices for insert in database 
-            priceBookAfterDiscount = double.Parse(txtPrice.Text) * Double.Parse(txtQuantity.Text);
+            priceBookBeforeDiscount = double.Parse(txtPrice.Text) * Double.Parse(txtQuantity.Text);
             discountPrecent = ((Double.Parse(txtPrice.Text) * Double.Parse(txtDiscount.Text)) / 100) * Double.Parse(txtQuantity.Text);
 
             ListViewItem list = new ListViewItem();
@@ -70,7 +72,11 @@ namespace BookShopManagementSystem.UserControls
                 totalPrice += totalPrice;
             }
 
-            labelSumOfAmount.Text = totalPrice.ToString();
+            labelSumOfAmount.Text = $"{totalPrice:F2}"; 
+
+            quantitySell = int.Parse(txtQuantity.Text);
+
+            CleareTextboxes();
         }
         #endregion
 
@@ -84,6 +90,11 @@ namespace BookShopManagementSystem.UserControls
 
         #region Button Clear 
         private void btnClear_Click(object sender, EventArgs e)
+        {
+            CleareTextboxes();
+        }
+
+        private void CleareTextboxes()
         {
             ComboTitle.Text = "Select";
             txtAuthor.Text = "";
@@ -124,7 +135,7 @@ namespace BookShopManagementSystem.UserControls
 
             sqlConnection.Open();
 
-            SqlCommand sqlCommand = new SqlCommand("SELECT [id],[Tracking], [Title], [Author],[SellingPrice],[Barcode] FROM [dbo].[Books] WHERE [Title] = @ComboTitle AND [UserId] = @Userid", sqlConnection);
+            SqlCommand sqlCommand = new SqlCommand("SELECT [id],[Tracking], [Title], [Author], [Quantity],[SellingPrice],[Barcode] FROM [dbo].[Books] WHERE [Title] = @ComboTitle AND [UserId] = @Userid", sqlConnection);
             
             sqlCommand.Parameters.AddWithValue("@ComboTitle", ComboTitle.Text);
             sqlCommand.Parameters.AddWithValue("@UserId", LoginForm.userId);
@@ -136,6 +147,7 @@ namespace BookShopManagementSystem.UserControls
                 if (reader.Read())
                 {
                     id = (int)reader["id"];
+                    quantityDatabase = int.Parse(reader["Quantity"].ToString());
                     txtAuthor.Text = reader["Author"].ToString();
                     txtBarCode.Text = reader["Barcode"].ToString();
                     txtTracking.Text = reader["Tracking"].ToString();

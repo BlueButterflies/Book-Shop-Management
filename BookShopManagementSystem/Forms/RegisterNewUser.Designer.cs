@@ -249,6 +249,7 @@
             this.comboBoxRole.Name = "comboBoxRole";
             this.comboBoxRole.Size = new System.Drawing.Size(210, 27);
             this.comboBoxRole.TabIndex = 11;
+            this.comboBoxRole.Text = "Select";
             // 
             // txtUserName
             // 

@@ -147,23 +147,23 @@
             // 
             this.labelSumOfAmount.AutoSize = true;
             this.labelSumOfAmount.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSumOfAmount.Location = new System.Drawing.Point(173, 107);
+            this.labelSumOfAmount.Location = new System.Drawing.Point(153, 107);
             this.labelSumOfAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSumOfAmount.Name = "labelSumOfAmount";
-            this.labelSumOfAmount.Size = new System.Drawing.Size(44, 27);
+            this.labelSumOfAmount.Size = new System.Drawing.Size(36, 27);
             this.labelSumOfAmount.TabIndex = 4;
-            this.labelSumOfAmount.Text = " 00";
+            this.labelSumOfAmount.Text = "00";
             // 
             // labelAmount
             // 
             this.labelAmount.AutoSize = true;
             this.labelAmount.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAmount.Location = new System.Drawing.Point(24, 107);
+            this.labelAmount.Location = new System.Drawing.Point(12, 107);
             this.labelAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAmount.Name = "labelAmount";
-            this.labelAmount.Size = new System.Drawing.Size(152, 27);
+            this.labelAmount.Size = new System.Drawing.Size(144, 27);
             this.labelAmount.TabIndex = 4;
-            this.labelAmount.Text = "Total Amount: ";
+            this.labelAmount.Text = "Total Amount:";
             // 
             // btnFinish
             // 

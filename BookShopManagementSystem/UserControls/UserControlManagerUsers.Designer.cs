@@ -1,6 +1,6 @@
 ﻿namespace BookShopManagementSystem.UserControls
 {
-    partial class UserControlMamagerUsers
+    partial class UserControlManagerUsers
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,11 +30,11 @@
         {
             this.labelFirstName = new System.Windows.Forms.Label();
             this.labelManageUser = new System.Windows.Forms.Label();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.comboBoxRole = new System.Windows.Forms.ComboBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.labelLastName = new System.Windows.Forms.Label();
-            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.txtFullName = new System.Windows.Forms.TextBox();
             this.labelPhone = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.labelMobile = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             // labelFirstName
             // 
             this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(54, 153);
+            this.labelFirstName.Location = new System.Drawing.Point(59, 153);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(69, 19);
             this.labelFirstName.TabIndex = 0;
@@ -63,61 +63,67 @@
             // 
             this.labelManageUser.AutoSize = true;
             this.labelManageUser.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelManageUser.Location = new System.Drawing.Point(328, 42);
+            this.labelManageUser.Location = new System.Drawing.Point(333, 42);
             this.labelManageUser.Name = "labelManageUser";
             this.labelManageUser.Size = new System.Drawing.Size(178, 34);
             this.labelManageUser.TabIndex = 1;
             this.labelManageUser.Text = "Manager User";
             // 
-            // txtFirstName
+            // txtUserName
             // 
-            this.txtFirstName.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtFirstName.Location = new System.Drawing.Point(175, 150);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(210, 26);
-            this.txtFirstName.TabIndex = 2;
+            this.txtUserName.Enabled = false;
+            this.txtUserName.ForeColor = System.Drawing.Color.CadetBlue;
+            this.txtUserName.Location = new System.Drawing.Point(180, 150);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(210, 26);
+            this.txtUserName.TabIndex = 2;
             // 
             // comboBoxRole
             // 
+            this.comboBoxRole.Enabled = false;
             this.comboBoxRole.ForeColor = System.Drawing.Color.CadetBlue;
             this.comboBoxRole.FormattingEnabled = true;
             this.comboBoxRole.Items.AddRange(new object[] {
             "Admin",
             "Employee"});
-            this.comboBoxRole.Location = new System.Drawing.Point(581, 244);
+            this.comboBoxRole.Location = new System.Drawing.Point(586, 244);
             this.comboBoxRole.Name = "comboBoxRole";
             this.comboBoxRole.Size = new System.Drawing.Size(210, 27);
             this.comboBoxRole.TabIndex = 3;
+            this.comboBoxRole.Text = "Select";
             // 
             // txtPass
             // 
+            this.txtPass.Enabled = false;
             this.txtPass.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtPass.Location = new System.Drawing.Point(581, 181);
+            this.txtPass.Location = new System.Drawing.Point(586, 181);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(210, 26);
             this.txtPass.TabIndex = 5;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // labelLastName
             // 
             this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(474, 153);
+            this.labelLastName.Location = new System.Drawing.Point(479, 153);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(73, 19);
             this.labelLastName.TabIndex = 4;
             this.labelLastName.Text = "Full Name";
             // 
-            // txtLastName
+            // txtFullName
             // 
-            this.txtLastName.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtLastName.Location = new System.Drawing.Point(581, 146);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(210, 26);
-            this.txtLastName.TabIndex = 7;
+            this.txtFullName.Enabled = false;
+            this.txtFullName.ForeColor = System.Drawing.Color.CadetBlue;
+            this.txtFullName.Location = new System.Drawing.Point(586, 146);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(210, 26);
+            this.txtFullName.TabIndex = 7;
             // 
             // labelPhone
             // 
             this.labelPhone.AutoSize = true;
-            this.labelPhone.Location = new System.Drawing.Point(71, 188);
+            this.labelPhone.Location = new System.Drawing.Point(76, 188);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Size = new System.Drawing.Size(45, 19);
             this.labelPhone.TabIndex = 6;
@@ -126,7 +132,7 @@
             // txtPhone
             // 
             this.txtPhone.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtPhone.Location = new System.Drawing.Point(175, 185);
+            this.txtPhone.Location = new System.Drawing.Point(180, 185);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(210, 26);
             this.txtPhone.TabIndex = 9;
@@ -134,7 +140,7 @@
             // labelMobile
             // 
             this.labelMobile.AutoSize = true;
-            this.labelMobile.Location = new System.Drawing.Point(453, 223);
+            this.labelMobile.Location = new System.Drawing.Point(459, 223);
             this.labelMobile.Name = "labelMobile";
             this.labelMobile.Size = new System.Drawing.Size(115, 19);
             this.labelMobile.TabIndex = 8;
@@ -143,24 +149,25 @@
             // txtChangePass
             // 
             this.txtChangePass.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtChangePass.Location = new System.Drawing.Point(581, 212);
+            this.txtChangePass.Location = new System.Drawing.Point(586, 212);
             this.txtChangePass.Name = "txtChangePass";
             this.txtChangePass.Size = new System.Drawing.Size(210, 26);
             this.txtChangePass.TabIndex = 11;
+            this.txtChangePass.UseSystemPasswordChar = true;
             // 
             // labelPass
             // 
             this.labelPass.AutoSize = true;
-            this.labelPass.Location = new System.Drawing.Point(478, 188);
+            this.labelPass.Location = new System.Drawing.Point(459, 188);
             this.labelPass.Name = "labelPass";
-            this.labelPass.Size = new System.Drawing.Size(65, 19);
+            this.labelPass.Size = new System.Drawing.Size(93, 19);
             this.labelPass.TabIndex = 10;
-            this.labelPass.Text = "Password";
+            this.labelPass.Text = "Old Password";
             // 
             // txtEmail
             // 
             this.txtEmail.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtEmail.Location = new System.Drawing.Point(175, 220);
+            this.txtEmail.Location = new System.Drawing.Point(180, 220);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(210, 26);
             this.txtEmail.TabIndex = 13;
@@ -177,7 +184,7 @@
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(72, 223);
+            this.labelEmail.Location = new System.Drawing.Point(77, 223);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(42, 19);
             this.labelEmail.TabIndex = 14;
@@ -191,12 +198,13 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(701, 305);
+            this.btnClear.Location = new System.Drawing.Point(706, 305);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(90, 29);
             this.btnClear.TabIndex = 17;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
@@ -206,17 +214,18 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(581, 305);
+            this.btnSave.Location = new System.Drawing.Point(586, 305);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(90, 29);
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // labelConfirmPass
             // 
             this.labelConfirmPass.AutoSize = true;
-            this.labelConfirmPass.Location = new System.Drawing.Point(33, 255);
+            this.labelConfirmPass.Location = new System.Drawing.Point(38, 255);
             this.labelConfirmPass.Name = "labelConfirmPass";
             this.labelConfirmPass.Size = new System.Drawing.Size(120, 19);
             this.labelConfirmPass.TabIndex = 19;
@@ -225,15 +234,16 @@
             // txtConfirmPass
             // 
             this.txtConfirmPass.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtConfirmPass.Location = new System.Drawing.Point(175, 252);
+            this.txtConfirmPass.Location = new System.Drawing.Point(180, 252);
             this.txtConfirmPass.Name = "txtConfirmPass";
             this.txtConfirmPass.Size = new System.Drawing.Size(210, 26);
             this.txtConfirmPass.TabIndex = 18;
+            this.txtConfirmPass.UseSystemPasswordChar = true;
             // 
             // labelRole
             // 
             this.labelRole.AutoSize = true;
-            this.labelRole.Location = new System.Drawing.Point(493, 251);
+            this.labelRole.Location = new System.Drawing.Point(498, 251);
             this.labelRole.Name = "labelRole";
             this.labelRole.Size = new System.Drawing.Size(35, 19);
             this.labelRole.TabIndex = 20;
@@ -256,12 +266,12 @@
             this.Controls.Add(this.labelPass);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.labelMobile);
-            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.labelPhone);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.labelLastName);
             this.Controls.Add(this.comboBoxRole);
-            this.Controls.Add(this.txtFirstName);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.labelManageUser);
             this.Controls.Add(this.labelFirstName);
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -279,11 +289,11 @@
 
         private System.Windows.Forms.Label labelFirstName;
         private System.Windows.Forms.Label labelManageUser;
-        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.ComboBox comboBoxRole;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label labelLastName;
-        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label labelPhone;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label labelMobile;

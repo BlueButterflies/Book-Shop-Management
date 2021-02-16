@@ -56,18 +56,18 @@ namespace BookShopManagementSystem.Forms
         {
             SqlCommand sqlCommand = new SqlCommand
                            (@"INSERT INTO[dbo].[Books]
-            ([Tracking],[Title],[Author],[Quantity],[CostPrice],[SellingPrice],[Categories],[Barcode],[Publisher],[UserId])
-            VALUES(@Tracking, @Title, @Author, @Quantity, @CostPrice, @SellingPrice, @Categories, @Barcode, @Publisher, @UserId)", sqlConnection);
+            ([Tracking],[Title],[Author],[Quantity],[CostPrice],[SellingPrice],[Categories],[Publisher],[Barcode],[UserId])
+            VALUES(@Tracking, @Title, @Author, @Quantity, @CostPrice, @SellingPrice, @Categories, @Publisher,  @Barcode, @UserId)", sqlConnection);
           
             sqlCommand.Parameters.AddWithValue("@Tracking", txtTracking.Text);
             sqlCommand.Parameters.AddWithValue("@Title", txtTitle.Text);
             sqlCommand.Parameters.AddWithValue("@Author", txtAuthor.Text);
-            sqlCommand.Parameters.AddWithValue("@Quatity", txtQuantity.Text);
+            sqlCommand.Parameters.AddWithValue("@Quantity", txtQuantity.Text);
             sqlCommand.Parameters.AddWithValue("@CostPrice", txtSellingPrice.Text);
             sqlCommand.Parameters.AddWithValue("@SellingPrice", txtSellingPrice.Text);
             sqlCommand.Parameters.AddWithValue("@Categories", comboBoxCategory.Text);
-            sqlCommand.Parameters.AddWithValue("@Barcode", txtBarCode.Text);
             sqlCommand.Parameters.AddWithValue("@Publisher", txtPublish.Text);
+            sqlCommand.Parameters.AddWithValue("@Barcode", txtBarCode.Text);
             sqlCommand.Parameters.AddWithValue("@UserId", LoginForm.userId);
 
             sqlConnection.Open();
