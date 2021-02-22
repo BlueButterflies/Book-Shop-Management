@@ -1,5 +1,5 @@
 <p align="center">
-<h1>This progect is alone Design for Book Shop Management System</h1>
+<h1>This progect is Book Shop Management System with database - I use Windows Sql Server (T-SQL)</h1>
 </p>
 
 <table>
