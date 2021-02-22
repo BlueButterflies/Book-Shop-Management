@@ -411,6 +411,7 @@
             // 
             // ComboTitle
             // 
+            this.ComboTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ComboTitle.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.booksBindingSource, "Title", true));
             this.ComboTitle.ForeColor = System.Drawing.Color.CadetBlue;
             this.ComboTitle.FormattingEnabled = true;
@@ -436,6 +437,7 @@
             // 
             // btnChargeOtherInfo
             // 
+            this.btnChargeOtherInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnChargeOtherInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChargeOtherInfo.Font = new System.Drawing.Font("Comic Sans MS", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChargeOtherInfo.Location = new System.Drawing.Point(398, 84);

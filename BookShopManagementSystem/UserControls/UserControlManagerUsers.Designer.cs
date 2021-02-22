@@ -61,6 +61,8 @@
             // 
             // labelManageUser
             // 
+            this.labelManageUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelManageUser.AutoSize = true;
             this.labelManageUser.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelManageUser.Location = new System.Drawing.Point(333, 42);
@@ -80,6 +82,7 @@
             // 
             // comboBoxRole
             // 
+            this.comboBoxRole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxRole.Enabled = false;
             this.comboBoxRole.ForeColor = System.Drawing.Color.CadetBlue;
             this.comboBoxRole.FormattingEnabled = true;
@@ -94,6 +97,7 @@
             // 
             // txtPass
             // 
+            this.txtPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPass.Enabled = false;
             this.txtPass.ForeColor = System.Drawing.Color.CadetBlue;
             this.txtPass.Location = new System.Drawing.Point(586, 181);
@@ -104,6 +108,7 @@
             // 
             // labelLastName
             // 
+            this.labelLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelLastName.AutoSize = true;
             this.labelLastName.Location = new System.Drawing.Point(479, 153);
             this.labelLastName.Name = "labelLastName";
@@ -113,6 +118,7 @@
             // 
             // txtFullName
             // 
+            this.txtFullName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFullName.Enabled = false;
             this.txtFullName.ForeColor = System.Drawing.Color.CadetBlue;
             this.txtFullName.Location = new System.Drawing.Point(586, 146);
@@ -139,6 +145,7 @@
             // 
             // labelMobile
             // 
+            this.labelMobile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMobile.AutoSize = true;
             this.labelMobile.Location = new System.Drawing.Point(459, 223);
             this.labelMobile.Name = "labelMobile";
@@ -148,6 +155,7 @@
             // 
             // txtChangePass
             // 
+            this.txtChangePass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtChangePass.ForeColor = System.Drawing.Color.CadetBlue;
             this.txtChangePass.Location = new System.Drawing.Point(586, 212);
             this.txtChangePass.Name = "txtChangePass";
@@ -157,6 +165,7 @@
             // 
             // labelPass
             // 
+            this.labelPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPass.AutoSize = true;
             this.labelPass.Location = new System.Drawing.Point(459, 188);
             this.labelPass.Name = "labelPass";
@@ -192,7 +201,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.BackColor = System.Drawing.Color.OrangeRed;
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -208,7 +217,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.BackColor = System.Drawing.Color.CadetBlue;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -242,6 +251,7 @@
             // 
             // labelRole
             // 
+            this.labelRole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelRole.AutoSize = true;
             this.labelRole.Location = new System.Drawing.Point(498, 251);
             this.labelRole.Name = "labelRole";
@@ -249,7 +259,7 @@
             this.labelRole.TabIndex = 20;
             this.labelRole.Text = "Role";
             // 
-            // UserControlMamagerUsers
+            // UserControlManagerUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -277,7 +287,7 @@
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.CadetBlue;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UserControlMamagerUsers";
+            this.Name = "UserControlManagerUsers";
             this.Size = new System.Drawing.Size(835, 378);
             this.Load += new System.EventHandler(this.UserControlMamagerUsers_Load);
             this.ResumeLayout(false);

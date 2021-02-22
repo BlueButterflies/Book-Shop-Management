@@ -39,12 +39,12 @@
             this.labelExtenses = new System.Windows.Forms.Label();
             this.btnAddNewExtens = new System.Windows.Forms.Button();
             this.dataGridExtenses = new System.Windows.Forms.DataGridView();
-            this.expenseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bookshopDataSet6 = new BookShopManagementSystem.bookshopDataSet6();
-            this.expenseTableAdapter = new BookShopManagementSystem.bookshopDataSet6TableAdapters.ExpenseTableAdapter();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expenseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookshopDataSet6 = new BookShopManagementSystem.bookshopDataSet6();
+            this.expenseTableAdapter = new BookShopManagementSystem.bookshopDataSet6TableAdapters.ExpenseTableAdapter();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridExtenses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expenseBindingSource)).BeginInit();
@@ -140,6 +140,8 @@
             // 
             // labelExtenses
             // 
+            this.labelExtenses.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelExtenses.AutoSize = true;
             this.labelExtenses.Font = new System.Drawing.Font("Comic Sans MS", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelExtenses.ForeColor = System.Drawing.Color.White;
@@ -170,6 +172,8 @@
             // 
             this.dataGridExtenses.AllowUserToAddRows = false;
             this.dataGridExtenses.AllowUserToDeleteRows = false;
+            this.dataGridExtenses.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridExtenses.AutoGenerateColumns = false;
             this.dataGridExtenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridExtenses.BackgroundColor = System.Drawing.Color.White;
@@ -187,20 +191,6 @@
             this.dataGridExtenses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridExtenses.Size = new System.Drawing.Size(791, 305);
             this.dataGridExtenses.TabIndex = 8;
-            // 
-            // expenseBindingSource
-            // 
-            this.expenseBindingSource.DataMember = "Expense";
-            this.expenseBindingSource.DataSource = this.bookshopDataSet6;
-            // 
-            // bookshopDataSet6
-            // 
-            this.bookshopDataSet6.DataSetName = "bookshopDataSet6";
-            this.bookshopDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // expenseTableAdapter
-            // 
-            this.expenseTableAdapter.ClearBeforeFill = true;
             // 
             // titleDataGridViewTextBoxColumn
             // 
@@ -222,6 +212,20 @@
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // expenseBindingSource
+            // 
+            this.expenseBindingSource.DataMember = "Expense";
+            this.expenseBindingSource.DataSource = this.bookshopDataSet6;
+            // 
+            // bookshopDataSet6
+            // 
+            this.bookshopDataSet6.DataSetName = "bookshopDataSet6";
+            this.bookshopDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // expenseTableAdapter
+            // 
+            this.expenseTableAdapter.ClearBeforeFill = true;
             // 
             // UserControlManagerExpens
             // 

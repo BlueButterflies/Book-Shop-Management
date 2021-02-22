@@ -102,8 +102,6 @@ namespace BookShopManagementSystem.UserControls
         private void UserControlMamagerUsers_Load(object sender, EventArgs e)
         {
             SelectFromDatabase();
-
-
         }
         #endregion
     }

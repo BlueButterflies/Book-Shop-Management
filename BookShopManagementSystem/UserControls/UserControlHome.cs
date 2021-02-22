@@ -19,6 +19,7 @@ namespace BookShopManagementSystem.UserControls
         public UserControlHome()
         {
             InitializeComponent();
+            LoadChart();
 
             sqlConnection.Open();
 
@@ -50,23 +51,23 @@ namespace BookShopManagementSystem.UserControls
 
         private void LoadChart() //Create Chart for Dash Board
         {
-            chartReport.Series["Report"].Points.AddXY("Jan", 500);
-            chartReport.Series["Report"].Points.AddXY("Feb", 60);
-            chartReport.Series["Report"].Points.AddXY("Mar", 100);
-            chartReport.Series["Report"].Points.AddXY("Apr", 1000);
-            chartReport.Series["Report"].Points.AddXY("May", 800);
-            chartReport.Series["Report"].Points.AddXY("Jun", 500);
-            chartReport.Series["Report"].Points.AddXY("Jul", 500);
-            chartReport.Series["Report"].Points.AddXY("Ago", 500);
-            chartReport.Series["Report"].Points.AddXY("Set", 500);
-            chartReport.Series["Report"].Points.AddXY("Oct", 500);
-            chartReport.Series["Report"].Points.AddXY("Nov", 500);
-            chartReport.Series["Report"].Points.AddXY("Dec", 500);
+            SqlCommand sqlCommand = new SqlCommand(@"SELECT [TotalAmount], MONTH([Date]) AS Month FROM [Sold] WHERE [UserId] =  @UserId ORDER BY [TotalAmount]", sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@UserId", LoginForm.userId);
+
+            sqlConnection.Open();
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+            while (sqlDataReader.Read())
+            {
+                chartReport.Series["Report"].Points.AddXY(sqlDataReader["Month"], sqlDataReader["TotalAmount"]);
+            }
+            sqlConnection.Close();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e) //Load from button Refresh
         {
             LoadChart();
         }
+
     }
 }

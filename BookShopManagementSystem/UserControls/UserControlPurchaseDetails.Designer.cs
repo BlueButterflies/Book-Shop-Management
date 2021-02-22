@@ -216,6 +216,8 @@
             // 
             this.dataGridPurchase.AllowUserToAddRows = false;
             this.dataGridPurchase.AllowUserToDeleteRows = false;
+            this.dataGridPurchase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridPurchase.AutoGenerateColumns = false;
             this.dataGridPurchase.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridPurchase.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -232,7 +234,6 @@
             this.barcodeDataGridViewTextBoxColumn,
             this.publisherDataGridViewTextBoxColumn});
             this.dataGridPurchase.DataSource = this.booksBindingSource;
-            this.dataGridPurchase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridPurchase.GridColor = System.Drawing.Color.FloralWhite;
             this.dataGridPurchase.Location = new System.Drawing.Point(10, 67);
             this.dataGridPurchase.Name = "dataGridPurchase";

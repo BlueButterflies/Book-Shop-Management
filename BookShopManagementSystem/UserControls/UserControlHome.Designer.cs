@@ -34,24 +34,24 @@
             this.labelSold = new System.Windows.Forms.Label();
             this.labelSoldBooks = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelSalesAndPurchase = new System.Windows.Forms.Label();
             this.labelPurchaseBooks = new System.Windows.Forms.Label();
             this.labelCountPurchase = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelReport = new System.Windows.Forms.Label();
             this.spinerRecivedBook = new MetroFramework.Controls.MetroProgressSpinner();
-            this.chartReport = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.spinerSoldBook = new MetroFramework.Controls.MetroProgressSpinner();
             this.labelsoldBook = new System.Windows.Forms.Label();
             this.labelRecivedBook = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.chartReport = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartReport)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartReport)).BeginInit();
             this.SuspendLayout();
             // 
             // labelSold
@@ -88,6 +88,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(227, 80);
             this.panel1.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Location = new System.Drawing.Point(150, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(59, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // labelSalesAndPurchase
             // 
@@ -137,6 +147,16 @@
             this.panel2.Size = new System.Drawing.Size(227, 80);
             this.panel2.TabIndex = 3;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Location = new System.Drawing.Point(161, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
             // labelReport
             // 
             this.labelReport.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -165,35 +185,6 @@
             this.spinerRecivedBook.Theme = MetroFramework.MetroThemeStyle.Light;
             this.spinerRecivedBook.UseSelectable = true;
             this.spinerRecivedBook.Value = 85;
-            // 
-            // chartReport
-            // 
-            this.chartReport.Anchor = System.Windows.Forms.AnchorStyles.None;
-            chartArea1.Name = "Report";
-            this.chartReport.ChartAreas.Add(chartArea1);
-            this.chartReport.Cursor = System.Windows.Forms.Cursors.Hand;
-            legend1.Name = "Legend1";
-            this.chartReport.Legends.Add(legend1);
-            this.chartReport.Location = new System.Drawing.Point(471, 96);
-            this.chartReport.Name = "chartReport";
-            this.chartReport.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            this.chartReport.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            series1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
-            series1.BackImageTransparentColor = System.Drawing.Color.White;
-            series1.BorderWidth = 5;
-            series1.ChartArea = "Report";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            series1.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.LabelForeColor = System.Drawing.Color.CadetBlue;
-            series1.Legend = "Legend1";
-            series1.Name = "Report";
-            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series1.ShadowColor = System.Drawing.Color.White;
-            this.chartReport.Series.Add(series1);
-            this.chartReport.Size = new System.Drawing.Size(337, 272);
-            this.chartReport.TabIndex = 7;
             // 
             // spinerSoldBook
             // 
@@ -237,7 +228,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresh.BackColor = System.Drawing.Color.White;
             this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.FlatAppearance.BorderSize = 0;
@@ -250,35 +241,49 @@
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // pictureBox2
+            // chartReport
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Location = new System.Drawing.Point(161, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Location = new System.Drawing.Point(150, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.chartReport.Anchor = System.Windows.Forms.AnchorStyles.None;
+            chartArea1.Name = "ChartArea1";
+            this.chartReport.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartReport.Legends.Add(legend1);
+            this.chartReport.Location = new System.Drawing.Point(508, 110);
+            this.chartReport.Name = "chartReport";
+            this.chartReport.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.ZigZag;
+            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            series1.BorderColor = System.Drawing.Color.Blue;
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.CornflowerBlue;
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series1.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series1.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
+            series1.LabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series1.Legend = "Legend1";
+            series1.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            series1.MarkerColor = System.Drawing.Color.Blue;
+            series1.MarkerImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series1.Name = "Report";
+            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series1.ShadowColor = System.Drawing.Color.White;
+            series1.YValuesPerPoint = 4;
+            this.chartReport.Series.Add(series1);
+            this.chartReport.Size = new System.Drawing.Size(300, 270);
+            this.chartReport.TabIndex = 12;
             // 
             // UserControlHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.chartReport);
             this.Controls.Add(this.labelRecivedBook);
             this.Controls.Add(this.labelsoldBook);
             this.Controls.Add(this.spinerSoldBook);
-            this.Controls.Add(this.chartReport);
             this.Controls.Add(this.spinerRecivedBook);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.labelReport);
@@ -286,16 +291,17 @@
             this.Controls.Add(this.labelSalesAndPurchase);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.CadetBlue;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UserControlHome";
             this.Size = new System.Drawing.Size(811, 383);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,9 +320,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelReport;
         private MetroFramework.Controls.MetroProgressSpinner spinerRecivedBook;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartReport;
         private MetroFramework.Controls.MetroProgressSpinner spinerSoldBook;
         private System.Windows.Forms.Label labelsoldBook;
         private System.Windows.Forms.Label labelRecivedBook;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartReport;
     }
 }

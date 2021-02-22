@@ -34,7 +34,7 @@
             this.labelShopTwo = new System.Windows.Forms.Label();
             this.picShoopTwo = new System.Windows.Forms.PictureBox();
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelCopy = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnSaleBooks = new System.Windows.Forms.Button();
             this.panelSide = new System.Windows.Forms.Panel();
@@ -112,7 +112,7 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.CadetBlue;
-            this.panelLeft.Controls.Add(this.label1);
+            this.panelLeft.Controls.Add(this.labelCopy);
             this.panelLeft.Controls.Add(this.btnHome);
             this.panelLeft.Controls.Add(this.btnSaleBooks);
             this.panelLeft.Controls.Add(this.panelSide);
@@ -127,17 +127,17 @@
             this.panelLeft.Size = new System.Drawing.Size(189, 500);
             this.panelLeft.TabIndex = 1;
             // 
-            // label1
+            // labelCopy
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.CadetBlue;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(8, 461);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 30);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Copyrights © 2020.All rights\r\nreserved by BlueButterfliesDev";
+            this.labelCopy.AutoSize = true;
+            this.labelCopy.BackColor = System.Drawing.Color.CadetBlue;
+            this.labelCopy.Font = new System.Drawing.Font("Comic Sans MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCopy.ForeColor = System.Drawing.Color.White;
+            this.labelCopy.Location = new System.Drawing.Point(8, 461);
+            this.labelCopy.Name = "labelCopy";
+            this.labelCopy.Size = new System.Drawing.Size(172, 30);
+            this.labelCopy.TabIndex = 12;
+            this.labelCopy.Text = "Copyrights © 2020.All rights\r\nreserved by BlueButterfliesDev";
             // 
             // btnHome
             // 
@@ -422,6 +422,6 @@
         private System.Windows.Forms.Timer timerTimes;
         private System.Windows.Forms.Panel panelUser;
         private CostumControl.DargControl dargControl;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelCopy;
     }
 }
