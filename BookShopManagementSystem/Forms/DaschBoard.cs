@@ -16,12 +16,11 @@ namespace BookShopManagementSystem.Forms
 {
     public partial class DaschBoard : Form
     {
-        
+        #region Variables
         int PanelWigth;
         bool isCollapsed;
+        #endregion
 
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=bookDb;Integrated Security=True");
-        
         public DaschBoard()
         {
             InitializeComponent();
@@ -29,9 +28,11 @@ namespace BookShopManagementSystem.Forms
             UserControlHome userHome = new UserControlHome();//Charge  chart dashboard open after login
             AddControlerPanel(userHome);
 
+            //Give from Login Form username and user role
             labelWelcome.Text = "Welcome: " + LoginForm.userLogin;
             labelRole.Text = "Role: " + LoginForm.userRole;
 
+            //Open menu left 
             timerTimes.Start();
             PanelWigth = panelLeft.Width;
             isCollapsed = false;
@@ -56,6 +57,7 @@ namespace BookShopManagementSystem.Forms
                     timerPanelLeft.Stop();
                     isCollapsed = false;
                     this.Refresh();
+                    labelCopy.Text = "Copyrights © 2020.All rights\nreserved by BlueButterfliesDev";
                 }
             }
             else
@@ -67,6 +69,7 @@ namespace BookShopManagementSystem.Forms
                     timerPanelLeft.Stop();
                     isCollapsed = true;
                     this.Refresh();
+                    labelCopy.Text = "© 2020";
                 }
             }
         }
@@ -143,11 +146,13 @@ namespace BookShopManagementSystem.Forms
 
         #endregion
 
+        #region Label Time
         private void timerTimes_Tick(object sender, EventArgs e)// View Time Now in User Page
         {
             DateTime time = DateTime.Now;
 
             labelTimeData.Text = time.ToString();
         }
+        #endregion
     }
 }
