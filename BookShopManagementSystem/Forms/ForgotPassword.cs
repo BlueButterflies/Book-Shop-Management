@@ -43,7 +43,7 @@ namespace BookShopManagementSystem.Forms
                 (@"SELECT [Email], [Password] 
                    FROM [dbo].[Users]
                    WHERE [UserName] = @User", sql);
-            sqlCommand.Parameters.AddWithValue("#@User", txtUserName.Text.Trim());
+            sqlCommand.Parameters.AddWithValue("@User", txtUserName.Text.Trim());
 
             SqlDataReader readerDb = sqlCommand.ExecuteReader();
             if (readerDb.Read())

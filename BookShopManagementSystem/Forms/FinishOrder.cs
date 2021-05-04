@@ -33,7 +33,7 @@ namespace BookShopManagementSystem.Forms
         private void btnDone_Click(object sender, EventArgs e)
         {
             InsertInDatabase();
-            UpdateAndDeleteFromDatabase();
+            //UpdateAndDeleteFromDatabase();
             MessageBox.Show("Sold it!");
             this.Close();
         }
@@ -74,7 +74,7 @@ namespace BookShopManagementSystem.Forms
         }
         #endregion
 
-        #region Update and Delete from Books table- database
+       /* #region Update and Delete from Books table- database
         private void UpdateAndDeleteFromDatabase()
         {
             sqlConnection.Open();
@@ -103,5 +103,6 @@ namespace BookShopManagementSystem.Forms
             sqlConnection.Close();
         }
         #endregion
+       */
     }
 }
