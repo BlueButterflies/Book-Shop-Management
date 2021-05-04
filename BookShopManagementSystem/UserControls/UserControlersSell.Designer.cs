@@ -46,7 +46,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnAddToCart = new System.Windows.Forms.Button();
-            this.labelTitle = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtBarCode = new System.Windows.Forms.TextBox();
             this.labelPrice = new System.Windows.Forms.Label();
@@ -181,10 +180,9 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.BackColor = System.Drawing.Color.Firebrick;
             this.panel8.Controls.Add(this.btnDelete);
             this.panel8.Controls.Add(this.panel7);
-            this.panel8.Controls.Add(this.btnClear);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 10);
             this.panel8.Name = "panel8";
@@ -194,12 +192,14 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Crimson;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Comic Sans MS", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(129, 3);
+            this.btnDelete.Location = new System.Drawing.Point(0, 0);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(116, 42);
+            this.btnDelete.Size = new System.Drawing.Size(245, 46);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -220,9 +220,9 @@
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(0, 3);
+            this.btnClear.Location = new System.Drawing.Point(273, 328);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(116, 42);
+            this.btnClear.Size = new System.Drawing.Size(129, 42);
             this.btnClear.TabIndex = 0;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -261,22 +261,11 @@
             this.btnAddToCart.UseVisualStyleBackColor = false;
             this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
-            // labelTitle
-            // 
-            this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(108, 62);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(84, 19);
-            this.labelTitle.TabIndex = 1;
-            this.labelTitle.Text = "Select Book";
-            // 
             // txtPrice
             // 
             this.txtPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPrice.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtPrice.Location = new System.Drawing.Point(260, 213);
+            this.txtPrice.Location = new System.Drawing.Point(304, 208);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(175, 26);
@@ -286,7 +275,7 @@
             // 
             this.txtBarCode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBarCode.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtBarCode.Location = new System.Drawing.Point(20, 216);
+            this.txtBarCode.Location = new System.Drawing.Point(64, 211);
             this.txtBarCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.Size = new System.Drawing.Size(175, 26);
@@ -296,7 +285,7 @@
             // 
             this.labelPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(256, 190);
+            this.labelPrice.Location = new System.Drawing.Point(300, 185);
             this.labelPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(40, 19);
@@ -307,7 +296,7 @@
             // 
             this.labelBarCode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelBarCode.AutoSize = true;
-            this.labelBarCode.Location = new System.Drawing.Point(16, 193);
+            this.labelBarCode.Location = new System.Drawing.Point(60, 188);
             this.labelBarCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelBarCode.Name = "labelBarCode";
             this.labelBarCode.Size = new System.Drawing.Size(66, 19);
@@ -318,7 +307,7 @@
             // 
             this.labelDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelDiscount.AutoSize = true;
-            this.labelDiscount.Location = new System.Drawing.Point(17, 259);
+            this.labelDiscount.Location = new System.Drawing.Point(61, 254);
             this.labelDiscount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDiscount.Name = "labelDiscount";
             this.labelDiscount.Size = new System.Drawing.Size(79, 19);
@@ -329,7 +318,7 @@
             // 
             this.txtDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDiscount.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtDiscount.Location = new System.Drawing.Point(20, 281);
+            this.txtDiscount.Location = new System.Drawing.Point(64, 276);
             this.txtDiscount.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(175, 26);
@@ -339,7 +328,7 @@
             // 
             this.labelTracking.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTracking.AutoSize = true;
-            this.labelTracking.Location = new System.Drawing.Point(256, 129);
+            this.labelTracking.Location = new System.Drawing.Point(300, 124);
             this.labelTracking.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTracking.Name = "labelTracking";
             this.labelTracking.Size = new System.Drawing.Size(69, 19);
@@ -350,7 +339,7 @@
             // 
             this.txtTracking.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTracking.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtTracking.Location = new System.Drawing.Point(261, 155);
+            this.txtTracking.Location = new System.Drawing.Point(305, 150);
             this.txtTracking.Margin = new System.Windows.Forms.Padding(4);
             this.txtTracking.Name = "txtTracking";
             this.txtTracking.Size = new System.Drawing.Size(175, 26);
@@ -360,7 +349,7 @@
             // 
             this.labelAuthor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAuthor.AutoSize = true;
-            this.labelAuthor.Location = new System.Drawing.Point(16, 129);
+            this.labelAuthor.Location = new System.Drawing.Point(60, 124);
             this.labelAuthor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAuthor.Name = "labelAuthor";
             this.labelAuthor.Size = new System.Drawing.Size(53, 19);
@@ -371,7 +360,7 @@
             // 
             this.txtAuthor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAuthor.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtAuthor.Location = new System.Drawing.Point(20, 152);
+            this.txtAuthor.Location = new System.Drawing.Point(64, 147);
             this.txtAuthor.Margin = new System.Windows.Forms.Padding(4);
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.Size = new System.Drawing.Size(175, 26);
@@ -392,7 +381,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(256, 258);
+            this.label1.Location = new System.Drawing.Point(300, 253);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 19);
@@ -403,7 +392,7 @@
             // 
             this.txtQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtQuantity.ForeColor = System.Drawing.Color.CadetBlue;
-            this.txtQuantity.Location = new System.Drawing.Point(260, 281);
+            this.txtQuantity.Location = new System.Drawing.Point(304, 276);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(175, 26);
@@ -415,11 +404,11 @@
             this.ComboTitle.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.booksBindingSource, "Title", true));
             this.ComboTitle.ForeColor = System.Drawing.Color.CadetBlue;
             this.ComboTitle.FormattingEnabled = true;
-            this.ComboTitle.Location = new System.Drawing.Point(21, 84);
+            this.ComboTitle.Location = new System.Drawing.Point(65, 79);
             this.ComboTitle.Name = "ComboTitle";
             this.ComboTitle.Size = new System.Drawing.Size(337, 27);
             this.ComboTitle.TabIndex = 18;
-            this.ComboTitle.Text = "Select";
+            this.ComboTitle.Text = "Select Book";
             // 
             // booksBindingSource
             // 
@@ -440,7 +429,7 @@
             this.btnChargeOtherInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnChargeOtherInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChargeOtherInfo.Font = new System.Drawing.Font("Comic Sans MS", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChargeOtherInfo.Location = new System.Drawing.Point(398, 84);
+            this.btnChargeOtherInfo.Location = new System.Drawing.Point(442, 79);
             this.btnChargeOtherInfo.Name = "btnChargeOtherInfo";
             this.btnChargeOtherInfo.Size = new System.Drawing.Size(37, 27);
             this.btnChargeOtherInfo.TabIndex = 19;
@@ -454,6 +443,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnChargeOtherInfo);
             this.Controls.Add(this.ComboTitle);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.label8);
@@ -465,7 +455,6 @@
             this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.labelBarCode);
             this.Controls.Add(this.labelPrice);
-            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.txtBarCode);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.btnAddToCart);
@@ -501,7 +490,6 @@
         private System.Windows.Forms.Button btnFinish;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtBarCode;
         private System.Windows.Forms.Label labelPrice;

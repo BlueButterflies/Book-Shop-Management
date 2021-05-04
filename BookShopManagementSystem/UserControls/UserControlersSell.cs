@@ -159,6 +159,36 @@ namespace BookShopManagementSystem.UserControls
             sqlConnection.Close();
         }
         #endregion
+
+        #region Update and Delete from Books table- database
+        public void UpdateAndDeleteFromDatabase()
+        {
+            sqlConnection.Open();
+            int totalQuantity = UserControlersSell.quantityDatabase;
+            SqlCommand sqlCommand = new SqlCommand();
+
+            if (UserControlersSell.quantityDatabase > UserControlersSell.quantitySell)
+            {
+                totalQuantity -= UserControlersSell.quantitySell;
+
+                sqlCommand = new SqlCommand(@"UPDATE [dbo].[Books] SET [Quantity] = @Quantity WHERE [id] = @ID AND [UserId] = @UserId", sqlConnection);
+
+                sqlCommand.Parameters.AddWithValue("@Quantity", totalQuantity);
+                sqlCommand.Parameters.AddWithValue("@ID", UserControlersSell.id);
+                sqlCommand.Parameters.AddWithValue("@UserId", LoginForm.userId);
+            }
+
+            if (UserControlersSell.quantityDatabase == 1 || UserControlersSell.quantityDatabase == UserControlersSell.quantitySell)
+            {
+                sqlCommand = new SqlCommand(@"DELETE FROM [dbo].[Books] WHERE [id] = @Id AND [UserId] = @UserId", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@Id", UserControlersSell.id);
+                sqlCommand.Parameters.AddWithValue("@UserId", LoginForm.userId);
+            }
+
+            sqlCommand.ExecuteNonQuery();
+            sqlConnection.Close();
+        }
+        #endregion
     }
 }
 
